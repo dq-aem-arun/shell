@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/shell/clientlibs"/>
+    <filter root="/apps/shell/components"/>
+    <filter root="/apps/shell/i18n"/>
+    <filter root="/apps/msm/shell_blueprint" mode="merge"/>
+</workspaceFilter>
