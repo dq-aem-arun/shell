@@ -1,0 +1,11 @@
+<sly data-sly-use.promo="com.shell.core.models.Promo">
+    <div class="promo-banner" data-sly-list.promobanner="${promo.promoBanner}">
+        <div class="promo-item1">
+            <img src="${promobanner.fileReference}" alt="${promobanner.title}" />
+            <div class="promo-item2">
+                <h2 class="title">${promobanner.title}</h2>
+                <div class="description">${promobanner.description @ context='html'}</div>
+            </div>
+        </div>
+    </div>
+</sly>

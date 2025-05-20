@@ -1,0 +1,14 @@
+{
+  "promobanner": {
+    "item0": {
+      "fileReference": "/content/dam/sample1.jpg",
+      "title": "Unleash the power within",
+      "description": "Shell Helix Ultra with Pure Plus technology keeps your engine strong, because only by unlocking the true power within can we push ourselves to the next level."
+    },
+    "item1": {
+      "fileReference": "/content/dam/sample2.jpg",
+      "title": "Offers and Promotions",
+      "description": "Discover exciting offers on wide range of products. Don’t let this deals slip away-redeem now!"
+    }
+  }
+}
