@@ -1,6 +1,6 @@
 package com.shell.core.models.impl;
 
-import com.shell.core.models.FooterModel;
+import com.shell.core.models.Footer;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,23 +11,23 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(AemContextExtension.class)
-public class FooterModelImplTest {
+public class FooterImplTest {
 
     AemContext context = new AemContext();
-    FooterModel footerModel;
+    Footer footerModel;
     @BeforeEach
     void setUp(){
         context.load().json("/footer/footer.json","/content");
-        context.addModelsForClasses(FooterModelImpl.class);
+        context.addModelsForClasses(FooterImpl.class);
 
     }
 
     @Test
     void testFooterSiteNavigation(){    //Scenario to check footerSiteNavigation ie group and group names
         context.currentResource("/content/footer-2");
-         footerModel=context.currentResource().adaptTo(FooterModel.class);
+         footerModel=context.currentResource().adaptTo(Footer.class);
         assertNotNull(footerModel);
-        List<FooterModel.FooterNavGroup> footerSiteNavigation = footerModel.getFooterSiteNavigation();
+        List<Footer.FooterNavGroup> footerSiteNavigation = footerModel.getFooterSiteNavigation();
         assertNotNull(footerSiteNavigation);
         String[] groupNamesActual = new String[footerSiteNavigation.size()];
         for(int i=0;i<groupNamesActual.length;i++){
@@ -45,8 +45,8 @@ public class FooterModelImplTest {
     @Test
     void testGetItems(){
         context.currentResource("/content/footer-2");
-        footerModel= context.currentResource().adaptTo(FooterModel.class);
-        List<FooterModel.FooterNavItem> navItems = footerModel.getFooterSiteNavigation().get(0).getItems();
+        footerModel= context.currentResource().adaptTo(Footer.class);
+        List<Footer.FooterNavItem> navItems = footerModel.getFooterSiteNavigation().get(0).getItems();
         assertNotNull(navItems);
 
         assertEquals("Home", navItems.get(0).getLabel());
@@ -57,10 +57,10 @@ public class FooterModelImplTest {
     @Test
     void testGetFooterSocialNavigation(){
         context.currentResource("/content/footer-2");
-        footerModel= context.currentResource().adaptTo(FooterModel.class);
-        List<FooterModel.FooterNavItem> footerSocialNavigation = footerModel.getFooterSocialNavigation();
+        footerModel= context.currentResource().adaptTo(Footer.class);
+        List<Footer.FooterNavItem> footerSocialNavigation = footerModel.getFooterSocialNavigation();
         assertNotNull(footerSocialNavigation);
-        FooterModel.FooterNavItem footerNavItem = footerSocialNavigation.get(0);
+        Footer.FooterNavItem footerNavItem = footerSocialNavigation.get(0);
         assertNotNull(footerNavItem);
         assertEquals("Facebook",footerNavItem.getLabel());
         assertEquals("/facebook",footerNavItem.getPath());
@@ -74,11 +74,11 @@ public class FooterModelImplTest {
     @Test
     void testGetFooterLegalLinks(){
         context.currentResource("/content/footer-2");
-        footerModel= context.currentResource().adaptTo(FooterModel.class);
+        footerModel= context.currentResource().adaptTo(Footer.class);
         assertNotNull(footerModel);
-        List<FooterModel.FooterNavItem> footerLegalLinks = footerModel.getFooterLegalLinks();
+        List<Footer.FooterNavItem> footerLegalLinks = footerModel.getFooterLegalLinks();
         assertNotNull(footerLegalLinks);
-        FooterModel.FooterNavItem footerNavItem = footerLegalLinks.get(0);
+        Footer.FooterNavItem footerNavItem = footerLegalLinks.get(0);
         assertEquals("Privacy Policy",footerNavItem.getLabel());
         assertEquals("/legal/privacy",footerNavItem.getPath());
         assertNull(footerNavItem.getIconPath());
@@ -88,7 +88,7 @@ public class FooterModelImplTest {
     @Test
     void testGetSocialNavigationLinksTitle(){
         context.currentResource("/content/footer-2");
-        footerModel= context.currentResource().adaptTo(FooterModel.class);
+        footerModel= context.currentResource().adaptTo(Footer.class);
         String socialNavigationlinksTitle = footerModel.getSocialNavigationlinksTitle();
         assertNotNull(socialNavigationlinksTitle);
         assertEquals("Contact Us",socialNavigationlinksTitle);
@@ -97,7 +97,7 @@ public class FooterModelImplTest {
     @Test
     void testCountOfFooterSiteNavigation(){
         context.currentResource("/content/footer-2");
-        footerModel= context.currentResource().adaptTo(FooterModel.class);
+        footerModel= context.currentResource().adaptTo(Footer.class);
         int size = footerModel.getFooterSiteNavigation().size();
         assertEquals(2,size);
 
@@ -105,7 +105,7 @@ public class FooterModelImplTest {
     @Test
     void testCountOfFooterSocialNavigation(){
         context.currentResource("/content/footer-2");
-        footerModel= context.currentResource().adaptTo(FooterModel.class);
+        footerModel= context.currentResource().adaptTo(Footer.class);
         int size = footerModel.getFooterSocialNavigation().size();
         assertEquals(1,size);
 
@@ -113,7 +113,7 @@ public class FooterModelImplTest {
     @Test
     void testCountOfFooterLegalLinks(){
         context.currentResource("/content/footer-2");
-        footerModel= context.currentResource().adaptTo(FooterModel.class);
+        footerModel= context.currentResource().adaptTo(Footer.class);
         int size = footerModel.getFooterLegalLinks().size();
         assertEquals(2,size);
 

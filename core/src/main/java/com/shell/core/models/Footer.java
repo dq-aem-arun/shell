@@ -6,7 +6,7 @@
 package com.shell.core.models;
 import java.util.List;
 
-public interface FooterModel{
+public interface Footer{
 
     List<FooterNavGroup> getFooterSiteNavigation();
 

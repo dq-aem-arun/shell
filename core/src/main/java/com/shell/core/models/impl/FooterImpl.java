@@ -6,7 +6,7 @@
  */
 package com.shell.core.models.impl;
 
-import com.shell.core.models.FooterModel;
+import com.shell.core.models.Footer;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -20,10 +20,10 @@ import java.util.Optional;
 
 @Model(
         adaptables = Resource.class,
-        adapters = FooterModel.class,
+        adapters = Footer.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
-public class FooterModelImpl implements FooterModel {
+public class FooterImpl implements Footer {
 
     @ChildResource(name = "groupNames")
     private List<Resource> footerGroups;
