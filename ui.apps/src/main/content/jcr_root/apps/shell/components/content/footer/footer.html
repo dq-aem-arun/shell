@@ -1,0 +1,39 @@
+<sly data-sly-use.footerModel="com.shell.core.models.Footer">
+<h1>Footer Component</h1>
+  <!-- Site Navigation -->
+  <div class="footer-site-navigation">
+    <div data-sly-list.group="${footerModel.footerSiteNavigation}">
+      <div class="footer-nav-group">
+        <h4>${group.groupName}</h4>
+        <ul data-sly-list.item="${group.items}">
+          <li>
+            <a href="${item.path}">${item.label}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Navigation -->
+  <div class="footer-social-navigation">
+    <h4>${footerModel.socialNavigationlinksTitle}</h4>  
+    <div data-sly-list.item="${footerModel.footerSocialNavigation}">
+      <div class="footer-social-item">
+        <a href="${item.path}">
+          <img src="${item.iconPath}" alt="${item.label}" height="30" width="10" />
+          <span>${item.label}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Links -->
+  <div class="footer-legal-links">
+    <ul data-sly-list.item="${footerModel.footerLegalLinks}">
+      <li>
+        <a href="${item.path}">${item.label}</a>
+      </li>
+    </ul>
+  </div>
+
+</sly>
