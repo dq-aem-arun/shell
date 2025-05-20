@@ -91,7 +91,7 @@ public class FooterModelImplTest {
         footerModel= context.currentResource().adaptTo(FooterModel.class);
         String socialNavigationlinksTitle = footerModel.getSocialNavigationlinksTitle();
         assertNotNull(socialNavigationlinksTitle);
-        assertEquals("Follow Us",socialNavigationlinksTitle);
+        assertEquals("Contact Us",socialNavigationlinksTitle);
     }
 
     @Test

@@ -9,8 +9,8 @@
             "path": "/home"
           },
           "item2": {
-            "label": "Contact",
-            "path": "/contact"
+            "label": "Contacts",
+            "path": "/contacts"
           }
         }
       }
@@ -82,6 +82,6 @@
         "path": "/legal/terms"
       }
     },
-    "socialNavigationlinksTitle": "Follow Us"
+    "socialNavigationlinksTitle": "Contact Us"
   }
 }
