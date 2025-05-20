@@ -58,5 +58,4 @@ class HeroBannerImplTest {
         assertSame(expected.intern(),actual.intern());
     }
 
-
 }
