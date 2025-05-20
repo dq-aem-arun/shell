@@ -7,6 +7,6 @@
         jcr:description="HeroBanner Component"
         jcr:primaryType="cq:Component"
         jcr:title="shell_hero_Banner"
-        componentGroup="Shell Components"
+        componentGroup="Shell"
         sling:resourceType="shell/components/content/shell-herobanner"
     />
