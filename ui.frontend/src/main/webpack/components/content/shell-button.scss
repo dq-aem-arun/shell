@@ -1,0 +1,166 @@
+.shell-button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.button-row {
+  flex-direction: row !important;
+}
+
+.button-column {
+  flex-direction: column !important;
+  align-items: flex-start; /* Or center, if you want horizontal centering */
+
+  .button-item {
+    width: auto;
+    margin:0;
+    padding: 0;
+  }
+
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.button-item {
+  margin: 0;
+
+  .button-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.80rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    .button-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// === Icon Position Variants ===
+.icon-start .button-link {
+  flex-direction: row;
+}
+
+.icon-end .button-link {
+  flex-direction: row-reverse;
+}
+
+// === Button Style Variants ===
+
+
+.shell-btn-link-1{
+ 
+  width: fit-content;
+  .button-link {
+    color:#FFFFFF;
+    font: 16px Arial, Roboto, helvetica, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  .button-text {
+   text-decoration-line: underline;
+  }
+}
+
+
+
+.shell-btn-link-2  {
+  width: fit-content;
+  .button-link {
+    background-color: transparent;
+    color: #4a4a4a;
+    font: 14px Arial, Roboto, helvetica, sans-serif;
+    font-weight: 300;
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff;
+    }
+  }
+}
+
+
+
+.shell-btn-primary {
+
+  width: fit-content;
+  .button-link {
+    width: auto;
+    height: auto;
+    background-color: #FFC800;
+    color: #4A4A4A;
+    padding: 10px 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+
+    &:hover {
+      background-color: #4A4A4A;
+      color: #FFC800;
+      border-radius: 5px;
+      border: 1px solid #FFC800;
+    }
+  }
+
+
+}
+
+
+
+.shell-btn-primary-transparent{
+
+  width: fit-content;
+  .button-link {
+    width: auto;
+    height: auto;
+    background-color: #FFC800;
+    color: #4A4A4A;
+    padding: 10px 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+
+    &:hover {
+      background-color:transparent;
+      color: #FFC800;
+      border-radius: 5px;
+      border: 1px solid #FFC800;
+    }
+  }
+}
+
+
+
+
+  .shell-btn-danger{
+
+    width: fit-content;
+    .button-link {
+      width: auto;
+      height: auto;
+      background-color:#B82E00;
+      color: #FFFFFF;
+      padding: 10px 12px;
+      font-weight: 500;
+      border-radius: 5px;
+      border: none;
+  
+      &:hover {
+        background-color:#FFFFFF;
+        color:#B82E00;
+        border-radius: 5px;
+        border: 1px #B82E00;
+      }
+    }
+  }
+
+
