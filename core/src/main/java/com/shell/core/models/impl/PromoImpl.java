@@ -11,6 +11,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 /**
+ * @author N.Chandrika
+ * @version 1.0
+ * @since 2025-05-21
  * Implementation of the {@link Promo} interface.
  * Represents a container model that holds a list of promotional banners.
  */
