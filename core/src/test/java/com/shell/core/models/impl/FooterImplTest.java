@@ -1,6 +1,8 @@
 package com.shell.core.models.impl;
 
 import com.shell.core.models.Footer;
+import com.shell.core.models.FooterNavItem;
+
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import org.junit.jupiter.api.BeforeEach;
