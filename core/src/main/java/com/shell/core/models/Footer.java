@@ -6,8 +6,6 @@
 package com.shell.core.models;
 import java.util.List;
 
-import com.shell.core.models.impl.FooterNavItem;
-
 public interface Footer{
 
     List<FooterNavGroup> getFooterSiteNavigation();
@@ -23,9 +21,4 @@ public interface Footer{
         List<FooterNavItem> getItems();
     }
 
-    // interface FooterNavItem {
-    //     String getLabel();
-    //     String getPath();
-    //     String getIconPath(); // for social only; null otherwise
-    // }
 }
