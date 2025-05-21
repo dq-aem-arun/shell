@@ -1,4 +1,4 @@
-package com.shell.core.models.Impl;
+package com.shell.core.models.impl;
 
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
