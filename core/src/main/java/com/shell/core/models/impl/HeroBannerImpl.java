@@ -9,8 +9,8 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 /**
  * @author Mohammad Shoaib
- * @version v1.o
- * @since 12-23-2025
+ * @version v1.0
+ * @since 20-05-2025
  * <p>
  * Implementation class for the HeroBanner Sling Model.
  * <p>
