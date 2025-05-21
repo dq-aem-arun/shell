@@ -34,9 +34,9 @@
                     jcr:title="Content Image"
                     sling:resourceType="wcm/core/components/policy/policy"
                     allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
-                    disableLazyLoading="false"
                     allowUpload="false"
                     altValueFromDAM="true"
+                    disableLazyLoading="false"
                     displayPopupTitle="true"
                     isDecorative="false"
                     jpegQuality="{Long}85"
@@ -237,10 +237,13 @@
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:lastModified="{Date}2025-05-19T15:28:22.604+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:shell - Content,/apps/shell/components/form/container]">
+                    components="[group:shell - Content,/apps/shell/components/form/container,group:Shell Components]"
+                    layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -339,6 +342,83 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>
+            <content jcr:primaryType="nt:unstructured">
+                <shell-button jcr:primaryType="nt:unstructured">
+                    <policy_1747648705393
+                        jcr:lastModified="{Date}2025-05-20T11:42:20.571+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="shell-button"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Icon-Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="icon-start"
+                                        cq:styleId="1747648759276"
+                                        cq:styleLabel="Icon-Start"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="icon-end"
+                                        cq:styleId="1747653321926"
+                                        cq:styleLabel="Icon-End"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Button-Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="button-row"
+                                        cq:styleId="1747716129586"
+                                        cq:styleLabel="Button-Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="button-column"
+                                        cq:styleId="1747716131284"
+                                        cq:styleLabel="button Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Button-Styles"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-btn-link -1"
+                                        cq:styleId="1747718063189"
+                                        cq:styleLabel="Button-Link-1"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="shell-btn-link-2"
+                                        cq:styleId="1747718070780"
+                                        cq:styleLabel="Button-Link-2"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="shell-btn-primary"
+                                        cq:styleId="1747721379244"
+                                        cq:styleLabel="Button-Primary"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="shell-btn-primary-transparent"
+                                        cq:styleId="1747721380025"
+                                        cq:styleLabel="Button-Primary-Transparent"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item4
+                                        cq:styleClasses="shell-btn-danger"
+                                        cq:styleId="1747721381409"
+                                        cq:styleLabel="Button-Danger"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                        </cq:styleGroups>
+                    </policy_1747648705393>
+                </shell-button>
+            </content>
         </components>
     </shell>
 </jcr:root>

@@ -1506,7 +1506,6 @@ Bundle-DocURL:
         <scope>test</scope>
                     
       </dependency>
-              
     </dependencies>
         
   </dependencyManagement>
