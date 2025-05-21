@@ -1,4 +1,4 @@
-package com.shell.core.models.Impl;
+package com.shell.core.models.impl;
 
 import com.shell.core.models.PlayStroreCard;
 import org.apache.sling.api.resource.Resource;
