@@ -43,7 +43,7 @@ public class FooterImpl implements Footer {
     private void init() {
         if (footerLegalLinksContainer != null) {
             for (Resource item : footerLegalLinksContainer.getChildren()) {
-                legalNavItems.add(new FooterNavItemImpl(item, false));
+                legalNavItems.add(new FooterNavItem(item, false));
             }
         }
     }
@@ -73,7 +73,7 @@ public class FooterImpl implements Footer {
         List<FooterNavItem> items = new ArrayList<>();
         if (resources != null) {
             for (Resource item : resources) {
-                items.add(new FooterNavItemImpl(item, includeIcon));
+                items.add(new FooterNavItem(item, includeIcon));
             }
         }
         return items;
@@ -102,7 +102,7 @@ public class FooterImpl implements Footer {
                     .orElse(new ArrayList<>());
             this.items = new ArrayList<>();
             for (Resource res : footerItems) {
-                items.add(new FooterNavItemImpl(res, false));
+                items.add(new FooterNavItem(res, false));
             }
         }
 
@@ -118,32 +118,7 @@ public class FooterImpl implements Footer {
         } 
     }
 
-    private static class FooterNavItemImpl implements FooterNavItem {
-        private final String label;
-        private final String path;
-        private final String iconPath;
-
-        FooterNavItemImpl(Resource resource, boolean includeIcon) {
-            this.label = resource.getValueMap().get("label", "");
-            this.path = resource.getValueMap().get("path", "");
-            this.iconPath = includeIcon ? resource.getValueMap().get("iconpath", "") : null;
-        }
-
-        @Override
-        public String getLabel() {
-            return label;
-        }
-
-        @Override
-        public String getPath() {
-            return path;
-        }
-
-        @Override
-        public String getIconPath() {
-            return iconPath;
-        }
-    }
+    
 
   
 }
