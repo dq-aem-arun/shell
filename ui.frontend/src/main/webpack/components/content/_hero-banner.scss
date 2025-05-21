@@ -1,81 +1,135 @@
 .cmp_hero-banner {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    border-radius: 18px;
-    overflow: hidden;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    flex-direction: row;
-    color: black;
-  }
-  
-  .cmp_hero-banner_img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-  }
-  
-  .cmp_hero-banner_text {
-    position: absolute;
-    top: 60px;
-    left: 44px;
-    width: 43%;
-    height: 63%;
-    color: black;
+  position: relative;
+  width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  overflow: hidden;
+}
+
+.cmp_hero-banner_image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* Text block */
+.cmp_hero-banner_text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 450px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cmp-herobanner-title {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.cmp_hero-banner_para {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.cmp_hero-banner_button {
+  padding: 10px 20px;
+  background: #d9001b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ✅ Mobile View */
+@media (max-width: 768px) {
+  .cmp_hero-banner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    box-sizing: border-box;
+  }
+
+  .cmp_hero-banner_image {
+    aspect-ratio: 3 / 2;
+    background-position: center;
+  }
+
+  .cmp_hero-banner_text {
+    position: static;
+    transform: none;
     background-color: #fff;
-    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 20px;
+    box-shadow: none;
+
   }
-  
+
+  .cmp-herobanner-title {
+    font-size: 1.5rem;
+  }
+
   .cmp_hero-banner_para {
-    font-size: 11px;
+    font-size: 0.95rem;
   }
-  .cmp-herobanner-title{
-    font-size: 23px;
-  }
-  
+
   .cmp_hero-banner_button {
-    padding: 10px 20px;
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%;
   }
-  
-  
-  @media screen and (max-width: 768px) {
-    .cmp_hero-banner_img {
-      border-radius: 10px 10px 0 0;
-    }
-    .cmp_hero-banner {
-      display: block; 
-    }
-  
-    .cmp_hero-banner_text {
-      position: static;
-      width: 100%;
-      height: auto;
-      padding: 0 20px 10px 20px;
-      background-color: #fff;
-      border-radius: 0 0 0 0 ;
-    }
-  
-    .cmp_hero-banner_para {
-      font-size: 12px;
-    }
-  
-    .cmp_hero-banner_button {
-      padding: 8px 16px;
-    }
-  }
+}
 
 
+/* Laptop (992px and above) */
+@media screen and (min-width: 992px) {
+  .cmp_hero-banner_text {
+    max-width: 22%;
+    /* Responsive width */
+
+    padding: 2rem;
+    left: 5%;
+    font-size: 1rem;
+  }
+
+  .cmp-herobanner-title {
+    font-size: clamp(1.75rem, 2vw, 2.25rem);
+    /* Scales with screen size */
+  }
+
+  .cmp_hero-banner_para {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+  }
+
+  .cmp_hero-banner_button {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+}
+
+/* Large laptop or 1440px+ */
+@media screen and (min-width: 1440px) {
+  .cmp_hero-banner_text {
+    height: 258px;
+    max-width: 20%;
+    padding: 2.5rem;
+    left: 8%;
+  }
+
+  .cmp_hero-banner_button {
+    font-size: 1.05rem;
+  }
+}
+
+/* --------- Dark Mode Support --------- */
+@media (prefers-color-scheme: dark) {
+  .cmp_hero-banner_text {
+    background-color: #121212;
+    color: #fff;
+  }
+}
