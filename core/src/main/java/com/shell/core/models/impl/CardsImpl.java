@@ -14,6 +14,10 @@ import java.util.List;
 /**
  * Sling Model implementation of the Cards interface.
  * Fetches the list of card items from the content repository.
+ *
+ * @author Saraswathi
+ * @version 1.0
+ * @since 2025-05-21
  */
 @Model(adaptables = Resource.class, adapters = Cards.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CardsImpl implements Cards {

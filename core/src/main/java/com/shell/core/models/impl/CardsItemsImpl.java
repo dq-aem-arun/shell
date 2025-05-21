@@ -11,6 +11,10 @@ import org.slf4j.LoggerFactory;
 /**
  * Sling Model implementation for a single Card item.
  * Maps and exposes properties like image, title, description, and showButton.
+ *
+ * @author Saraswathi
+ * @version 1.0
+ * @since 2025-05-21
  */
 @Model(adaptables = Resource.class, adapters = CardsItems.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CardsItemsImpl implements CardsItems {
