@@ -16,8 +16,12 @@ import static org.junit.jupiter.api.Assertions.*;
  * This test class ensures that the Sling Model correctly maps and returns
  * expected values from the JSON content resource.
  * </p>
+ *
+ * @author Mohammad Shoaib
+ * @version v1.o
+ * @since 12-23-2025
+ *
  */
-@Slf4j
 @ExtendWith(AemContextExtension.class)
 class HeroBannerImplTest {
 
@@ -32,7 +36,6 @@ class HeroBannerImplTest {
      */
     @BeforeEach
     void setUp() {
-        log.info("Loading all required Resources in setUp() method of HeroBannerImplTest");
         context.addModelsForClasses(HeroBanner.class);
         context.load().json("/heroBanner/herobanner.json", "/component");
     }
@@ -43,7 +46,6 @@ class HeroBannerImplTest {
      */
     @Test
     void getTitleTest() {
-        log.info("Testing title of HeroBanner component");
         context.currentResource("/component/container/shell_herobanner");
         HeroBanner heroBanner = context.currentResource().adaptTo(HeroBanner.class);
         assertNotNull(heroBanner, "HeroBanner model should not be null");
@@ -59,7 +61,6 @@ class HeroBannerImplTest {
      */
     @Test
     void getDetailsTest() {
-        log.info("Testing Details of HeroBanner component");
         context.currentResource("/component/container/shell_herobanner");
         HeroBanner heroBanner = context.currentResource().adaptTo(HeroBannerImpl.class);
         assertNotNull(heroBanner, "HeroBannerImpl model should not be null");
@@ -75,7 +76,6 @@ class HeroBannerImplTest {
      */
     @Test
     void getImageTest() {
-        log.info("Testing Image of HeroBanner component");
         context.currentResource("/component/container/shell_herobanner");
         HeroBannerImpl heroBanner = context.currentResource().adaptTo(HeroBannerImpl.class);
         assertNotNull(heroBanner, "HeroBannerImpl model should not be null");
