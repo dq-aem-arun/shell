@@ -18,6 +18,10 @@ import com.shell.core.models.ShellButtonItem;
  * Implementation of the ShellButton interface.
  * This class provides the logic for retrieving button data and checking if the
  * component is empty.
+ * 
+ * @author ManojKumar
+ * @version 1.0
+ * @since 19-05-2025
  */
 @Model(adaptables = Resource.class, adapters = ShellButton.class, resourceType = ShellButton.RESOURCE_TYPE, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ShellButtonImpl implements ShellButton {

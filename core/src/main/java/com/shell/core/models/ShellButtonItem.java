@@ -4,6 +4,10 @@ package com.shell.core.models;
  * Interface representing a single button item in the Shell Button component.
  * This interface defines the contract for retrieving button properties such as
  * text, link, and icon.
+ * 
+ * @author ManojKumar
+ * @version 1.0
+ * @since 19-05-2025
  */
 public interface ShellButtonItem {
 

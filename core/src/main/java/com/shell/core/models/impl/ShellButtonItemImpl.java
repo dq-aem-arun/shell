@@ -10,6 +10,10 @@ import com.shell.core.models.ShellButtonItem;
 /**
  * Implementation of the ShellButtonItem interface.
  * Represents a single button item with properties such as text, link, and icon.
+ * 
+ * @author ManojKumar
+ * @version 1.0
+ * @since 19-05-2025
  */
 public class ShellButtonItemImpl implements ShellButtonItem {
 
