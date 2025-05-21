@@ -5,18 +5,38 @@ import com.shell.core.models.Promo;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
-import java.util.List;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.util.List;
+/**
+ * Implementation of the {@link Promo} interface.
+ * Represents a container model that holds a list of promotional banners.
+ */
 @Model(adaptables = Resource.class, adapters = Promo.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class PromoImpl implements Promo {
 
-    // Injecting the child resources under the "promobanner" node
+    private static final Logger LOG = LoggerFactory.getLogger(PromoImpl.class);
+
+    /**
+     * List of promotional banner child resources under the "promobanner" node.
+     */
     @ChildResource(name = "promobanner")
     private List<Promobanner> promobanner;
 
-
+    /**
+     * Gets the list of promotional banner items.
+     *
+     * @return list of {@link Promobanner} instances.
+     */
+    @Override
     public List<Promobanner> getPromoBanner() {
+        if (promobanner != null) {
+            LOG.debug("Retrieved {} promo banners.", promobanner.size());
+        } else {
+            LOG.warn("No promo banners found.");
+        }
         return promobanner;
     }
 }
