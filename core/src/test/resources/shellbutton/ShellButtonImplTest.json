@@ -1,0 +1,21 @@
+{
+    "shell-buttons": {
+        "buttons": {
+            "btn-1":{
+                "buttonText": "Button 1",
+                "buttonLink": "shell/us/en/home-page-1",
+                "icon": "content/shell/images/icons/icon-1.png"
+            },
+            "btn-2":{
+                "buttonText": "Button 2",
+                "buttonLink": "shell/us/en/home-page-2",
+                "icon": "content/shell/images/icons/icon-2.png"
+            }
+        }
+    },
+"shell-buttonsEmpty": {
+       
+    }
+
+
+}
