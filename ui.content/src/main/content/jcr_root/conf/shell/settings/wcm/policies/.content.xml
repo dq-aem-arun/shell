@@ -237,12 +237,12 @@
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2025-05-19T15:28:22.604+05:30"
+                    jcr:lastModified="{Date}2025-05-20T17:01:17.374+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:shell - Content,/apps/shell/components/form/container,group:Shell Components]"
+                    components="[group:Shell,group:shell - Content,/apps/shell/components/form/container]"
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
@@ -345,7 +345,7 @@
             <content jcr:primaryType="nt:unstructured">
                 <shell-button jcr:primaryType="nt:unstructured">
                     <policy_1747648705393
-                        jcr:lastModified="{Date}2025-05-20T11:42:20.571+05:30"
+                        jcr:lastModified="{Date}2025-05-20T15:38:24.314+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="shell-button"
@@ -389,7 +389,7 @@
                                 jcr:primaryType="nt:unstructured">
                                 <cq:styles jcr:primaryType="nt:unstructured">
                                     <item0
-                                        cq:styleClasses="shell-btn-link -1"
+                                        cq:styleClasses="shell-btn-link-1"
                                         cq:styleId="1747718063189"
                                         cq:styleLabel="Button-Link-1"
                                         jcr:primaryType="nt:unstructured"/>
