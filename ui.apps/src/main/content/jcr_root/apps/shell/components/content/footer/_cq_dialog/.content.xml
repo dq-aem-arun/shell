@@ -38,6 +38,7 @@
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldLabel="Navigation Group Name"
+                                            fieldDescription="Enter the title of the navigation group"
                                             name="group" />
                                         <navItems
                                             jcr:primaryType="nt:unstructured"
