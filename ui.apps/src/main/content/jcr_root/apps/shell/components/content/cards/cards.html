@@ -1,16 +1,15 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"/>
 <sly data-sly-use.model="com.shell.core.models.Cards"/>
-<sly data-sly-list.card="${model.cards}">
-    <ul>
-        <li>
-            <sly data-sly-test="${card.fileReference}">
-                <img src="${card.fileReference}">
+<section class="shell-card-section">
+    <sly data-sly-list.card="${model.cards}">
+        <div class="shell-card ${style.cssClass}">
+            <img src="${card.fileReference}" alt="${card.title}" class="card-image"/>
+            <div class="card-content ${style.cssClass}">
+                <h3 data-sly-test="${card.title}" class="card-title">${card.title @ context='html'}</h3>
+                <p data-sly-test="${card.description}" class="card-description">${card.description @ context='html'}</p>
+            </div>
+           <sly data-sly-resource="${'btn' @ resourceType='core/wcm/components/button/v1/button'}"></sly>
             </sly>
-            <h5 data-sly-test="${card.title}">${card.title @ context='html'}</h5>
-            <p data-sly-test="${card.description}">${card.description @ context='html'}</p>
-            <sly data-sly-test="${card.showButton}">
-                <sly data-sly-resource="${'btn' @ resourceType='core/wcm/components/button/v1/button'}"></sly>
-            </sly>
-        </li>
-    </ul>
-</sly>
-
+        </div>
+    </sly>
+</section>
