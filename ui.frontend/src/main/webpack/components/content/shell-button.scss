@@ -1,4 +1,4 @@
-.shell-button {
+.button-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -6,18 +6,16 @@
   list-style: none;
 }
 
-.button-row {
+ .button-row .button-container{
   flex-direction: row !important;
 }
 
-.button-column {
+ .button-column .button-container{
   flex-direction: column !important;
   align-items: flex-start; /* Or center, if you want horizontal centering */
 
   .button-item {
     width: auto;
-    margin:0;
-    padding: 0;
   }
 
   .button-link {
@@ -32,7 +30,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.80rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -55,13 +53,10 @@
 }
 
 // === Button Style Variants ===
-
-
-.shell-btn-link-1{
- 
+.shell-btn-link-1 .button-item{
   width: fit-content;
   .button-link {
-    color:#FFFFFF;
+    color: #ffffff;
     font: 16px Arial, Roboto, helvetica, sans-serif;
     font-weight: 700;
     margin: 0;
@@ -69,13 +64,11 @@
   }
 
   .button-text {
-   text-decoration-line: underline;
+    text-decoration-line: underline;
   }
 }
 
-
-
-.shell-btn-link-2  {
+.shell-btn-link-2 .button-item{
   width: fit-content;
   .button-link {
     background-color: transparent;
@@ -88,79 +81,65 @@
   }
 }
 
-
-
-.shell-btn-primary {
-
+.shell-btn-primary .button-item{
   width: fit-content;
   .button-link {
     width: auto;
     height: auto;
-    background-color: #FFC800;
-    color: #4A4A4A;
+    background-color: #ffc800;
+    color: #4a4a4a;
     padding: 10px 12px;
     font-weight: 500;
     border-radius: 5px;
     border: none;
 
     &:hover {
-      background-color: #4A4A4A;
-      color: #FFC800;
+      background-color: #4a4a4a;
+      color: #ffc800;
       border-radius: 5px;
-      border: 1px solid #FFC800;
+      border: 1px solid #ffc800;
     }
   }
-
-
 }
 
-
-
-.shell-btn-primary-transparent{
-
+.shell-btn-primary-transparent .button-item{
   width: fit-content;
   .button-link {
     width: auto;
     height: auto;
-    background-color: #FFC800;
-    color: #4A4A4A;
+    background-color: #ffc800;
+    color: #4a4a4a;
     padding: 10px 12px;
     font-weight: 500;
     border-radius: 5px;
     border: none;
 
     &:hover {
-      background-color:transparent;
-      color: #FFC800;
+      background-color: transparent;
+      color: #ffc800;
       border-radius: 5px;
-      border: 1px solid #FFC800;
+      border: 1px solid #ffc800;
     }
   }
 }
 
+.shell-btn-danger .button-item{
+  width: fit-content;
+  .button-link {
+    width: auto;
+    height: auto;
+    background-color: #b82e00;
+    color: #ffffff;
+    padding: 10px 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
 
-
-
-  .shell-btn-danger{
-
-    width: fit-content;
-    .button-link {
-      width: auto;
-      height: auto;
-      background-color:#B82E00;
-      color: #FFFFFF;
-      padding: 10px 12px;
-      font-weight: 500;
+    &:hover {
+      background-color: #ffffff;
+      color: #b82e00;
       border-radius: 5px;
-      border: none;
-  
-      &:hover {
-        background-color:#FFFFFF;
-        color:#B82E00;
-        border-radius: 5px;
-        border: 1px #B82E00;
-      }
+      border: 1px #b82e00;
     }
   }
-
-
+}
