@@ -1,0 +1,16 @@
+<sly data-sly-use.model="com.shell.core.models.Cards"/>
+<sly data-sly-list.card="${model.cards}">
+    <ul>
+        <li>
+            <sly data-sly-test="${card.fileReference}">
+                <img src="${card.fileReference}">
+            </sly>
+            <h5 data-sly-test="${card.title}">${card.title @ context='html'}</h5>
+            <p data-sly-test="${card.description}">${card.description @ context='html'}</p>
+            <sly data-sly-test="${card.showButton}">
+                <sly data-sly-resource="${'btn' @ resourceType='core/wcm/components/button/v1/button'}"></sly>
+            </sly>
+        </li>
+    </ul>
+</sly>
+
