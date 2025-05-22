@@ -1,23 +1,19 @@
 .playstore-card {
-    background-color: #000000;
     padding: 20px;
-    max-width: 600px;
-    color: #E0E0E0;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .playstore-card__title {
     font-size: 24px;
     font-weight: 700;
-    color: #E0E0E0;
     margin-bottom: 20px;
 }
 
 .playstore-card__description {
     font-size: 14px;
-    color: #ffffff;
     margin-bottom: 8px;
     text-align: inherit;
+    max-width:600px;
 }
 
 .playstore-card__badges {
@@ -53,14 +49,14 @@
 
 .center {
     align-items: center;
-    text-align: center;
+    text-align: left;
     margin-left: 0;
     margin-right: auto;
 }
 
 .right {
     align-items: flex-end;
-    text-align: right;
+    text-align: left;
     margin-left: 0;
     margin-right: auto;
 }
@@ -71,11 +67,11 @@
 }
 
 .center .playstore-card__badges {
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .right .playstore-card__badges {
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 /* Responsiveness */
@@ -95,7 +91,7 @@
 
 @media (max-width: 480px) {
   .playstore-card {
-    padding: 15px;
+    display: inline;
   }
 
   .playstore-card__title {
@@ -109,4 +105,11 @@
   .playstore-card__badge {
     max-height: 40px;
   }
+  /* --------- Dark Mode Support --------- */
+    @media (prefers-color-scheme: dark) {
+      .shell-card-section-stacked {
+        background-color: #121212;
+        color:#FFFFFF
+      }
+    }
 }
