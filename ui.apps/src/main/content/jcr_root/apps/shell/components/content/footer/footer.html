@@ -1,39 +1,67 @@
-<sly data-sly-use.footerModel="com.shell.core.models.Footer">
-<h1>Footer Component</h1>
-  <!-- Site Navigation -->
-  <div class="footer-site-navigation">
-    <div data-sly-list.group="${footerModel.footerSiteNavigation}">
-      <div class="footer-nav-group">
-        <h4>${group.groupName}</h4>
-        <ul data-sly-list.item="${group.items}">
+<sly
+  data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"/>
+<sly
+  data-sly-use.footerModel="com.shell.core.models.Footer"
+  data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+  data-sly-test.hasContent="${!footerModel.empty}">
+  <footer class="cmp-footer">
+    <div class="cmp-footer-container">
+      <!-- Top Footer Section -->
+      <div class="cmp-footer-sections">
+        <sly data-sly-list.group="${footerModel.footerSiteNavigation}">
+          <div class="cmp-footer-section">
+            <h4>${group.groupName}</h4>
+            <sly data-sly-list.item="${group.items}">
+              <ul>
+                <li>
+                  <a href="${item.path}.html" ><span>${item.label}</span></a>
+                </li>
+              </ul>
+            </sly>
+          </div>
+        </sly>
+        <!--/* Footer icons */-->
+        <div class="cmp-footer-section">
+          <h4>${footerModel.socialNavigationlinksTitle}</h4>
+          <sly data-sly-list.item="${footerModel.footerSocialNavigation}">
+            <ul>
+              <li>
+                <a href="${item.path}.html" target="_blank">
+                  <img
+                    src="${item.iconPath}"
+                    alt="${item.label}"
+                    class="cmp-footer-icon-left-img"/>
+                  <span>${item.label}</span>
+                  <img
+                    src="${properties.iconpathRight}"
+                    alt="${properties.label}"
+                    class="cmp-footer-icon-right-img"/>
+                </a>
+              </li>
+            </ul>
+          </sly>
+        </div>
+      </div>
+      <!-- Bottom Footer Section -->
+      <div class="cmp-footer-bottom">
+        <ul class="cmp-footer-left">
+          <sly data-sly-list.item="${footerModel.footerLegalLinks}">
+            <li>
+              <a href="${item.path}.html"><span>${item.label}</span></a>
+            </li>
+          </sly>
+        </ul>
+        <ul class="cmp-footer-right">
           <li>
-            <a href="${item.path}">${item.label}</a>
+            <a href="${properties.pathRight}.html">
+              <span>${properties.labelRight}</span>
+            </a>
           </li>
         </ul>
       </div>
     </div>
-  </div>
-
-  <!-- Social Navigation -->
-  <div class="footer-social-navigation">
-    <h4>${footerModel.socialNavigationlinksTitle}</h4>  
-    <div data-sly-list.item="${footerModel.footerSocialNavigation}">
-      <div class="footer-social-item">
-        <a href="${item.path}">
-          <img src="${item.iconPath}" alt="${item.label}" height="30" width="10" />
-          <span>${item.label}</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Legal Links -->
-  <div class="footer-legal-links">
-    <ul data-sly-list.item="${footerModel.footerLegalLinks}">
-      <li>
-        <a href="${item.path}">${item.label}</a>
-      </li>
-    </ul>
-  </div>
-
+  </footer>
+</sly>
+<sly
+  data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}">
 </sly>
