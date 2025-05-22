@@ -1,7 +1,6 @@
 package com.shell.core.models.impl;
 
 import com.shell.core.models.HeroBanner;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -31,7 +30,6 @@ import org.slf4j.LoggerFactory;
         resourceType = HeroBanner.RESOURCE_TYPE,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
-@Slf4j
 public class HeroBannerImpl implements HeroBanner {
     private static final Logger log = LoggerFactory.getLogger(HeroBannerImpl.class);
 
