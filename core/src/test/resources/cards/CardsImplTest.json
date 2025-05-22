@@ -1,0 +1,38 @@
+{
+  "cardsList": {
+    "cards": {
+      "item0": {
+        "title": "AEM",
+        "fileReference": "/content/dam/shell/image1.jpg",
+        "description": "hello",
+        "showButton": true
+      },
+      "item1": {
+        "fileReference": "/content/dam/shell/image2.jpg",
+        "title": "Hello",
+        "description": "welcome",
+        "showButton": true
+      }
+    }
+  },
+  "cardsList2": {
+    "cards": {
+      "item0": {
+        "title": "Adobe",
+        "description": "",
+        "fileReference": "/content/dam/shell/image3.jpg",
+        "showButton": true
+      }
+    }
+  },
+  "cardsListWithMissingFields": {
+    "cards": {
+      "item0": {
+        "title": null,
+        "description": null,
+        "fileReference": null,
+        "showButton": false
+      }
+    }
+  }
+}

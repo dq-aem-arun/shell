@@ -6,6 +6,8 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Mohammad Shoaib
@@ -31,6 +33,7 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 )
 @Slf4j
 public class HeroBannerImpl implements HeroBanner {
+    private static final Logger log = LoggerFactory.getLogger(HeroBannerImpl.class);
 
     /**
      * The title text for the Hero Banner.
