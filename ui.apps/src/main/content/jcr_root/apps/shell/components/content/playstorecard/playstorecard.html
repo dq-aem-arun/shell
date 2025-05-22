@@ -1,1 +1,22 @@
-Hello from play store card
+
+<div class="playstore-card" data-sly-use.card="com.shell.core.models.PlayStroreCard">
+    <!-- Title -->
+    <h2 class="playstore-card__title" data-sly-test="${card.titlefield}">
+        ${card.titlefield}
+    </h2>
+
+    <!-- Description -->
+    <div class="playstore-card__description" data-sly-test="${card.description}">
+        <p>${card.description @ context='html'}</p>
+    </div>
+
+    <!-- App Store Links -->
+    <div class="playstore-card__badges" data-sly-test="${card.firstImageReference || card.secondImageReference}">
+        <a href="${card.linkURL}" class="playstore-card__badge-link" data-sly-test="${card.firstImageReference}">
+            <img src="${card.firstImageReference}" alt="Google Play" class="playstore-card__badge"/>
+        </a>
+        <a href="${card.linkURL}" class="playstore-card__badge-link" data-sly-test="${card.secondImageReference}">
+            <img src="${card.secondImageReference}" alt="App Store" class="playstore-card__badge"/>
+        </a>
+    </div>
+</div>
