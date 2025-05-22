@@ -14,7 +14,7 @@
             <sly data-sly-list.item="${group.items}">
               <ul>
                 <li>
-                  <a href="${item.path}"><span>${item.label}</span></a>
+                  <a href="${item.path}.html" ><span>${item.label}</span></a>
                 </li>
               </ul>
             </sly>
@@ -26,7 +26,7 @@
           <sly data-sly-list.item="${footerModel.footerSocialNavigation}">
             <ul>
               <li>
-                <a href="${item.path}">
+                <a href="${item.path}.html" target="_blank">
                   <img
                     src="${item.iconPath}"
                     alt="${item.label}"
@@ -47,13 +47,13 @@
         <ul class="cmp-footer-left">
           <sly data-sly-list.item="${footerModel.footerLegalLinks}">
             <li>
-              <a href="${item.path}"><span>${item.label}</span></a>
+              <a href="${item.path}.html"><span>${item.label}</span></a>
             </li>
           </sly>
         </ul>
         <ul class="cmp-footer-right">
           <li>
-            <a href="${properties.pathRight}">
+            <a href="${properties.pathRight}.html">
               <span>${properties.labelRight}</span>
             </a>
           </li>
@@ -63,5 +63,5 @@
   </footer>
 </sly>
 <sly
-  data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"
-></sly>
+  data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}">
+</sly>
