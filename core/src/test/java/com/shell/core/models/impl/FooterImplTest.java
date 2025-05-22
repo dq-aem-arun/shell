@@ -2,17 +2,18 @@ package com.shell.core.models.impl;
 
 import com.shell.core.models.Footer;
 import com.shell.core.models.FooterNavItem;
-
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
-
+/*
+ * @author Jay
+ * @version v1.0.0
+ * @since 19-05-2025
+ */
 @ExtendWith(AemContextExtension.class)
 public class FooterImplTest {
 
@@ -92,7 +93,7 @@ public class FooterImplTest {
         assertNotNull(socialNavigationlinksTitle);
         assertEquals("Contact Us", socialNavigationlinksTitle);
     }
-
+    // Test for Footer Legal Links Size
     @Test
     void testCountOfFooterSiteNavigation() {
         context.currentResource("/content/footer-2");
@@ -101,7 +102,7 @@ public class FooterImplTest {
         assertEquals(2, size);
 
     }
-
+    // Test for Footer Social Navigation
     @Test
     void testCountOfFooterSocialNavigation() {
         context.currentResource("/content/footer-2");
@@ -110,7 +111,7 @@ public class FooterImplTest {
         assertEquals(1, size);
 
     }
-
+    // Test for Footer Legal Links multifield Bottom part of footer
     @Test
     void testCountOfFooterLegalLinks() {
         context.currentResource("/content/footer-2");
@@ -118,5 +119,14 @@ public class FooterImplTest {
         int size = footerModel.getFooterLegalLinks().size();
         assertEquals(2, size);
 
+    }
+    //test for isFooterEmpty method
+    @Test
+    void testFooterSiteNavigationWhenEmpty() {
+        context.currentResource("/content/footer-3");
+        footerModel = context.currentResource().adaptTo(Footer.class);
+        List<Footer.FooterNavGroup> groups = footerModel.getFooterSiteNavigation();
+        assertNotNull(groups);
+        assertTrue(groups.isEmpty(), "Expected no footer nav groups");
     }
 }

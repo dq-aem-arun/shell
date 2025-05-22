@@ -1,7 +1,15 @@
-/*
- * Author : Jay
- * Created Date:19-05-2025
- * Version: v1.0.0
+/**
+ * Implementation of the {@link Footer} Sling Model for the Shell Footer component.
+ * This model adapts from a {@link Resource} and provides access to
+ * grouped footer links, social navigation items, and legal navigation links.
+ *
+ * <br/>
+ * The model is registered for the resource type {@code shell/components/content/footer}.
+ *
+ * @author Jay  
+ * @Version: v1.0.0
+ * @since: 19-05-2025   
+ * 
  */
 package com.shell.core.models.impl;
 
@@ -14,17 +22,12 @@ import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Model(
-        adaptables = Resource.class,
-        adapters = Footer.class,
-        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
-)
+@Model(adaptables = Resource.class, adapters = Footer.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class FooterImpl implements Footer {
 
     private static final Logger LOG = LoggerFactory.getLogger(FooterImpl.class);
@@ -43,6 +46,10 @@ public class FooterImpl implements Footer {
 
     private List<FooterNavItem> legalNavItems = new ArrayList<>();
 
+    /**
+     * Initializes the Footer model after construction.
+     * Populates the legal navigation items if the resource is available.
+     */
     @PostConstruct
     private void init() {
         LOG.debug("Initializing FooterImpl...");
@@ -57,6 +64,24 @@ public class FooterImpl implements Footer {
         }
     }
 
+    /**
+     * Checks if all footer sections (site navigation, social, legal) are empty or
+     * null.
+     *
+     * @return true if all sections are empty or null
+     */
+    @Override
+    public boolean isEmpty() {
+        return (getFooterSiteNavigation() == null || getFooterSiteNavigation().isEmpty()) &&
+                (getFooterSocialNavigation() == null || getFooterSocialNavigation().isEmpty()) &&
+                (getFooterLegalLinks() == null || getFooterLegalLinks().isEmpty());
+    }
+
+    /**
+     * Returns the list of grouped footer site navigation links.
+     *
+     * @return list of {@link FooterNavGroup}
+     */
     @Override
     public List<FooterNavGroup> getFooterSiteNavigation() {
         LOG.debug("Fetching footer site navigation groups...");
@@ -72,18 +97,35 @@ public class FooterImpl implements Footer {
         return groups;
     }
 
+    /**
+     * Returns the list of social media footer navigation items.
+     *
+     * @return list of {@link FooterNavItem}
+     */
     @Override
     public List<FooterNavItem> getFooterSocialNavigation() {
         LOG.debug("Fetching footer social navigation items...");
         return buildNavItemList(socialNavItems, true);
     }
 
+    /**
+     * Returns the list of legal footer navigation links.
+     *
+     * @return list of {@link FooterNavItem}
+     */
     @Override
     public List<FooterNavItem> getFooterLegalLinks() {
         LOG.debug("Returning legal navigation items count: {}", legalNavItems.size());
         return legalNavItems;
     }
 
+    /**
+     * Utility method to convert resources to {@link FooterNavItem}.
+     *
+     * @param resources   list of resource items
+     * @param includeIcon whether icon should be included
+     * @return list of {@link FooterNavItem}
+     */
     private List<FooterNavItem> buildNavItemList(List<Resource> resources, boolean includeIcon) {
         List<FooterNavItem> items = new ArrayList<>();
         if (resources != null) {
@@ -97,19 +139,31 @@ public class FooterImpl implements Footer {
         return items;
     }
 
+    /**
+     * Returns the title displayed above the social navigation links.
+     *
+     * @return social navigation title as {@link String}
+     */
     @Override
     public String getSocialNavigationlinksTitle() {
         LOG.debug("Returning social navigation title: {}", socialNavigationlinksTitle);
         return socialNavigationlinksTitle;
     }
 
-    // --- Inner classes ---
+    /**
+     * Inner class representing a group of footer navigation items.
+     */
     private static class FooterNavGroupImpl implements FooterNavGroup {
         private final String groupName;
         private final List<FooterNavItem> items;
 
         private static final Logger LOG = LoggerFactory.getLogger(FooterNavGroupImpl.class);
 
+        /**
+         * Constructs the navigation group from a given resource.
+         *
+         * @param resource the resource containing group name and items
+         */
         FooterNavGroupImpl(Resource resource) {
             this.groupName = resource.getValueMap().get("group", "");
             LOG.debug("Initializing FooterNavGroupImpl with group name: {}", groupName);
@@ -130,15 +184,24 @@ public class FooterImpl implements Footer {
             }
         }
 
+        /**
+         * Returns the name of the footer group.
+         *
+         * @return group name as {@link String}
+         */
         @Override
         public String getGroupName() {
             return groupName;
         }
 
+        /**
+         * Returns the list of items in the footer group.
+         *
+         * @return list of {@link FooterNavItem}
+         */
         @Override
         public List<FooterNavItem> getItems() {
             return items;
         }
     }
-
 }
