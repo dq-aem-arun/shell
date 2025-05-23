@@ -2,6 +2,7 @@
   "titlefield": "Download Our App",
   "description": "Get it from Google Play or App Store",
   "firstImageReference": "/content/dam/images/google-play-badge.png",
+  "firstImageLinkURL": "https://example.com",
   "secondImageReference": "/content/dam/images/app-store-badge.png",
-  "LinkURL": "https://example.com"
+  "secondImageLinkURL": "https://example.com"
 }
