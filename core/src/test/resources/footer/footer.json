@@ -42,12 +42,10 @@
           "item1": {
             "label": "Home",
             "path": "/home"
-
           },
           "item2": {
             "label": "Contact",
             "path": "/contact"
-
           }
         }
       },
@@ -83,5 +81,11 @@
       }
     },
     "socialNavigationlinksTitle": "Contact Us"
+  },
+  "footer-3": {
+    "groupNames": {},
+    "footerItemsSocial": {},
+    "footerItemsLegalLinks": {},
+    "socialNavigationlinksTitle": ""
   }
 }

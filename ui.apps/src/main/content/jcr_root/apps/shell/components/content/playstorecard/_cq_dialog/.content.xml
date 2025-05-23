@@ -14,73 +14,93 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <titlefield
+                    <column
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Title"
-                            name="./titlefield"
-                            required="{Boolean}true"/>
-                    <description
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                            fieldLabel="Description"
-                            name="./description"
-                            useFixedInlineToolbar="{Boolean}true">
-                        <uiSettings jcr:primaryType="nt:unstructured">
-                            <cui jcr:primaryType="nt:unstructured">
-                                <inline
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <titlefield
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Title"
+                                    name="./titlefield"
+                                    required="{Boolean}true"/>
+                            <description
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                    fieldLabel="Description"
+                                    name="./description"
+                                    useFixedInlineToolbar="{Boolean}true">
+                                <uiSettings jcr:primaryType="nt:unstructured">
+                                    <cui jcr:primaryType="nt:unstructured">
+                                        <inline
+                                                jcr:primaryType="nt:unstructured"
+                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
+                                            <popovers jcr:primaryType="nt:unstructured">
+                                                <justify
+                                                        jcr:primaryType="nt:unstructured"
+                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+                                                        ref="justify"/>
+                                                <lists
+                                                        jcr:primaryType="nt:unstructured"
+                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                        ref="lists"/>
+                                                <paraformat
+                                                        jcr:primaryType="nt:unstructured"
+                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                        ref="paraformat"/>
+                                            </popovers>
+                                        </inline>
+                                        <tableEditOptions
+                                                jcr:primaryType="nt:unstructured"
+                                                toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+                                    </cui>
+                                </uiSettings>
+                            </description>
+                            <firstImageReference
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                    class="cq-droptarget"
+                                    fieldLabel="firstImageReference"
+                                    fileNameParameter="./fileName"
+                                    fileReferenceParameter="./firstImageReference"
+                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                    name="./file"/>
+                            <firstImageLinkURL
+                                    granite:class="cmp-title-link-url"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                    fieldDescription="Links the title. Path to a content page, external URL or page anchor."
+                                    fieldLabel="firstImageLinkURL"
+                                    name="./firstImageLinkURL"
+                                    rootPath="/content">
+                                <granite:rendercondition
                                         jcr:primaryType="nt:unstructured"
-                                        toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat]">
-                                    <popovers jcr:primaryType="nt:unstructured">
-                                        <justify
-                                                jcr:primaryType="nt:unstructured"
-                                                items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
-                                                ref="justify"/>
-                                        <lists
-                                                jcr:primaryType="nt:unstructured"
-                                                items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
-                                                ref="lists"/>
-                                        <paraformat
-                                                jcr:primaryType="nt:unstructured"
-                                                items="paraformat:getFormats:paraformat-pulldown"
-                                                ref="paraformat"/>
-                                    </popovers>
-                                </inline>
-                                <tableEditOptions
+                                        sling:resourceType="granite/ui/components/foundation/renderconditions/simple"
+                                        expression="${!cqDesign.linkDisabled}"/>
+                            </firstImageLinkURL>
+                            <secondImageReference
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                    class="cq-droptarget"
+                                    fileNameParameter="./fileName"
+                                    fileReferenceParameter="./secondImageReference"
+                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                    name="./file"/>
+                            <secondImageLinkURL
+                                    granite:class="cmp-title-link-url"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                                    fieldDescription="Links the title. Path to a content page, external URL or page anchor."
+                                    fieldLabel="secondImageLinkURL"
+                                    name="./secondImageLinkURL"
+                                    rootPath="/content">
+                                <granite:rendercondition
                                         jcr:primaryType="nt:unstructured"
-                                        toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
-                            </cui>
-                        </uiSettings>
-                    </description>
-                    <firstImageReference
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                            class="cq-droptarget"
-                            fileNameParameter="./fileName"
-                            fileReferenceParameter="./firstImageReference"
-                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                            name="./file"/>
-                    <secondImageReference
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                            class="cq-droptarget"
-                            fileNameParameter="./fileName"
-                            fileReferenceParameter="./secondImageReference"
-                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                            name="./file"/>
-                    <LinkURL
-                            granite:class="cmp-title-link-url"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/coral/common/form/pagefield"
-                            fieldDescription="Links the title. Path to a content page, external URL or page anchor."
-                            fieldLabel="buttonLink"
-                            name="./LinkURL"
-                            rootPath="/content">
-                        <granite:rendercondition
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/renderconditions/simple"
-                                expression="${!cqDesign.linkDisabled}"/>
-                    </LinkURL>
+                                        sling:resourceType="granite/ui/components/foundation/renderconditions/simple"
+                                        expression="${!cqDesign.linkDisabled}"/>
+                            </secondImageLinkURL>
+                        </items>
+                    </column>
                 </items>
             </column>
         </items>

@@ -2,43 +2,50 @@ package com.shell.core.models;
 
 /**
  * Interface representing the PlayStoreCard component model.
- * Provides access to configured properties such as title, description,
- * app store image references, and link URL.
+ * Provides access to configured properties such as the title, description,
+ * image references for Google Play and App Store badges, and their respective link URLs.
  */
 public interface PlayStroreCard {
 
     /**
-     * Gets the title text to be displayed in the card.
+     * Returns the title text to be displayed on the card.
      *
-     * @return title as a String
+     * @return the title as a {@link String}
      */
     String getTitlefield();
 
     /**
-     * Gets the description text to be displayed in the card.
+     * Returns the description text to be displayed on the card.
      *
-     * @return description as a String
+     * @return the description as a {@link String}
      */
     String getDescription();
 
     /**
-     * Gets the image path for the Google Play badge.
+     * Returns the image path or reference for the App Store badge.
      *
-     * @return Google Play image path as a String
+     * @return the App Store image path as a {@link String}
      */
     String getFirstImageReference();
 
     /**
-     * Gets the image path for the App Store badge.
+     * Returns the hyperlink URL for the Google Play badge.
      *
-     * @return App Store image path as a String
+     * @return the Google Play badge URL as a {@link String}
+     */
+    String getFirstImageLinkURL();
+
+    /**
+     * Returns the image path or reference for the App Store badge.
+     *
+     * @return the App Store image path as a {@link String}
      */
     String getSecondImageReference();
 
     /**
-     * Gets the hyperlink URL for the download action.
+     * Returns the hyperlink URL for the App Store badge.
      *
-     * @return link URL as a String
+     * @return the App Store badge URL as a {@link String}
      */
-    String getLinkURL();
+    String getSecondImageLinkURL();
 }
