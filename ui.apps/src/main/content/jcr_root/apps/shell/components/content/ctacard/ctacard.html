@@ -1,0 +1,9 @@
+<h1>hello</h1>
+<sly data-sly-use.model="com.shell.core.models.CTACard"/>
+<ul data-sly-list.ctacards="${model.ctaCards}">
+    <li>
+        <img src="${ctacards.iconReference}">
+        <h3 class="ctacard-title">${ctacards.title}</h3>
+    </li>
+</ul>
+
