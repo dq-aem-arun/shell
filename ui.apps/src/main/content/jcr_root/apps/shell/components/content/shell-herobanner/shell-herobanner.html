@@ -1,10 +1,10 @@
 <sly data-sly-use.model="com.shell.core.models.HeroBanner">
-    <div class="cmp_hero-banner">
+    <div class="cmp_hero-banner ${cq.styleClasses}">
         <img src="${model.image}" alt="Random Image" class="cmp_hero-banner_img" />
         <div class="cmp_hero-banner_text">
             <h1 class="cmp-herobanner-title">${model.title}</h1>
             <p class="cmp_hero-banner_para">${model.details}</p>
-            <button class="cmp_hero-banner_button"> Download the app now</button>
+            <div class="cmp_hero-banner_button" data-sly-resource="${'myButton' @ resourceType='core/wcm/components/button/v1/button'}"></div>
         </div>
     </div>
 </sly>

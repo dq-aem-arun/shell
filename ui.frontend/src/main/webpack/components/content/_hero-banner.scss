@@ -1,3 +1,4 @@
+/* ORIGINAL STYLES */
 .cmp_hero-banner {
   position: relative;
   width: 100%;
@@ -52,6 +53,50 @@
   cursor: pointer;
 }
 
+/* VARIANT STYLE SYSTEM CLASS - Transparent Card Details */
+
+.transparent-card-details .cmp_hero-banner {
+    background: transparent;
+    border-radius: 0;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.transparent-card-details .cmp_hero-banner_text {
+    background-color: rgba(2, 4, 3, 0.3);
+    color: #fff;
+    top: 130px;
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+}
+
+.transparent-card-details .cmp_hero-banner_para {
+    position: relative;
+    font-size: 11px;
+    margin-top: 0;
+    color: #fff;
+    top: 0px;
+}
+
+.transparent-card-details .cmp-herobanner-title {
+    position: relative;
+    font-size: 23px;
+    margin: 0;
+    top: -5px;
+    color: #fff;
+}
+
+.transparent-card-details .cmp_hero-banner_button {
+    background: #fff;
+    color: #000;
+    margin-bottom: 50px;
+}
+
 @media screen and (max-width: 768px) {
   .cmp_hero-banner_img {
     border-radius: 10px 10px 0 0;
@@ -76,6 +121,28 @@
 
   .cmp_hero-banner_button {
     padding: 8px 16px;
+  }
+
+  /* 🔄 Responsive for variant */
+  .transparent-card-details .cmp_hero-banner_img {
+    max-width: 100%;
+  }
+
+  .transparent-card-details .cmp_hero-banner_text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(149, 21%, 13%, 0.3);
+    padding: 0 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    margin-right: 8px;
+    border-radius: 0;
+    color: #000;
   }
 }
 
