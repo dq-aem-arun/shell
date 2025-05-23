@@ -29,8 +29,9 @@ class PlayStroreCardImplTest {
         assertEquals("Download Our App", playStroreCardImpl.getTitlefield());
         assertEquals("Get it from Google Play or App Store", playStroreCardImpl.getDescription());
         assertEquals("/content/dam/images/google-play-badge.png", playStroreCardImpl.getFirstImageReference());
+        assertEquals("https://example.com", playStroreCardImpl.getFirstImageLinkURL());
         assertEquals("/content/dam/images/app-store-badge.png", playStroreCardImpl.getSecondImageReference());
-        assertEquals("https://example.com", playStroreCardImpl.getLinkURL());
+        assertEquals("https://example.com", playStroreCardImpl.getSecondImageLinkURL());
     }
 
     @Test
@@ -52,14 +53,20 @@ class PlayStroreCardImplTest {
     }
 
     @Test
+    void testGetFirstImageLinkURL() {
+        assertNotNull(playStroreCardImpl);
+        assertEquals("https://example.com", playStroreCardImpl.getFirstImageLinkURL());
+    }
+
+    @Test
     void testGetSecondImageReference() {
         assertNotNull(playStroreCardImpl);
         assertEquals("/content/dam/images/app-store-badge.png", playStroreCardImpl.getSecondImageReference());
     }
 
     @Test
-    void testGetLinkURL() {
+    void testGetSecondImageLinkURL() {
         assertNotNull(playStroreCardImpl);
-        assertEquals("https://example.com", playStroreCardImpl.getLinkURL());
+        assertEquals("https://example.com", playStroreCardImpl.getSecondImageLinkURL());
     }
 }
