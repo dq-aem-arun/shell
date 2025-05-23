@@ -1,0 +1,150 @@
+/* Promo Banner Container */
+.promo-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 15px 10px;
+    background: #fff;
+}
+
+/* Promo Item Block */
+.promo-item1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: #E0E0E0;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 350px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex Direction Variants */
+.promo-banner--row .promo-item1 {
+    flex-direction: row;
+}
+
+.promo-banner--row-reverse .promo-item1 {
+    flex-direction: row-reverse;
+}
+
+.promo-banner--column .promo-item1 {
+    flex-direction: column;
+}
+
+.promo-banner--column-reverse .promo-item1 {
+    flex-direction: column-reverse;
+}
+
+/* Image Container */
+.promo-img {
+    width: 50%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.promo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content Section */
+.promo-item2 {
+    flex: 1;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #E0E0E0;
+    font-family: var(--font-custom), var(--font-default);
+}
+
+/* Title Styling */
+.promo-item2 .title {
+    font-size: 23.4px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #4A4A4A;
+    line-height: 1.5;
+}
+
+/* Description Styling */
+.promo-item2 .description {
+    font-size: 5px;
+    color: red;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 14px;
+    text-align: start;
+    color: #4A4A4A;
+}
+
+/* Remove Margin from Last Child */
+.promo-item2>*:not(:last-child) {
+    margin-bottom: 0;
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 1024px) {
+    .promo-banner {
+        gap: 20px;
+    }
+
+    .promo-item1 {
+        flex-direction: column;
+    }
+
+    .promo-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .promo-img img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+
+    .promo-item2 {
+        padding: 40px 24px;
+        text-align: center;
+    }
+
+    .promo-item2 .title {
+        font-size: 26px;
+        margin: 0px 0px -40px;
+    }
+
+    .promo-item2 .description {
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+}
+
+/* Responsive Styles for Mobiles */
+@media (max-width: 767px) {
+    .promo-img img {
+        max-height: 300px;
+    }
+
+    .promo-item2 {
+        padding: 32px 20px;
+        text-align: center;
+    }
+
+    .promo-item2 .title {
+        font-size: 22px;
+        margin: 0px 0px -40px;
+    }
+
+    .promo-item2 .description {
+        font-size: 15px;
+    }
+}
