@@ -1,0 +1,36 @@
+/* Light mode default */
+.my-custom-image-container {
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Image container positioning override (optional class) */
+.my-custom-image-container-right .my-custom-image-container {
+    justify-content: flex-start;
+}
+
+/* Image wrapper styles */
+.my-custom-image {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.my-custom-image img {
+    max-width: 100%;
+    height: 300px;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    .my-custom-image-container {
+        background-color: #1E232A; /* Dark background */
+    }
+}
