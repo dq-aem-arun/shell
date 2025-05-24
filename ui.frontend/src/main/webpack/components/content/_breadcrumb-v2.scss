@@ -1,0 +1,112 @@
+.breadcrumb_v2_container {
+  padding-left: 0.25rem; // or less, adjust as needed
+
+  .cmp-breadcrumb {
+    padding: 5px 0px;
+  }
+
+  .cmp-breadcrumb__list {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 0; // remove any default margin
+    padding-left: 0; // remove any default padding
+  }
+
+  .cmp-breadcrumb__item {
+    color: #4a4a4a;
+    font-size: 12px;
+    position: relative;
+    padding-top: 0;
+
+    &:not(:first-child)::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 14px;
+      height: 14px;
+      margin: 0 0.15rem 0 0;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23595959" viewBox="0 0 24 24"><polygon points="7.374 4.324 15.219 12.952 7.407 20.773 8.822 22.187 17.981 13.017 8.854 2.979"/></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+  }
+
+  .cmp-breadcrumb__item--active {
+    font-weight: normal;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: black;
+    }
+  }
+
+  .cmp-breadcrumb__item-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: text-decoration 0.2s;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  // Hide mobile-only by default
+  .mobile-only {
+    display: none;
+  }
+}
+
+// Show mobile-only and hide breadcrumb on mobile
+@media (max-width: 959px) {
+  .breadcrumb_v2_container {
+    .mobile-only {
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 0.5rem;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23595959" viewBox="0 0 24 24"><polygon points="16.626 4.324 8.781 12.952 16.593 20.773 15.178 22.187 6.019 13.017 15.146 2.979"/></svg>');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .cmp-breadcrumb {
+      display: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+// Styles for the second-last breadcrumb display
+#second-last-display {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 12px;
+  color: #4a4a4a;
+  font-weight: normal;
+}
+
+#second-last-display a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
