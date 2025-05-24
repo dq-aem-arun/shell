@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
 }
 .top-navbar {
-  background-color: #14191f;
+  background-color: #f5f5f5;
   padding: 0 280px;
   display: flex;
   justify-content: space-between;
@@ -21,7 +21,7 @@ body {
   position: relative;
 }
 .nav-links a {
-  color: #e0e0e0;
+  color: #4a4a4a;
   text-decoration: none;
   padding: 8px 20px;
   font-size: 12px;
@@ -151,3 +151,10 @@ body {
     padding: 0 280px;
   }
 }
+// Dark Mode Theme 
+.top-navbar,.nav-links a{
+    @media (prefers-color-scheme: dark) {
+      color: #e0e0e0; 
+      background-color: #14191f;
+    }
+  }
