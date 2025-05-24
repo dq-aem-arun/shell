@@ -1,11 +1,11 @@
 .shell-accordian {
 
     .cmp-accordion {
-        
+
         border: 2px solid gray;
         position: relative;
         border-radius: 20px;
-        
+
     }
 
     .cmp-accordion__button {
@@ -15,6 +15,7 @@
         padding: 16px 32px;
         border: none;
         border-radius: 20px 20px 20px 20px;
+
         &::after {
             content: '';
             display: inline-block;
@@ -37,22 +38,15 @@
         transform: translateY(-50%) rotate(180deg);
     }
 
-    .cmp-accordion__item {
-        
-       
-    }
+    .cmp-accordion__item {}
 
-    .cmp-accordion__header {
-        
-    }
+    .cmp-accordion__header {}
 
     .cmp-accordion__title {}
 
     .cmp-accordion__icon {}
 
-    .cmp-accordion__panel {
-
-    }
+    .cmp-accordion__panel {}
 
     .cmp-accordion__panel--expanded {
         padding: 16px 32px;
@@ -63,12 +57,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .cmp-text p{
-
-
-
-       
-            color: white;
-          
+    .cmp-text p {
+        color: white;
     }
 }
