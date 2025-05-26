@@ -22,6 +22,7 @@ body {
   gap: 1rem;
   padding: 1rem;
   border-radius: 12px;
+
 }
 .circle {
   height: 60px;
@@ -47,6 +48,7 @@ body {
   flex: 1;
   margin-top: 0px;
   width: 600px;
+margin-left:15px;
 }
 .cta-cards {
   display: flex;
@@ -54,68 +56,9 @@ body {
   flex-direction: row;
   gap: 10px;
 }
-/* Small Mobile */
-@media (max-width: 599px) {
-  .ctacard-title {
-    font-size: 0.95rem;
-    max-width: 213px;
-     margin-top:0px;
-  }
-.cta-card-list{
-    margin-left:10px;
-    }
-  .circle {
-    height: 50px;
-    width: 50px;
-  }
 
-  .circle img {
-    width: 24px;
-    height: 24px;
-  }
-}
-/* Tablet view (600px - 991px) */
-@media (min-width: 600px) and (max-width: 991px) {
-.cta-card-list{
-    margin-left:10px;
-    }
-  .ctacard-title {
-    font-size: 1.1rem;
-  }
-.circle {
-    height: 70px;
-    width: 70px;
-  }
-.circle img {
-    width: 32px;
-    height: 32px;
-  }
-}
-/* Desktop and iPad Pro landscape (992px and up) */
-@media (min-width: 1024px) {
-  .cta-card-items {
-    flex: 1 1 calc(45% - 2rem);
-    max-width: 45%;
-  }
-.ctacard-title {
-    font-size: 1.2rem;
-  }
-.circle {
-    height: 80px;
-    width: 80px;
-  }
-.circle img {
-    width: 36px;
-    height: 36px;
-  }
-}
-/* Ultra-wide Desktop (1200px and up) */
-@media (min-width: 1200px) {
-  .cta-card-items {
-    flex: 1 1 calc(30% - 1rem);
-    max-width: 30%;
-  }
-}
+
+
 /* Horizontal variation */
 .horizontal .ctacard-title {
   font-weight: 700;
@@ -125,7 +68,7 @@ body {
   line-height: 1.4;
   flex: 1;
   overflow: hidden;
-  text-overflow: ellipsis;
+//   text-overflow: ellipsis;
   margin-top: 0px;
 }
 .horizontal .cta-cards {
@@ -145,6 +88,27 @@ body {
 }
 /* Small Mobile */
 @media (max-width: 599px) {
+
+
+    .ctacard-title {
+        font-size: 0.95rem;
+        max-width: 213px;
+         margin-top:0px;
+      }
+    .cta-card-list{
+        margin-left:10px;
+        }
+      .circle {
+        height: 50px;
+        width: 50px;
+      }
+
+      .circle img {
+        width: 24px;
+        height: 24px;
+      }
+
+
   .horizontal .ctacard-title {
     font-size: 0.95rem;
     max-width: 213px;
@@ -165,6 +129,22 @@ body {
 }
 /* Tablet view (600px - 991px) */
 @media (min-width: 600px) and (max-width: 991px) {
+
+    .cta-card-list{
+        margin-left:10px;
+        }
+      .ctacard-title {
+        font-size: 1.1rem;
+      }
+    .circle {
+        height: 70px;
+        width: 70px;
+      }
+    .circle img {
+        width: 32px;
+        height: 32px;
+      }
+
   .horizontal .ctacard-title {
     font-size: 1.1rem;
   }
@@ -179,6 +159,24 @@ body {
 }
 /* Desktop and iPad Pro landscape (992px and up) */
 @media (min-width: 1024px) {
+
+    .cta-card-items {
+        flex: 1 1 calc(45% - 2rem);
+        max-width: 45%;
+      }
+    .ctacard-title {
+        font-size: 1.2rem;
+      }
+    .circle {
+        height: 80px;
+        width: 80px;
+      }
+    .circle img {
+        width: 36px;
+        height: 36px;
+      }
+
+
   .horizontal .cta-card-items {
     width: calc(28% - 1.33rem);
   }
@@ -196,6 +194,12 @@ body {
 }
 /* Ultra-wide Desktop (1200px and up) */
 @media (min-width: 1200px) {
+
+    .cta-card-items {
+        flex: 1 1 calc(30% - 1rem);
+        max-width: 30%;
+      }
+
   .horizontal .cta-card-items {
     flex: 1 1 calc(28% - 1rem);
     max-width: 30%;
