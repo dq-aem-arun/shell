@@ -4,7 +4,7 @@
   <ul class="nav-links" data-sly-test="${!navigation.items[0].children.empty}">
     <sly data-sly-list.child="${navigation.items[0].children}">
       <li>
-        <a href="${child.URL}"> ${child.title} </a>
+        <a href="${child.URL}"><span> ${child.title}</span> </a>
       </li>
     </sly>
   </ul>
