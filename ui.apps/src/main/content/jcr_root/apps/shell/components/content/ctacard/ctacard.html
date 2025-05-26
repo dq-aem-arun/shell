@@ -1,3 +1,4 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
 <div class="cta-main">
     <sly data-sly-use.model="com.shell.core.models.CTACard"/>
     <ul data-sly-list.ctacards="${model.ctaCards}" class="cta-card-list">
@@ -11,3 +12,4 @@
         </li>
     </ul>
 </div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=model.empty}" />
