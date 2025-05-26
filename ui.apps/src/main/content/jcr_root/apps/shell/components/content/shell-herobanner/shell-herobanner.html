@@ -4,7 +4,9 @@
         <div class="cmp_hero-banner_text">
             <h1 class="cmp-herobanner-title">${model.title}</h1>
             <p class="cmp_hero-banner_para">${model.details}</p>
-            <div class="cmp_hero-banner_button" data-sly-resource="${'myButton' @ resourceType='core/wcm/components/button/v1/button'}"></div>
+            <div
+                data-sly-resource="${'shellbutton' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}">
+            </div>
         </div>
     </div>
 </sly>
