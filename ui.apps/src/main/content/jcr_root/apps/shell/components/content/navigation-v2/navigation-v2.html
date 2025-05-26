@@ -1,31 +1,20 @@
-<sly data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation" />
+<sly data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation"/>
 
 <nav class="top-navbar">
   <ul class="nav-links" data-sly-test="${!navigation.items[0].children.empty}">
     <sly data-sly-list.child="${navigation.items[0].children}">
       <li>
-        <a href="${child.URL}">
-          ${child.title}
-        </a>
+        <a href="${child.URL}"> ${child.title} </a>
       </li>
     </sly>
   </ul>
 
   <a href="#" class="rewards-btn" id="rewardsBtn">
-        <svg
-          class="user-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-        Shell GO+ Rewards
-      </a>
+    <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"stroke-linejoin="round" >
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </svg>
+    Shell GO+ Rewards
+  </a>
 </nav>
