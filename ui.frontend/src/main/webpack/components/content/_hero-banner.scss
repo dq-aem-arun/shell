@@ -48,14 +48,14 @@
 
 /* VARIANT STYLE SYSTEM CLASS - Transparent Card Details */
 .transparent-card-details .cmp_hero-banner {
-    background: transparent;
-    border-radius: 0;
-    color: #fff;
-    display: block;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: transparent;
+  border-radius: 0;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .transparent-card-details .cmp_hero-banner_img {
@@ -65,35 +65,36 @@
   display: block;
   border-radius: 10px;
 }
+
 .transparent-card-details .cmp_hero-banner_text {
-    background-color: rgba(2, 4, 3, 0.3);
-    color: #fff;
-    top: 130px;
-    width: 100%;
-    left: 0;
-    border-radius: 0;
+  background-color: rgba(2, 4, 3, 0.3);
+  color: #fff;
+  top: 130px;
+  width: 100%;
+  left: 0;
+  border-radius: 0;
 }
 
 .transparent-card-details .cmp_hero-banner_para {
-    position: relative;
-    font-size: 11px;
-    margin-top: 0;
-    color: #fff;
-    top: 0px;
+  position: relative;
+  font-size: 11px;
+  margin-top: 0;
+  color: #fff;
+  top: 0px;
 }
 
 .transparent-card-details .cmp-herobanner-title {
-    position: relative;
-    font-size: 23px;
-    margin: 0;
-    top: -5px;
-    color: #fff;
+  position: relative;
+  font-size: 23px;
+  margin: 0;
+  top: -5px;
+  color: #fff;
 }
 
 .transparent-card-details .cmp_hero-banner_button {
-    background: #fff;
-    color: #000;
-    margin-bottom: 50px;
+  background: #fff;
+  color: #000;
+  margin-bottom: 50px;
 }
 
 /* VARIANT STYLE SYSTEM CLASS - Home herobanner Details */
@@ -144,7 +145,6 @@
   // color:#fff;
 }
 
-
 @media screen and (max-width: 768px) {
   .cmp_hero-banner_img {
     border-radius: 10px 10px 0 0;
@@ -165,19 +165,19 @@
 
   .cmp_hero-banner_para {
     font-size: 12px;
-    color:#000;
+    color: #000;
   }
+
   .cmp_hero-banner_title {
     font-size: 32px;
-    color:#000;
+    color: #000;
   }
 
   /* 🔄 Responsive for variant */
   .transparent-card-details .cmp_hero-banner_img {
     max-width: 100%;
-    height:auto;
+    height: auto;
   }
-
 
   .transparent-card-details .cmp_hero-banner_text {
     position: absolute;
@@ -196,8 +196,7 @@
     color: #000;
   }
 
-  
-   /* 🔄 Responsive for variant  */
+  /* 🔄 Responsive for variant  */
   .home-herobanner-details .cmp_hero-banner_img {
     border-radius: 10px 10px 0 0;
     display: block;
@@ -205,7 +204,7 @@
     max-width: 50pc;
     width: 100%;
   }
-  
+
   .home-herobanner-details .cmp_hero-banner {
     display: block;
   }
@@ -217,39 +216,40 @@
     padding: 0 20px 10px 20px;
     background-color: #fff;
     border-radius: 0 0 0 0;
-    color:#000;
-    
+    color: #000;
+
   }
 
   .home-herobanner-details .cmp_hero-banner_para {
     font-size: 18px;
-    color:#000;
+    color: #000;
   }
+
   .home-herobanner-details .cmp_hero-banner_title {
     font-size: 32px;
-    color:#000;
+    color: #000;
   }
 }
-
-
-
 
 @media (prefers-color-scheme: dark) {
   .cmp_hero-banner_text {
     background-color: #121212;
     color: #fff;
   }
+
   .cmp_hero-banner_para {
-    color:#fff;
-  }
-  @media screen and (max-width: 768px) {
-    
-  .home-herobanner-details .cmp_hero-banner_text {
-    background-color: #121212;
     color: #fff;
   }
-  .home-herobanner-details .cmp_hero-banner_para {
-    color:#fff;
+
+  @media screen and (max-width: 768px) {
+
+    .home-herobanner-details .cmp_hero-banner_text {
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .home-herobanner-details .cmp_hero-banner_para {
+      color: #fff;
+    }
   }
-}
 }
