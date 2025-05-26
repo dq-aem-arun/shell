@@ -5,6 +5,7 @@ package com.shell.core.models;
  * Represents individual card properties like image, title, description, and button visibility.
  */
 public interface CardsItems {
+
     /**
      * @return image path for the card
      */
