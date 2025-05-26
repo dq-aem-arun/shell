@@ -6,6 +6,8 @@
   list-style: none;
 }
 
+
+
  .button-row .button-container{
   flex-direction: row !important;
 }
@@ -39,6 +41,7 @@
     .button-icon {
       width: 20px;
       height: 20px;
+      
     }
   }
 }
@@ -53,20 +56,40 @@
 }
 
 // === Button Style Variants ===
+.shell-btn-link-1 .button-container
+{
+gap:0.6rem;
+}
+
+
+
 .shell-btn-link-1 .button-item{
   width: fit-content;
   .button-link {
-    color: #ffffff;
-    font: 16px Arial, Roboto, helvetica, sans-serif;
+    color: #4A4A4A;
+    font: 14px Arial, Roboto, helvetica, sans-serif;
     font-weight: 700;
     margin: 0;
     padding: 0;
+    @media (prefers-color-scheme: dark) {
+      color: #E0E0E0;
+    }
   }
 
+   .button-icon{
+    filter: invert(29%) sepia(1%) saturate(15%) hue-rotate(180deg) brightness(30%) contrast(88%);
+
+    @media (prefers-color-scheme: dark) {
+      filter: invert(93%) sepia(3%) saturate(3%) hue-rotate(179deg) brightness(101%) contrast(102%);
+
+  }
+  }
+  
   .button-text {
     text-decoration-line: underline;
   }
 }
+
 
 .shell-btn-link-2 .button-item{
   width: fit-content;
@@ -79,6 +102,17 @@
       color: #ffffff;
     }
   }
+
+  .button-icon{
+    filter: invert(29%) sepia(1%) saturate(15%) hue-rotate(180deg) brightness(30%) contrast(88%);
+
+    @media (prefers-color-scheme: dark) {
+      filter: invert(93%) sepia(3%) saturate(3%) hue-rotate(179deg) brightness(101%) contrast(102%);
+
+  }
+  }
+
+
 }
 
 .shell-btn-primary .button-item{
@@ -100,6 +134,9 @@
       border: 1px solid #ffc800;
     }
   }
+  .button-link:hover .button-icon {
+    filter: invert(76%) sepia(96%) saturate(2463%) hue-rotate(1deg) brightness(104%) contrast(101%);  }
+
 }
 
 .shell-btn-primary-transparent .button-item{
@@ -121,6 +158,10 @@
       border: 1px solid #ffc800;
     }
   }
+
+  .button-link:hover .button-icon {
+    filter: invert(76%) sepia(96%) saturate(2463%) hue-rotate(1deg) brightness(104%) contrast(101%);  }
+
 }
 
 .shell-btn-danger .button-item{
