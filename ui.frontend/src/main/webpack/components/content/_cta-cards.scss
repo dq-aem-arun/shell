@@ -22,7 +22,6 @@ body {
   gap: 1rem;
   padding: 1rem;
   border-radius: 12px;
-
 }
 .circle {
   height: 60px;
@@ -57,8 +56,6 @@ margin-left:15px;
   gap: 10px;
 }
 
-
-
 /* Horizontal variation */
 .horizontal .ctacard-title {
   font-weight: 700;
@@ -88,8 +85,6 @@ margin-left:15px;
 }
 /* Small Mobile */
 @media (max-width: 599px) {
-
-
     .ctacard-title {
         font-size: 0.95rem;
         max-width: 213px;
@@ -107,8 +102,6 @@ margin-left:15px;
         width: 24px;
         height: 24px;
       }
-
-
   .horizontal .ctacard-title {
     font-size: 0.95rem;
     max-width: 213px;
@@ -159,7 +152,6 @@ margin-left:15px;
 }
 /* Desktop and iPad Pro landscape (992px and up) */
 @media (min-width: 1024px) {
-
     .cta-card-items {
         flex: 1 1 calc(45% - 2rem);
         max-width: 45%;
@@ -175,8 +167,6 @@ margin-left:15px;
         width: 36px;
         height: 36px;
       }
-
-
   .horizontal .cta-card-items {
     width: calc(28% - 1.33rem);
   }
