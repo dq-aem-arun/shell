@@ -52,8 +52,6 @@ public class PromoBanner_V3ImplTest {
         ctx.currentResource("/content/promobannerv3");
         PromoBanner_V3Impl banner = ctx.currentResource().adaptTo(PromoBanner_V3Impl.class);
         assertNotNull(banner);
-
-        assertNotNull(banner);
         assertEquals("HOW IT'S MADE:", banner.getText1());
         assertEquals("DESIGNED FROM NATURAL GASHOW IT'S MADE:", banner.getText2());
         assertEquals("SHELL HELIX ULTRA WITH PUREPLUS TECHNOLOGY", banner.getText3());
