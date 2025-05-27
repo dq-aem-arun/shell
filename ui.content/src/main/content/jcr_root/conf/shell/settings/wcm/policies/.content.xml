@@ -608,8 +608,8 @@
                     </policy_1748069373389>
                 </promo-banner-v2>
                 <ctacard jcr:primaryType="nt:unstructured">
-                    <policy_1748088167915
-                        jcr:lastModified="{Date}2025-05-24T17:36:00.464+05:30"
+                    <policy_1748346038090
+                        jcr:lastModified="{Date}2025-05-27T17:40:59.741+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="cta card policies"
@@ -617,45 +617,18 @@
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                         <cq:styleGroups jcr:primaryType="nt:unstructured">
                             <item0
-                                cq:styleGroupLabel="horizontal-view"
+                                cq:styleGroupLabel="H-View"
                                 jcr:primaryType="nt:unstructured">
                                 <cq:styles jcr:primaryType="nt:unstructured">
                                     <item0
-                                        cq:styleClasses="horizontal "
-                                        cq:styleId="1748088195392"
+                                        cq:styleClasses="horizontal"
+                                        cq:styleId="1748346068199"
                                         cq:styleLabel="H-view"
                                         jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
                             </item0>
-                            <item1
-                                cq:styleGroupLabel="blacktheam"
-                                jcr:primaryType="nt:unstructured">
-                                <cq:styles jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        cq:styleClasses="  bg"
-                                        cq:styleId="1748088220626"
-                                        cq:styleLabel="lytblack"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item1
-                                        cq:styleClasses="hbg"
-                                        cq:styleId="1748088251203"
-                                        cq:styleLabel="black"
-                                        jcr:primaryType="nt:unstructured"/>
-                                </cq:styles>
-                            </item1>
-                            <item2
-                                cq:styleGroupLabel="lighttheam"
-                                jcr:primaryType="nt:unstructured">
-                                <cq:styles jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        cq:styleClasses="bg-color"
-                                        cq:styleId="1748088274903"
-                                        cq:styleLabel="gray"
-                                        jcr:primaryType="nt:unstructured"/>
-                                </cq:styles>
-                            </item2>
                         </cq:styleGroups>
-                    </policy_1748088167915>
+                    </policy_1748346038090>
                 </ctacard>
             </content>
         </components>

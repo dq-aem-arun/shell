@@ -196,10 +196,10 @@ margin-left:15px;
   }
 }
 @media (prefers-color-scheme: dark) {
-      .bg .cta-main{
+     .cta-main{
           background-color:#141920;
           }
-      .hbg .cta-main{
+      .horizontal .cta-main{
            background-color:#1D232A;
           }
       .ctacard-title {
@@ -213,7 +213,7 @@ margin-left:15px;
       .cta-main{
           background-color:white;
           }
-        .bg-color .cta-main{
+        .horizontal .cta-main{
             background-color:#F5F5F5;
             }
         }
