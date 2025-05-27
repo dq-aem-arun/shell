@@ -1,0 +1,85 @@
+.shell-accordian {
+
+    .cmp-accordion {
+        border: none; // Remove or keep as needed for outer border
+        position: relative;
+        border-radius: 20px;
+    }
+
+    .cmp-accordion__button {
+        font-size: 15px;
+        color: rgb(63, 63, 63);
+        position: relative;
+        padding: 12px 32px;
+        border-radius: 20px 20px 20px 20px;
+        border: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-width: 0; // Allow flex children to shrink
+        box-sizing: border-box;
+        
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('data:image/svg+xml;utf8,<svg fill="black" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>') no-repeat center center;
+            background-size: contain;
+            pointer-events: none;
+            transition: transform 0.3s;
+        }
+    }
+
+    // Rotate chevron when expanded
+    .cmp-accordion__button--expanded::after {
+        border-radius: 20px 20px 0px 0px;
+        transform: translateY(-50%) rotate(180deg);
+        
+    }
+
+    .cmp-accordion__item {
+        border: 2px solid gray;
+        border-radius: 20px;
+        margin-bottom: 12px;
+    }
+
+    .cmp-accordion__header {}
+
+    .cmp-accordion__title {
+        flex: 1 1 auto;
+        min-width: 0;
+        white-space: normal;
+    word-break: break-word;
+    }
+
+    .cmp-accordion__icon {}
+
+    .cmp-accordion__panel {
+        display: none;
+        border-radius: 0 0 20px 20px; 
+        margin-bottom: 16px; 
+        background: #eaeaea; 
+        box-sizing: border-box;
+    }
+
+    .cmp-accordion__panel--expanded {
+        display: block;
+        padding: 16px 32px;
+    }
+
+    .cmp-accordion__panel--hidden {
+        display: none;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .cmp-text p {
+        color: white;
+    }
+}
