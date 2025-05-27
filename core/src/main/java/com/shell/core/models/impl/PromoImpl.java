@@ -42,8 +42,16 @@ public class PromoImpl implements Promo {
         return promobanner;
     }
 
+    /**
+     * Checks if the Promo model is empty.
+     *
+     * This method returns true if the list of promotional banners is either null
+     * or contains no banner items, indicating that there is no content to display.
+     *
+     * @return true if there are no promotional banners, false otherwise.
+     */
     @Override
     public boolean isEmpty() {
-        return promobanner==null || promobanner.isEmpty();
+        return promobanner == null || promobanner.isEmpty();
     }
 }

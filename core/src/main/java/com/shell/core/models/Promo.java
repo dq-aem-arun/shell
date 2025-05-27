@@ -13,5 +13,13 @@ public interface Promo {
      * @return list of {@link Promobanner} items.
      */
     List<Promobanner> getPromoBanner();
-    public  boolean isEmpty();
+    /**
+     * Checks if the Promo model is empty.
+     *
+     * Implementations should return true if there are no promotional banners
+     * or if the banner list is empty, indicating no content to render.
+     *
+     * @return true if the model is empty, false otherwise.
+     */
+    public boolean isEmpty();
 }
