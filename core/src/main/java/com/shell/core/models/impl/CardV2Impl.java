@@ -67,4 +67,20 @@ public class CardV2Impl implements CardV2 {
         return showButton;
     }
 
+    /**
+     * Evaluates whether the CardV2 component contains meaningful content.
+     * A card is considered empty if:
+     * - the title is null or empty,
+     * - the image reference is null or empty,
+     * - and the showButton flag is false.
+     * This helps in preventing the rendering of incomplete or placeholder cards in the UI.
+     *
+     * @return true if all key fields are empty or false; false otherwise
+     */
+    @Override
+    public boolean isEmpty() {
+        boolean isEmpty = (title == null || title.isEmpty()) && (imageReference == null || imageReference.isEmpty()) && !showButton;
+        log.info("Checking if the components is empty: {}", isEmpty);
+        return isEmpty;
+    }
 }
