@@ -40,4 +40,18 @@ public class CardsImpl implements Cards {
         LOG.info("Fetching card list. Total cards: {}", cards != null ? cards.size() : 0);
         return cards;
     }
+    /**
+     * Checks whether the card component is empty.
+     * This method returns {@code true} if the list of cards is either {@code null} or contains no elements.
+     * Useful for determining whether to render the component or display a placeholder in the authoring interface.
+     *
+     * @return {@code true} if there are no cards to display; {@code false} otherwise.
+     */
+    @Override
+    public boolean isEmpty() {
+        boolean isEmpty = cards == null || cards.isEmpty();
+        LOG.info("Checking if the component is empty: {}", isEmpty);
+        return isEmpty;
+    }
+
 }
