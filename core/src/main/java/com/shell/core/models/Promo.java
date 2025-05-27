@@ -13,4 +13,5 @@ public interface Promo {
      * @return list of {@link Promobanner} items.
      */
     List<Promobanner> getPromoBanner();
+    public  boolean isEmpty();
 }

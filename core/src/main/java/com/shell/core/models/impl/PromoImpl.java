@@ -41,4 +41,9 @@ public class PromoImpl implements Promo {
         }
         return promobanner;
     }
+
+    @Override
+    public boolean isEmpty() {
+        return promobanner==null || promobanner.isEmpty();
+    }
 }
