@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        jcr:description="Shell Accordian Component"
+        jcr:primaryType="cq:Component"
+        jcr:title="Shell Accordian"
+        componentGroup="Shell"
+        sling:resourceSuperType="core/wcm/components/accordion/v1/accordion"
+/>
