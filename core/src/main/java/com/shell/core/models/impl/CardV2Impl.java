@@ -28,6 +28,9 @@ public class CardV2Impl implements CardV2 {
     @ValueMapValue(name = "imageReference")
     private String imageReference;
 
+    @ValueMapValue
+    private boolean showButton;
+
     /**
      * Returns the title for the card component.
      * Logged for debug tracing during Sling model usage.
@@ -51,4 +54,17 @@ public class CardV2Impl implements CardV2 {
         log.info("getImageReference() called - returning: {}", imageReference);
         return imageReference;
     }
+
+    /**
+     * Returns the boolean flag indicating whether a button should be displayed on the card.
+     * Logged for debug tracing during Sling model usage.
+     *
+     * @return true if the button should be shown; false otherwise
+     */
+    @Override
+    public boolean getShowButton() {
+        log.info("getShowButton() called - returning: {}", showButton);
+        return showButton;
+    }
+
 }

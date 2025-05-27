@@ -19,4 +19,12 @@ public interface CardV2 {
      * @return the image path as a String
      */
     String getImageReference();
+
+    /**
+     * Indicates whether one or more buttons should be displayed on the card.
+     * This flag is used to conditionally render button elements in the UI layer.
+     *
+     * @return true if the card should display a button; false otherwise
+     */
+    boolean getShowButton();
 }
