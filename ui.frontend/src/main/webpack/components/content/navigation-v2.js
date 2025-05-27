@@ -1,22 +1,23 @@
-const navLinks = document.querySelectorAll(".nav-links a");
-const rewardsBtn = document.getElementById("rewardsBtn");
-function updateActive(link) {
-  navLinks.forEach((l) => l.classList.remove("active"));
-  link.classList.add("active");
-  if (link.textContent.trim() === "Customer") {
-    rewardsBtn.style.display = "flex";
-  } else {
-    rewardsBtn.style.display = "none";
-  }
-}
-navLinks.forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    updateActive(this);
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname;
+
+  // Highlight the active nav link
+  const navLinks = document.querySelectorAll(".nav-links a");
+  navLinks.forEach((link) => {
+    const linkPath = new URL(link.href).pathname;
+    if (linkPath === currentPath) {
+      link.classList.add("active");
+    }
   });
-});
-// Initial check on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const activeLink = document.querySelector(".nav-links a.active");
-  if (activeLink) updateActive(activeLink);
+
+  // Show rewards button only if first nav link matches current page
+  const firstNavLink = document.querySelector(".nav-links a");
+  const rewardsBtn = document.getElementById("rewardsBtn");
+
+  if (firstNavLink && rewardsBtn) {
+    const firstPath = new URL(firstNavLink.href).pathname;
+    if (firstPath === currentPath) {
+      rewardsBtn.style.display = "flex";
+    }
+  }
 });
