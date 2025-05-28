@@ -40,4 +40,11 @@ class CardV2ImplTest {
         assertNotNull(cardV2Impl);
         assertEquals("/content/dam/shell/cards/visit-points.png", cardV2Impl.getImageReference());
     }
+
+    @Test
+    void testGetShowButton() {
+        assertNotNull(cardV2Impl);
+        assertTrue(cardV2Impl.getShowButton(), "Expected showButton to be true");
+    }
+
 }
