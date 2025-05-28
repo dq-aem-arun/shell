@@ -1,1 +1,20 @@
-<h2>Hello</h2>
+<div class="card-v2-container" data-sly-use.card="com.shell.core.models.CardV2">
+    <div class="card-v2-content${!card.imageReference ? ' no-image' : ''}">
+        <!-- Image Block -->
+        <div data-sly-test="${card.imageReference}" class="card-v2-image">
+            <img src="${card.imageReference @ context='uri'}" alt="${card.title}" />
+        </div>
+
+        <!-- Title Block -->
+        <div data-sly-test="${card.title}" class="card-v2-title">
+            <h3 class="cardv2-title">${card.title}</h3>
+        </div>
+
+        <!-- Conditionally include shellButton component -->
+        <div data-sly-test="${card.showButton}"> 
+            <div
+                data-sly-resource="${'shellbutton' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}">
+            </div>
+        </div>
+    </div>
+</div>
