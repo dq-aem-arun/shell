@@ -12,7 +12,7 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 @Model(
     adaptables = Resource.class,
     adapters = { Search.class, ComponentExporter.class },
-    resourceType = "shell/components/search", // adjust as needed
+    resourceType = "shell/components/content/search", // adjust as needed
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
 public class SearchImpl implements Search {
@@ -46,6 +46,6 @@ public class SearchImpl implements Search {
 
     @Override
     public String getExportedType() {
-        return "shell/components/search";
+        return "shell/components/content/search";
     }
 }
