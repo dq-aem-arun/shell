@@ -8,7 +8,7 @@ import java.util.List;
 public interface TableRow {
     /**
      * Get all columns in this row
-     * 
+     *
      * @return List of TableColumn objects
      */
     List<TableColumn> getColumns();

@@ -14,7 +14,7 @@ import com.shell.core.models.TableColumn;
  * This class represents a table column value and provides methods
  * to access and check the presence of the value.
  * </p>
- * 
+ *
  * @author Mohammad Shoaib
  * @version 1.1
  * @since 26-05-2025
@@ -42,6 +42,7 @@ public class TableColumnImpl implements TableColumn {
      */
     @Override
     public String getColumn() {
+
         String result = Optional.ofNullable(columnValue).orElse("");
         logger.debug("getColumn() called, returning: {}", result);
         return result;
@@ -54,6 +55,7 @@ public class TableColumnImpl implements TableColumn {
      */
     @Override
     public boolean hasValue() {
+
         boolean hasValue = StringUtils.isNotBlank(columnValue);
         logger.debug("hasValue() called, result: {}", hasValue);
         return hasValue;

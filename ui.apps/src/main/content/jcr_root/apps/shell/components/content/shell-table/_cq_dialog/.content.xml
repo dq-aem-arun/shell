@@ -41,6 +41,7 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                         name="./column"
+                                        emptyText="Enter column value "
                                         fieldLabel="Column Value" />
                                 </items>
                             </field>

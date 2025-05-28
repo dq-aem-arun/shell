@@ -91,7 +91,9 @@ public class TableRowImpl implements TableRow {
      */
     @Override
     public List<TableColumn> getColumns() {
-        return columns != null ? columns : Collections.emptyList();
+        List<TableColumn> getCols = columns != null ? columns : Collections.emptyList();
+        LOG.info("Column getColumns() returning: {}", getCols);
+        return getCols;
     }
 
     /**

@@ -107,7 +107,9 @@ public class DynamicTableImpl implements DynamicTable {
      */
     @Override
     public List<TableRow> getRows() {
-        return tableRows != null ? tableRows : Collections.emptyList();
+        List<TableRow> getRows = tableRows != null ? tableRows : Collections.emptyList();
+        LOG.info("getRows() returning: {}", getRows);
+        return getRows;
     }
 
     /**
