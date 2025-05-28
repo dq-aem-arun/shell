@@ -1,0 +1,48 @@
+<!--/* Dynamic Table HTL Template */-->
+<div data-sly-use.dynamicTable="com.shell.core.models.DynamicTable" 
+     data-sly-test="${dynamicTable.hasRows}"
+     class="dynamic-table">
+    
+    <table class="table table-striped">
+        <tbody>
+            <tr data-sly-repeat.row="${dynamicTable.rows}">
+                <td data-sly-repeat.column="${row.columns}" 
+                    data-sly-test="${column.hasValue}">
+                    ${column.column @ context='text'}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+<!--/* Alternative with more styling options */-->
+<div data-sly-use.table="com.shell.core.models.DynamicTable" 
+     data-sly-test="${table.hasRows}"
+     class="dynamic-table-wrapper">
+    
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover" border="1">
+            <tbody>
+                <sly data-sly-repeat.tableRow="${table.rows}">
+                    <tr data-sly-test="${tableRow.hasColumns}">
+                        <sly data-sly-repeat.col="${tableRow.columns}">
+                            <td data-sly-test="${col.hasValue}" 
+                                class="table-cell">
+                                ${col.column @ context='html'}
+                            </td>
+                        </sly>
+                    </tr>
+                </sly>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+<!--/* Empty state */-->
+<div data-sly-use.emptyTable="com.shell.core.models.DynamicTable" 
+     data-sly-test="${!emptyTable.hasRows}"
+     class="empty-table">
+    <p>No table data available.</p>
+</div>

@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card-v2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/*second Varation for card*/
+.card-v2-content-plain .card-v2-content{
+    height: 420px;
+    background-color: #F5F5F5;
+    padding: 24px;
+}
+    
+.card-v2-content {
+    border-radius: 20px;
+    margin: 0 auto;
+    max-width: 25pc;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.card-v2-image {
+  width: 100%;
+}
+
+.card-v2-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0; 
+    padding: 0;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+ }
+
+.card-v2-title {
+    padding:24px; 
+    text-align: left; 
+}
+
+.cardv2-title {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: custom-font, 'Roboto', Arial, Helvetica, sans-serif;
+    color: #4A4A4A;
+    margin-top: 0px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+
+    .card-v2-content {
+        max-width: 90%;
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+    .cardv2-title {
+        font-size: 18px;
+    }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+    .card-v2-content {
+        max-width: 100%;
+        padding: 20px 12px;
+        border-radius: 12px;
+    }
+    .cardv2-title {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .card-v2-title {
+        padding: 16px;
+    }
+    .card-v2-image img {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .cardv2-title {
+        color: #E0E0E0;
+    }
+    .card-v2-container{
+        background-color: #1E232A;
+    }
+    .card-v2-content-plain .card-v2-content{
+        height: 420px;
+        background-color: #14191F;
+        padding: 24px;
+    }
+    .card-v2-content-default .card-v2-content{
+        background-color:none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: light) {
+    .card-v2-container {
+         background-color: #ffffff;
+    }
+    
+}
