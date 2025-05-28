@@ -1,4 +1,7 @@
-<div class="card-v2-container" data-sly-use.card="com.shell.core.models.CardV2">
+<sly data-sly-use.card="com.shell.core.models.CardV2"/>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
+
+<div class="card-v2-container">
     <div class="card-v2-content${!card.imageReference ? ' no-image' : ''}">
         <!-- Image Block -->
         <div data-sly-test="${card.imageReference}" class="card-v2-image">
@@ -11,10 +14,11 @@
         </div>
 
         <!-- Conditionally include shellButton component -->
-        <div data-sly-test="${card.showButton}"> 
+        <div data-sly-test="${card.showButton}">
             <div
-                data-sly-resource="${'shellbutton' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}">
+                    data-sly-resource="${'shellbutton' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}">
             </div>
         </div>
     </div>
 </div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=card.empty}" />
