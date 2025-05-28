@@ -1,4 +1,5 @@
 {
   "title": "Earn points on every visit",
-  "imageReference": "/content/dam/shell/cards/visit-points.png"
+  "imageReference": "/content/dam/shell/cards/visit-points.png",
+  "showButton": true
 }
