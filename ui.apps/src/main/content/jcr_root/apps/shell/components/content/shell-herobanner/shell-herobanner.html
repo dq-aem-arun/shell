@@ -1,12 +1,14 @@
 <sly data-sly-use.model="com.shell.core.models.HeroBanner">
+    <section class="section-main">
     <div class="cmp_hero-banner ${cq.styleClasses}">
-        <img src="${model.image}" alt="Random Image" class="cmp_hero-banner_img" />
+       <div> <img src="${model.image}" alt="Upload the Image" class="cmp_hero-banner_img"/></div>
         <div class="cmp_hero-banner_text">
             <h1 class="cmp-herobanner-title">${model.title}</h1>
-            <p class="cmp_hero-banner_para">${model.details}</p>
+            <div class="cmp_hero-banner_para">${model.details @context='html'}</div>
             <div
                 data-sly-resource="${'shellbutton' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}">
             </div>
         </div>
     </div>
+    </section>    
 </sly>
