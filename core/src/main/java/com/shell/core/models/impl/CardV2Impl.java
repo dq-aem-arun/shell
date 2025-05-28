@@ -28,6 +28,9 @@ public class CardV2Impl implements CardV2 {
     @ValueMapValue(name = "imageReference")
     private String imageReference;
 
+    @ValueMapValue
+    private boolean showButton;
+
     /**
      * Returns the title for the card component.
      * Logged for debug tracing during Sling model usage.
@@ -50,5 +53,34 @@ public class CardV2Impl implements CardV2 {
     public String getImageReference() {
         log.info("getImageReference() called - returning: {}", imageReference);
         return imageReference;
+    }
+
+    /**
+     * Returns the boolean flag indicating whether a button should be displayed on the card.
+     * Logged for debug tracing during Sling model usage.
+     *
+     * @return true if the button should be shown; false otherwise
+     */
+    @Override
+    public boolean getShowButton() {
+        log.info("getShowButton() called - returning: {}", showButton);
+        return showButton;
+    }
+
+    /**
+     * Evaluates whether the CardV2 component contains meaningful content.
+     * A card is considered empty if:
+     * - the title is null or empty,
+     * - the image reference is null or empty,
+     * - and the showButton flag is false.
+     * This helps in preventing the rendering of incomplete or placeholder cards in the UI.
+     *
+     * @return true if all key fields are empty or false; false otherwise
+     */
+    @Override
+    public boolean isEmpty() {
+        boolean isEmpty = (title == null || title.isEmpty()) && (imageReference == null || imageReference.isEmpty()) && !showButton;
+        log.info("Checking if the components is empty: {}", isEmpty);
+        return isEmpty;
     }
 }
