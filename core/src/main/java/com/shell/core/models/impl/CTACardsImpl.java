@@ -14,6 +14,10 @@ import java.util.List;
 /**
  * Sling Model implementation for individual CTA (Call-To-Action) card items.
  * This model is adaptable from a Resource and provides properties like icon reference and title.
+ *
+ * @author Saraswathi
+ * @version 1.0
+ * @since 22-05-2025
  */
 @Model(adaptables = Resource.class,adapters =CTACard.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CTACardsImpl implements CTACard {
@@ -23,9 +27,6 @@ public class CTACardsImpl implements CTACard {
     /**
      * Injects a list of child resources under the current resource.
      * These resources must be adaptable to the CTACardItems interface.
-     * @author Saraswathi
-     * @version 1.0
-     * @since 22-05-2025
      */
     @ChildResource
     private List<CTACardItems>ctaCards;
@@ -40,5 +41,12 @@ public class CTACardsImpl implements CTACard {
         LOG.info("Fetching CTA cards list. Size: {}",
                 ctaCards != null ? ctaCards.size() : "null");
         return ctaCards;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        boolean isEmpty = ctaCards == null || ctaCards.isEmpty();
+        LOG.info("Checking if the component is empty: {}", isEmpty);
+        return isEmpty;
     }
 }

@@ -8,7 +8,7 @@ import java.util.List;
  * This interface provides a method to retrieve a list of CTA card items,
  * which are typically displayed in a grid or list layout on the front end.
  * <p>
- * Each CTA card item contains content like image, title, and optional action elements.
+ * Each CTA card item contains content like image, title.
  *
  * @author Saraswathi
  * @version 1.0
@@ -22,4 +22,5 @@ public interface CTACard {
      * @return List of CTACardItems representing individual cards
      */
     List<CTACardItems> getCtaCards();
+    public boolean isEmpty();
 }
