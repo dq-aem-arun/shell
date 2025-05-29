@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-05-27T17:34:13.800+05:30"
+        cq:lastModified="{Date}2025-05-28T18:25:40.850+05:30"
         cq:lastModifiedBy="admin"
         cq:policy="shell/components/page/policy"
         jcr:primaryType="nt:unstructured"
@@ -22,12 +22,8 @@
                                 cq:policy="shell/components/content/shell-button/policy_1747648705393"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <promo-banner-v2
-                                cq:policy="shell/components/content/promo-banner-v2/policy_1748069373389"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <ctacard
-                                cq:policy="shell/components/content/ctacard/policy_1748346038090"
+                            <playstorecard
+                                cq:policy="shell/components/content/playstorecard/policy_1748436888824"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
                         </content>

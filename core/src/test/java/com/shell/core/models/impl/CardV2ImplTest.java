@@ -46,5 +46,4 @@ class CardV2ImplTest {
         assertNotNull(cardV2Impl);
         assertTrue(cardV2Impl.getShowButton(), "Expected showButton to be true");
     }
-
 }
