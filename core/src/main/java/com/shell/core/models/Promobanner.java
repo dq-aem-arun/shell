@@ -10,12 +10,14 @@ public interface Promobanner {
      * @return the file reference as a String.
      */
     String getFileReference();
+
     /**
      * Gets the title text of the banner.
      *
      * @return the title as a String.
      */
     String getTitle();
+
     /**
      * Gets the description text of the banner.
      *
