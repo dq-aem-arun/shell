@@ -1,0 +1,28 @@
+<div class="form-section">
+
+  <form id="filterForm">
+    <div class="dropdown-container">
+      <button type="button" class="dropdown-button" onclick="toggleDropdown()">Select Tags</button>
+      <div class="dropdown-content" id="dropdownMenu"></div>
+    </div>
+  
+    <div class="form-item">
+      <label for="startDate">Start Date</label>
+      <input type="date" id="startDate" name="startDate" class="date-input" />
+    </div>
+  
+    <div class="form-item">
+      <label for="endDate">End Date</label>
+      <input type="date" id="endDate" name="endDate" class="date-input" />
+    </div>
+  
+    <div class="form-item">
+      <button type="submit" class="submit-button" title="Search">🔍</button>
+    </div>
+  </form>
+
+  <!-- Results -->
+  <div class="results" id="results"></div>
+</div>
+
+
