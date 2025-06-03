@@ -40,7 +40,7 @@ import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVL
 )
 public class FilteringServlet extends SlingAllMethodsServlet {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FilteringServlet.class);
+    private static final Logger logger = LoggerFactory.getLogger(FilteringServlet.class);
     private static final String BASE_PATH = "/content/shell";
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -69,13 +69,11 @@ public class FilteringServlet extends SlingAllMethodsServlet {
                 String tagPath = "/content/cq:tags/shell/" + tag;
                 if (resolver.getResource(tagPath) != null) {
                     validTags.add("shell:" + tag);
-                }
-                else {
-                    response.getWriter().write("Invalid tag input"  + tag);
+                } else {
+                    logger.warn("Invalid tag: {}", tag);
                 }
             }
 
-            // Early return if invalid tags
             if (!inputTags.isEmpty() && validTags.isEmpty()) {
                 response.getWriter().write("[]");
                 return;
@@ -85,10 +83,10 @@ public class FilteringServlet extends SlingAllMethodsServlet {
             Date startDate = null;
             Date endDate = null;
             try {
-                if (jsonRequest.has("startDate")) {
+                if (jsonRequest.has("startDate") && !jsonRequest.get("startDate").getAsString().isEmpty()) {
                     startDate = DATE_FORMAT.parse(jsonRequest.get("startDate").getAsString());
                 }
-                if (jsonRequest.has("endDate")) {
+                if (jsonRequest.has("endDate") && !jsonRequest.get("endDate").getAsString().isEmpty()) {
                     endDate = DATE_FORMAT.parse(jsonRequest.get("endDate").getAsString());
                 }
             } catch (ParseException e) {
@@ -98,10 +96,9 @@ public class FilteringServlet extends SlingAllMethodsServlet {
             }
 
             // Pagination
-            int limit = Optional.ofNullable(request.getParameter("limit")).map(Integer::parseInt).orElse(10);
+            int limit = Optional.ofNullable(request.getParameter("limit")).map(Integer::parseInt).orElse(25);
             int offset = Optional.ofNullable(request.getParameter("offset")).map(Integer::parseInt).orElse(0);
 
-            // JCR session
             Session session = resolver.adaptTo(Session.class);
             if (session == null) {
                 response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
@@ -109,7 +106,6 @@ public class FilteringServlet extends SlingAllMethodsServlet {
                 return;
             }
 
-            // Build predicates
             Map<String, String> predicates = new HashMap<>();
             predicates.put("path", BASE_PATH);
             predicates.put("type", "cq:Page");
@@ -124,8 +120,10 @@ public class FilteringServlet extends SlingAllMethodsServlet {
                 }
             }
 
+            // Apply date range if provided
             if (startDate != null || endDate != null) {
-                // Normalize startDate
+                predicates.put("daterange.property", "jcr:content/cq:lastModified");
+
                 if (startDate != null) {
                     Calendar cal = Calendar.getInstance();
                     cal.setTime(startDate);
@@ -133,26 +131,23 @@ public class FilteringServlet extends SlingAllMethodsServlet {
                     cal.set(Calendar.MINUTE, 0);
                     cal.set(Calendar.SECOND, 0);
                     cal.set(Calendar.MILLISECOND, 0);
-                    startDate = cal.getTime();
-                    predicates.put("daterange.lowerBound", DATE_FORMAT.format(startDate));
+                    predicates.put("daterange.lowerBound", DATE_FORMAT.format(cal.getTime()));
+                    predicates.put("daterange.lowerOperation", ">=");
                 }
 
-// Normalize endDate to next day 00:00:00
                 if (endDate != null) {
                     Calendar cal = Calendar.getInstance();
                     cal.setTime(endDate);
-                    cal.add(Calendar.DATE, 1);  // exclusive upper bound
-                    cal.set(Calendar.HOUR_OF_DAY, 0);
-                    cal.set(Calendar.MINUTE, 0);
-                    cal.set(Calendar.SECOND, 0);
-                    cal.set(Calendar.MILLISECOND, 0);
-                    endDate = cal.getTime();
-                    predicates.put("daterange.upperBound", DATE_FORMAT.format(endDate));
+                    cal.set(Calendar.HOUR_OF_DAY, 23);
+                    cal.set(Calendar.MINUTE, 59);
+                    cal.set(Calendar.SECOND, 59);
+                    cal.set(Calendar.MILLISECOND, 999);
+                    predicates.put("daterange.upperBound", DATE_FORMAT.format(cal.getTime()));
+                    predicates.put("daterange.upperOperation", "<=");
                 }
-
             }
 
-                // Execute query
+            // Execute query
             Query query = queryBuilder.createQuery(PredicateGroup.create(predicates), session);
             SearchResult result = query.getResult();
 
@@ -174,7 +169,7 @@ public class FilteringServlet extends SlingAllMethodsServlet {
             response.getWriter().write(articles.toString());
 
         } catch (Exception e) {
-            LOGGER.error("Error in FilteringServlet: ", e);
+            logger.error("Error in FilteringServlet: ", e);
             response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             response.getWriter().write("{\"error\":\"Internal server error\"}");
         }
