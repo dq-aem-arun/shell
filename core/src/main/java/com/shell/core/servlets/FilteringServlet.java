@@ -80,14 +80,18 @@ public class FilteringServlet extends SlingAllMethodsServlet {
 
         try (BufferedReader reader = request.getReader()) {
             // Parse incoming JSON payload from the request body
+            logger.info("FilteringServlet: Received POST request");
             JsonObject jsonRequest = JsonParser.parseReader(reader).getAsJsonObject();
             ResourceResolver resolver = request.getResourceResolver();
+
+            logger.debug("Request JSON: {}", jsonRequest.toString());
 
             // Extract tags from JSON
             List<String> inputTags = new ArrayList<>();
             if (jsonRequest.has("tags") && jsonRequest.get("tags").isJsonArray()) {
                 jsonRequest.get("tags").getAsJsonArray().forEach(tag -> inputTags.add(tag.getAsString()));
             }
+            logger.info("Input tags: {}", inputTags);
 
             // Validate and build full tag IDs
             List<String> validTags = new ArrayList<>();
@@ -104,10 +108,12 @@ public class FilteringServlet extends SlingAllMethodsServlet {
             } else {
                 // Default path when no tags are provided
                 BASE_PATH = "/content/shell/us/en";
+                logger.info("No tags provided. Using default BASE_PATH: {}", BASE_PATH);
             }
 
             // Return empty result if all provided tags are invalid
             if (!inputTags.isEmpty() && validTags.isEmpty()) {
+                logger.info("All provided tags were invalid. Returning empty result.");
                 response.getWriter().write("[]");
                 return;
             }
@@ -118,11 +124,14 @@ public class FilteringServlet extends SlingAllMethodsServlet {
             try {
                 if (jsonRequest.has("startDate") && !jsonRequest.get("startDate").getAsString().isEmpty()) {
                     startDate = DATE_FORMAT.parse(jsonRequest.get("startDate").getAsString());
+                    logger.info("Start date: {}", startDate);
                 }
                 if (jsonRequest.has("endDate") && !jsonRequest.get("endDate").getAsString().isEmpty()) {
                     endDate = DATE_FORMAT.parse(jsonRequest.get("endDate").getAsString());
+                    logger.info("End date: {}", endDate);
                 }
             } catch (ParseException e) {
+                logger.error("Invalid date format in request", e);
                 response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
                 response.getWriter().write("{\"error\":\"Invalid date format. Expected yyyy-MM-dd\"}");
                 return;
@@ -132,9 +141,12 @@ public class FilteringServlet extends SlingAllMethodsServlet {
             int limit = Optional.ofNullable(request.getParameter("limit")).map(Integer::parseInt).orElse(25);
             int offset = Optional.ofNullable(request.getParameter("offset")).map(Integer::parseInt).orElse(0);
 
+            logger.info("Pagination - Limit: {}, Offset: {}", limit, offset);
+
             // Get JCR session from resource resolver
             Session session = resolver.adaptTo(Session.class);
             if (session == null) {
+                logger.error("JCR session could not be retrieved");
                 response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                 response.getWriter().write("{\"error\":\"Unable to get JCR session\"}");
                 return;
@@ -154,6 +166,7 @@ public class FilteringServlet extends SlingAllMethodsServlet {
                 for (int i = 0; i < validTags.size(); i++) {
                     predicates.put("tagid." + (i + 1) + "_value", validTags.get(i));
                 }
+                logger.info("Tag filters applied: {}", validTags);
             }
 
             // Add date filtering if dates are provided
@@ -181,7 +194,10 @@ public class FilteringServlet extends SlingAllMethodsServlet {
                     predicates.put("daterange.upperBound", DATE_FORMAT.format(cal.getTime()));
                     predicates.put("daterange.upperOperation", "<=");
                 }
+                logger.info("Date range filtering applied: {} to {}", startDate, endDate);
             }
+
+            logger.debug("Query predicates: {}", predicates);
 
             // Execute QueryBuilder query with built predicates
             Query query = queryBuilder.createQuery(PredicateGroup.create(predicates), session);
@@ -202,13 +218,15 @@ public class FilteringServlet extends SlingAllMethodsServlet {
                 }
             }
 
+            logger.info("Found {} matching articles", articles.length());
+
             // Return final result
             response.setStatus(SlingHttpServletResponse.SC_OK);
             response.getWriter().write(articles.toString());
 
         } catch (Exception e) {
             // Handle unexpected errors gracefully
-            logger.error("Error in FilteringServlet: ", e);
+            logger.error("Unexpected error while processing request", e);
             response.setStatus(SlingHttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             response.getWriter().write("{\"error\":\"Internal server error\"}");
         }
