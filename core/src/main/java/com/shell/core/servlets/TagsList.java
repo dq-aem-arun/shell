@@ -10,6 +10,7 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.servlets.annotations.SlingServletPaths;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
@@ -27,8 +28,9 @@ public class TagsList extends SlingSafeMethodsServlet {
 
     private static final Logger LOG = LoggerFactory.getLogger(TagsList.class);
 
+    @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
-            throws IOException, ServletException {
+            throws IOException {
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
@@ -42,35 +44,47 @@ public class TagsList extends SlingSafeMethodsServlet {
                 return;
             }
 
-            Tag resolve = tagManager.resolve("/content/cq:tags/shell/technology");
-            if (resolve != null) {
-                Iterator<Tag> listChildren = resolve.listChildren();
-
-                JSONArray jsonArray = new JSONArray();
-
-                while (listChildren.hasNext()) {
-                    Tag next = listChildren.next();
-
-                    JSONObject jsonObject = new JSONObject();
-                    jsonObject.put("title", next.getTitle());
-                    jsonObject.put("path", next.getPath());
-
-                    jsonArray.put(jsonObject);
-                }
-                PrintWriter out = response.getWriter();
-                out.write(jsonArray.toString());
-                out.flush();
+            Tag rootTag = tagManager.resolve("/content/cq:tags");
+            if (rootTag == null) {
+                sendErrorResponse(response, "Root tag not found");
+                return;
             }
 
+            JSONArray result = new JSONArray();
+            Iterator<Tag> children = rootTag.listChildren();
+            while (children.hasNext()) {
+                Tag child = children.next();
+                result.put(buildTagTree(child));
+            }
+
+            PrintWriter out = response.getWriter();
+            out.write(result.toString());
+            out.flush();
 
         } catch (Exception e) {
             LOG.error("Error retrieving tags", e);
             sendErrorResponse(response, "Error retrieving tags: " + e.getMessage());
         }
-
-
     }
 
+    private JSONObject buildTagTree(Tag tag) throws JSONException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("title", tag.getTitle());
+        jsonObject.put("path", tag.getPath());
+        jsonObject.put("tagId", tag.getTagID());
+
+        JSONArray childrenArray = new JSONArray();
+        Iterator<Tag> children = tag.listChildren();
+        while (children.hasNext()) {
+            childrenArray.put(buildTagTree(children.next()));
+        }
+
+        if (childrenArray.length() > 0) {
+            jsonObject.put("children", childrenArray);
+        }
+
+        return jsonObject;
+    }
 
     private void sendErrorResponse(SlingHttpServletResponse response, String message) throws IOException {
         Map<String, Object> errorResponse = new HashMap<>();
