@@ -1,0 +1,49 @@
+.form-section {
+  display: flex;
+  flex-direction: column;
+  /* vertically stack */
+  align-items: center;
+  margin-top: 20px;
+}
+
+#filterForm {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.dropdown-button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 200px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.submit-button {
+  padding: 8px 15px;
+  margin-top: 10px;
+}
