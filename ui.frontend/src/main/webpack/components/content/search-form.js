@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   const dropdownMenu = document.getElementById('dropdownMenu');
   let currentPage = 1;
   const pageSize = 25;
@@ -7,12 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.toggleDropdown = function () {
     dropdownMenu.classList.toggle('show');
-
     // Save previously selected tags
     const previouslySelected = new Set();
     const checkboxes = dropdownMenu.querySelectorAll('input[type="checkbox"]:checked');
     checkboxes.forEach(cb => previouslySelected.add(cb.value));
-
     dropdownMenu.innerHTML = '';
 
     fetch("/bin/tags/list")
@@ -21,12 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
         data.forEach((tag, index) => {
           const tagIdParts = tag.tagId.split(":");
           const shortTagId = tagIdParts.length > 1 ? tagIdParts[1] : tag.tagId;
-
           const item = document.createElement('div');
           item.className = 'dropdown-item';
-
           const isChecked = previouslySelected.has(shortTagId) ? 'checked' : '';
-
           item.innerHTML = `
             <input type="checkbox" id="tag${index}" name="tags" value="${shortTagId}" ${isChecked}>
             <label for="tag${index}">${tag.title}</label>
@@ -51,12 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectedTags = [];
     const checkboxes = document.querySelectorAll('input[name="tags"]:checked');
     checkboxes.forEach(cb => selectedTags.push(cb.value));
-
     const startDate = document.getElementById('startDate').value;
     const endDate = document.getElementById('endDate').value;
-
     const isInitialLoad = selectedTags.length === 0 && !startDate && !endDate;
-
     if (!isInitialLoad && ((startDate && !endDate) || (!startDate && endDate))) {
       alert('Please select both Start Date and End Date.');
       return;
@@ -68,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (endDate) formData.endDate = endDate;
 
     const offset = (currentPage - 1) * pageSize;
-
     fetch(`/bin/filter-articles?limit=${pageSize}&offset=${offset}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -118,8 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
             currentPage++;
             fetchFilteredArticles();
           });
-
-        } else {
+        } 
+        else {
           const noResults = document.createElement('p');
           noResults.textContent = 'No pages found for selected filters.';
           resultDiv.appendChild(noResults);
@@ -142,5 +132,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //  Initial fetch when page loads — shows all articles
   fetchFilteredArticles();
-
 });
