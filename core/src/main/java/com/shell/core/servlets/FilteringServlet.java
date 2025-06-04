@@ -41,7 +41,6 @@ import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVL
 public class FilteringServlet extends SlingAllMethodsServlet {
 
     private static final Logger logger = LoggerFactory.getLogger(FilteringServlet.class);
-    private static final String BASE_PATH = "/content/shell";
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     @Reference
@@ -50,7 +49,6 @@ public class FilteringServlet extends SlingAllMethodsServlet {
     @Override
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
             throws ServletException, IOException {
-
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 
@@ -65,13 +63,18 @@ public class FilteringServlet extends SlingAllMethodsServlet {
             }
 
             List<String> validTags = new ArrayList<>();
-            for (String tag : inputTags) {
-                String tagPath = "/content/cq:tags/shell/" + tag;
-                if (resolver.getResource(tagPath) != null) {
-                    validTags.add("shell:" + tag);
-                } else {
-                    logger.warn("Invalid tag: {}", tag);
+            String BASE_PATH = "/content/shell";
+            if (!inputTags.isEmpty()) {
+                for (String tag : inputTags) {
+                    String tagPath = "/content/cq:tags/shell/" + tag;
+                    if (resolver.getResource(tagPath) != null) {
+                        validTags.add("shell:" + tag);
+                    } else {
+                        logger.warn("Invalid tag: {}", tag);
+                    }
                 }
+            } else {
+                BASE_PATH = "/content/shell/us/en";
             }
 
             if (!inputTags.isEmpty() && validTags.isEmpty()) {
