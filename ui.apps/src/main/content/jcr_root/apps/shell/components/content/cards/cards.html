@@ -1,0 +1,17 @@
+<sly data-sly-use.model="com.shell.core.models.Cards" />
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
+
+<section class="shell-card-section" data-sly-test="${!model.empty}">
+    <sly data-sly-list.card="${model.cards}">
+        <div class="shell-card ${style.cssClass}">
+            <img src="${card.fileReference}" alt="${card.title}" class="card-image"/>
+            <div class="card-content ${style.cssClass}">
+                <h3 data-sly-test="${card.title}" class="card-title">${card.title @ context='html'}</h3>
+                <p data-sly-test="${card.description}" class="card-description">${card.description @ context='html'}</p>
+            </div>
+        </div>
+    </sly>
+</section>
+
+<!-- Corrected Placeholder support -->
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=model.empty}" />

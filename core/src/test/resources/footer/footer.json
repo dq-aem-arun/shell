@@ -1,0 +1,91 @@
+{
+  "footer-1": {
+    "groupNames": {
+      "groupA": {
+        "group": "Group A",
+        "footerItems": {
+          "item1": {
+            "label": "Home",
+            "path": "/home"
+          },
+          "item2": {
+            "label": "Contacts",
+            "path": "/contacts"
+          }
+        }
+      }
+    },
+    "footerItemsSocial": {
+      "facebook": {
+        "label": "Facebook",
+        "path": "/facebook",
+        "iconpath": "/icons/facebook.svg"
+      }
+    },
+    "footerItemsLegalLinks": {
+      "privacy": {
+        "label": "Privacy Policy",
+        "path": "/legal/privacy"
+      },
+      "terms": {
+        "label": "Terms of Use",
+        "path": "/legal/terms"
+      }
+    },
+    "socialNavigationlinksTitle": "Follow Us"
+  },
+  "footer-2": {
+    "groupNames": {
+      "groupA": {
+        "group": "Group A",
+        "footerItems": {
+          "item1": {
+            "label": "Home",
+            "path": "/home"
+          },
+          "item2": {
+            "label": "Contact",
+            "path": "/contact"
+          }
+        }
+      },
+      "groupB": {
+        "group": "Group B",
+        "footerItems": {
+          "item1": {
+            "label": "Home",
+            "path": "/home"
+          },
+          "item2": {
+            "label": "Contact",
+            "path": "/contact"
+          }
+        }
+      }
+    },
+    "footerItemsSocial": {
+      "facebook": {
+        "label": "Facebook",
+        "path": "/facebook",
+        "iconpath": "/icons/facebook.svg"
+      }
+    },
+    "footerItemsLegalLinks": {
+      "privacy": {
+        "label": "Privacy Policy",
+        "path": "/legal/privacy"
+      },
+      "terms": {
+        "label": "Terms of Use",
+        "path": "/legal/terms"
+      }
+    },
+    "socialNavigationlinksTitle": "Contact Us"
+  },
+  "footer-3": {
+    "groupNames": {},
+    "footerItemsSocial": {},
+    "footerItemsLegalLinks": {},
+    "socialNavigationlinksTitle": ""
+  }
+}
