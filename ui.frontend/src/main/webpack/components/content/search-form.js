@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const dropdownMenu = document.getElementById('dropdownMenu');
   let currentPage = 1;
   const pageSize = 25;
-  let isFirstLoad = true; // ✅ Track initial load
+  let isFirstLoad = true; //  Track initial load
 
   window.toggleDropdown = function () {
     dropdownMenu.classList.toggle('show');
@@ -18,17 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch("/bin/tags/list")
       .then(response => response.json())
       .then(data => {
-        const tagsArray = data.map(tag => tag.title);
+        data.forEach((tag, index) => {
+          const tagIdParts = tag.tagId.split(":");
+          const shortTagId = tagIdParts.length > 1 ? tagIdParts[1] : tag.tagId;
 
-        tagsArray.forEach((tag, index) => {
           const item = document.createElement('div');
           item.className = 'dropdown-item';
 
-          const isChecked = previouslySelected.has(tag) ? 'checked' : '';
+          const isChecked = previouslySelected.has(shortTagId) ? 'checked' : '';
 
           item.innerHTML = `
-            <input type="checkbox" id="tag${index}" name="tags" value="${tag}" ${isChecked}>
-            <label for="tag${index}">${tag}</label>
+            <input type="checkbox" id="tag${index}" name="tags" value="${shortTagId}" ${isChecked}>
+            <label for="tag${index}">${tag.title}</label>
           `;
           dropdownMenu.appendChild(item);
         });
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultDiv = document.getElementById('results');
         resultDiv.innerHTML = '';
 
-        // ✅ Show result count only after first load
+        //  Show result count only after first load
         if (!isFirstLoad) {
           const resultCountPara = document.createElement('p');
           resultCountPara.textContent = `${filtered.length} result${filtered.length !== 1 ? 's' : ''} for selected filters`;
@@ -124,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
           resultDiv.appendChild(noResults);
         }
 
-        isFirstLoad = false; // ✅ Turn off initial load after first fetch
+        isFirstLoad = false; // Turn off initial load after first fetch
       })
       .catch(error => {
         console.error('Error:', error);
@@ -135,11 +136,11 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('filterForm').addEventListener('submit', function (event) {
     event.preventDefault();
     currentPage = 1;
-    isFirstLoad = false; // ✅ Ensure filter count shows after search
+    isFirstLoad = false; //  Ensure filter count shows after search
     fetchFilteredArticles();
   });
 
-  // 🔄 Initial fetch when page loads — shows all articles
+  //  Initial fetch when page loads — shows all articles
   fetchFilteredArticles();
 
 });
