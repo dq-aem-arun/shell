@@ -80,21 +80,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (filtered.length > 0) {
           const ul = document.createElement('ul');
+          ul.className ="resultsList";
           filtered.forEach(p => {
             const li = document.createElement('li');
+            li.className="resultItem";
             li.style.marginBottom = '10px';
             li.innerHTML = `
-              <a href="${p.url}.html" target="_blank" style="font-weight: bold; color: #007bff;">${p.title}</a><br/>
+              <a href="${p.url}.html" target="_blank" style="font-weight: bold; color: #007bff;  text-decoration: none;">${p.title}</a><br/>
               <span style="font-size: 0.9em; color: #555;">${p.url}</span>`;
             ul.appendChild(li);
           });
           resultDiv.appendChild(ul);
 
           const paginationDiv = document.createElement('div');
-          paginationDiv.style.marginTop = '10px';
+          paginationDiv.className = 'pagination';
           paginationDiv.innerHTML = `
-            <button id="prevPage" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>
-            <button id="nextPage" ${filtered.length < pageSize ? 'disabled' : ''}>Next</button>`;
+            <button id="prevPage" class="prevbut"${currentPage === 1 ? 'disabled' : ''}>Previous</button>
+            <button id="nextPage" class="nextbut"${filtered.length < pageSize ? 'disabled' : ''}>Next</button>`;
           resultDiv.appendChild(paginationDiv);
 
           document.getElementById('prevPage')?.addEventListener('click', () => {
