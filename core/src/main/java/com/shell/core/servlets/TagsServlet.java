@@ -35,6 +35,7 @@ public class TagsServlet extends SlingSafeMethodsServlet {
         if (subCatRoot != null) {
             for (Resource tag : subCatRoot.getChildren()) {
                 JsonObject obj = new JsonObject();
+                obj.addProperty("value", tag.getName());
                 obj.addProperty("text", tag.getValueMap().get("jcr:title", tag.getName()));
                 result.add(obj);
             }
