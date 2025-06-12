@@ -28,7 +28,7 @@ public class TagsServlet extends SlingSafeMethodsServlet {
         if (category == null || subcategory == null) return;
 
         ResourceResolver resolver = request.getResourceResolver();
-        String path = "/content/shell/us/en/data/categories/" + category + "/subcategories/" + subcategory + "/tags";
+        String path = "/content/shell/data/categories/" + category + "/subcategories/" + subcategory + "/tags";
         Resource subCatRoot = resolver.getResource(path);
 
         JsonArray result = new JsonArray();

@@ -24,7 +24,7 @@ public class CategoryServlet extends SlingSafeMethodsServlet {
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
         ResourceResolver resolver = request.getResourceResolver();
-        Resource dataRoot = resolver.getResource("/content/shell/us/en/data/categories");
+        Resource dataRoot = resolver.getResource("/content/shell/data/categories");
 
         JsonArray result = new JsonArray();
         if (dataRoot != null) {

@@ -26,7 +26,7 @@ public class SubcategoryServlet extends SlingSafeMethodsServlet {
         if (category == null) return;
 
         ResourceResolver resolver = request.getResourceResolver();
-        Resource catRoot = resolver.getResource("/content/shell/us/en/data/categories/" + category + "/subcategories");
+        Resource catRoot = resolver.getResource("/content/shell/data/categories/" + category + "/subcategories");
 
         JsonArray result = new JsonArray();
         if (catRoot != null) {
