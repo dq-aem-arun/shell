@@ -4,5 +4,6 @@
     jcr:mixinTypes="[mix:language]"
     jcr:primaryType="nt:file">
     <jcr:content
+        jcr:lastModifiedBy="admin"
         jcr:primaryType="nt:resource"/>
 </jcr:root>

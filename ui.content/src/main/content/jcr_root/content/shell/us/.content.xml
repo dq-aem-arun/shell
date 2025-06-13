@@ -8,4 +8,7 @@
         jcr:title="us"
         sling:resourceType="shell/components/page"/>
     <en/>
+    <es/>
+    <de/>
+    <fr/>
 </jcr:root>

@@ -1,0 +1,12 @@
+<sly data-sly-use.teaserTemplate="/apps/shell/components/btn/btn.html"></sly>
+
+<div class="banner">
+    <h2>${properties.teaserTitle || 'Enter title'}</h2>
+    <p>${properties.teaserDescription || 'Enter description'}</p>
+
+    <sly data-sly-call="${teaserTemplate.button @
+        title='Test Button',
+        description='Test Desc',
+        cssClass='btn-primary',
+        link='https://google.com'}"></sly>
+</div>

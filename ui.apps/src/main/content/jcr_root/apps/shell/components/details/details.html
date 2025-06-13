@@ -1,0 +1,12 @@
+
+
+<h2>Enter ID to Fetch Details</h2>
+<input type="text" id="inputId" placeholder="Enter ID" />
+<button onclick="fetchDetails()">Submit</button>
+
+<h3>Result:</h3>
+<pre id="resultArea"></pre>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='shell.details'}"/>
+

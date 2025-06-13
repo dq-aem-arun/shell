@@ -1,0 +1,26 @@
+{
+  "tagSummary": {
+    "we-retail:apparel": 2
+  },
+  "pagesWithTag": 0,
+  "pages": [
+    {
+      "pagePath": "/content/shell/us/en",
+      "tags": []
+    },
+    {
+      "pagePath": "/content/shell/us/en/home",
+      "tags": [
+        "we-retail:apparel"
+      ]
+    },
+    {
+      "pagePath": "/content/shell/us/en/test",
+      "tags": [
+        "we-retail:apparel"
+      ]
+    }
+  ],
+  "totalPages": 3,
+  "taggedPages": 4
+}

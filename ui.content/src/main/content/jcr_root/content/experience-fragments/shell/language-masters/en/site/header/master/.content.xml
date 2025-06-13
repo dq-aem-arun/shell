@@ -29,6 +29,7 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="shell/components/search"
                 searchRoot="/content/shell/en"/>
+            <logo/>
         </root>
     </jcr:content>
 </jcr:root>
