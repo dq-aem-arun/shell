@@ -1,6 +1,7 @@
 .playstore-card {
-    padding: 20px;
+    padding: 24px;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    max-width:600px;
 }
 
 .playstore-card__title {
@@ -13,7 +14,6 @@
     font-size: 14px;
     margin-bottom: 8px;
     text-align: inherit;
-    max-width:600px;
 }
 
 .playstore-card__badges {
@@ -40,21 +40,21 @@
 }
 
 /* Text and item alignment per style */
-.left {
+.left{
     align-items: flex-start;
     text-align: left;
     margin-left: 0;
     margin-right: auto;
 }
 
-.center {
+.center{
     align-items: center;
     text-align: left;
     margin-left: 0;
     margin-right: auto;
 }
 
-.right {
+.right{
     align-items: flex-end;
     text-align: left;
     margin-left: 0;
@@ -62,16 +62,17 @@
 }
 
 /* Badge alignment per style */
-.left .playstore-card__badges {
+.left-image .playstore-card__badges {
     justify-content: flex-start;
 }
 
-.center .playstore-card__badges {
-    justify-content: flex-start;
+.center-image .playstore-card__badges {
+    justify-content: center;
+
 }
 
-.right .playstore-card__badges {
-    justify-content: flex-start;
+.right-image .playstore-card__badges {
+    justify-content:flex-end;
 }
 
 /* Responsiveness */
@@ -105,11 +106,11 @@
   .playstore-card__badge {
     max-height: 40px;
   }
+}
   /* --------- Dark Mode Support --------- */
-    @media (prefers-color-scheme: dark) {
-      .shell-card-section-stacked {
-        background-color: #121212;
-        color:#FFFFFF
-      }
+@media (prefers-color-scheme: dark) {
+    .playstore-card__title, .playstore-card__description p{
+        color: #E0E0E0;
     }
 }
+

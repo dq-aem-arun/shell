@@ -1,4 +1,7 @@
-<div class="playstore-card" data-sly-use.card="com.shell.core.models.PlayStroreCard">
+<sly data-sly-use.card="com.shell.core.models.PlayStroreCard"></sly>
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
+
+<div class="playstore-card ${cq.styleClasses}">
     <!-- Title -->
     <h2 class="playstore-card__title" data-sly-test="${card.titlefield}">
         ${card.titlefield}
@@ -19,3 +22,4 @@
         </a>
     </div>
 </div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=card.empty}" />

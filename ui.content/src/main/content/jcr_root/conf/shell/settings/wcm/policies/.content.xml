@@ -237,7 +237,7 @@
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2025-05-24T12:35:40.611+05:30"
+                    jcr:lastModified="{Date}2025-05-20T17:01:17.374+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
@@ -345,7 +345,7 @@
             <content jcr:primaryType="nt:unstructured">
                 <shell-button jcr:primaryType="nt:unstructured">
                     <policy_1747648705393
-                        jcr:lastModified="{Date}2025-05-20T15:38:24.314+05:30"
+                        jcr:lastModified="{Date}2025-05-24T18:29:07.962+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="shell-button"
@@ -545,91 +545,133 @@
                         </cq:styleGroups>
                     </policy_1747891101434>
                 </cards>
-                <promo-banner-v2 jcr:primaryType="nt:unstructured">
-                    <policy_1748069373389
-                        cq:styleDefaultClasses="styles"
-                        jcr:lastModified="{Date}2025-05-24T12:19:50.296+05:30"
+                <card_v2 jcr:primaryType="nt:unstructured">
+                    <policy_1748078705106
+                        jcr:lastModified="{Date}2025-05-26T10:50:07.582+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="test"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        allowUpload="true"
-                        altValueFromDAM="true"
-                        disableLazyLoading="true"
-                        displayPopupTitle="true"
-                        isDecorative="false"
-                        jpegQuality="{Long}1"
-                        titleValueFromDAM="true"
-                        uuidDisabled="true">
-                        <jcr:content jcr:primaryType="nt:unstructured"/>
-                        <plugins jcr:primaryType="nt:unstructured">
-                            <crop
-                                jcr:primaryType="nt:unstructured"
-                                features="*">
-                                <aspectRatios jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        jcr:primaryType="nt:unstructured"
-                                        name="Wide Landscape"
-                                        ratio="0.6180"/>
-                                    <item1
-                                        jcr:primaryType="nt:unstructured"
-                                        name="Landscape"
-                                        ratio="0.8284"/>
-                                    <item2
-                                        jcr:primaryType="nt:unstructured"
-                                        name="Square"
-                                        ratio="1"/>
-                                    <item3
-                                        jcr:primaryType="nt:unstructured"
-                                        name="Portrait"
-                                        ratio="1.6180"/>
-                                </aspectRatios>
-                            </crop>
-                            <rotate
-                                jcr:primaryType="nt:unstructured"
-                                features="right"/>
-                            <flip
-                                jcr:primaryType="nt:unstructured"
-                                features="-"/>
-                        </plugins>
-                        <cq:styleGroups jcr:primaryType="nt:unstructured">
-                            <item0
-                                cq:styleGroupLabel="Alignments"
-                                jcr:primaryType="nt:unstructured">
-                                <cq:styles jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        cq:styleClasses="my-custom-image-container-right"
-                                        cq:styleId="1748069379695"
-                                        cq:styleLabel="left-align"
-                                        jcr:primaryType="nt:unstructured"/>
-                                </cq:styles>
-                            </item0>
-                        </cq:styleGroups>
-                    </policy_1748069373389>
-                </promo-banner-v2>
-                <ctacard jcr:primaryType="nt:unstructured">
-                    <policy_1748346038090
-                        jcr:lastModified="{Date}2025-05-27T17:40:59.741+05:30"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="cta card policies"
+                        jcr:title="card_v2"
                         sling:resourceType="wcm/core/components/policy/policy">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                         <cq:styleGroups jcr:primaryType="nt:unstructured">
                             <item0
-                                cq:styleGroupLabel="H-View"
+                                cq:styleGroupLabel="card_v2"
                                 jcr:primaryType="nt:unstructured">
                                 <cq:styles jcr:primaryType="nt:unstructured">
                                     <item0
-                                        cq:styleClasses="horizontal"
-                                        cq:styleId="1748346068199"
-                                        cq:styleLabel="H-view"
+                                        cq:styleClasses="imageBlock"
+                                        cq:styleId="1748078714267"
+                                        cq:styleLabel="imageBlock"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="titleBlock"
+                                        cq:styleId="1748078738012"
+                                        cq:styleLabel="titleBlock"
                                         jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
                             </item0>
                         </cq:styleGroups>
-                    </policy_1748346038090>
-                </ctacard>
+                    </policy_1748078705106>
+                    <policy_8003352754666
+                        cq:styleDefaultClasses="card_v2"
+                        jcr:lastModified="{Date}2025-05-27T10:50:32.917+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="card-v2 policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="card_v2"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="card-v2-content-plain "
+                                        cq:styleId="1748323225250"
+                                        cq:styleLabel="plain card"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_8003352754666>
+                </card_v2>
+                <policy_8003352754666
+                    cq:styleDefaultClasses="card_v2"
+                    jcr:lastModified="{Date}2025-05-27T10:50:32.917+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="card-v2 policy"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="card_v2"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="card-v2-content-plain "
+                                    cq:styleId="1748323225250"
+                                    cq:styleLabel="plain card"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_8003352754666>
+                <playstorecard jcr:primaryType="nt:unstructured">
+                    <policy_1748436888824
+                        cq:styleDefaultClasses="Playstorecard"
+                        jcr:lastModified="{Date}2025-05-28T18:25:40.837+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="playstorecard"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="component Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="left"
+                                        cq:styleId="1748436897085"
+                                        cq:styleLabel="Align Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="center"
+                                        cq:styleId="1748436908101"
+                                        cq:styleLabel="Align Center"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="right"
+                                        cq:styleId="1748436913069"
+                                        cq:styleLabel="Align Right"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="images Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="left-image"
+                                        cq:styleId="1748436920200"
+                                        cq:styleLabel="Align Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="center-image"
+                                        cq:styleId="1748436923390"
+                                        cq:styleLabel="Align Center"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="right-image"
+                                        cq:styleId="1748436925959"
+                                        cq:styleLabel="Align Right"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1748436888824>
+                </playstorecard>
             </content>
         </components>
     </shell>
