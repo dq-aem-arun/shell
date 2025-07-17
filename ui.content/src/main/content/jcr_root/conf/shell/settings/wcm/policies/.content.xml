@@ -630,6 +630,44 @@
                         </cq:styleGroups>
                     </policy_1748346038090>
                 </ctacard>
+                <promobanner jcr:primaryType="nt:unstructured">
+                    <policy_1748436640796
+                        jcr:lastModified="{Date}2025-05-28T18:28:35.663+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Promo-Banner-Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Promo-Banner-Variants"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="promo-banner--row "
+                                        cq:styleId="1748436902283"
+                                        cq:styleLabel="Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="promo-banner--row-reverse"
+                                        cq:styleId="1748436939065"
+                                        cq:styleLabel="Row-Reverse"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="promo-banner--column"
+                                        cq:styleId="1748436953086"
+                                        cq:styleLabel="Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="promo-banner--column-reverse"
+                                        cq:styleId="1748436964434"
+                                        cq:styleLabel="Column-Reverse"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1748436640796>
+                </promobanner>
             </content>
         </components>
     </shell>
