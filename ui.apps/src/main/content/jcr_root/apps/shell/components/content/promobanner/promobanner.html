@@ -1,0 +1,21 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.promo="com.shell.core.models.Promo">
+    <div class="promo-banner" data-sly-list.promobanner="${promo.promoBanner}">
+        <div class="promo-item1">
+            <div class="promo-img">
+                <img src="${promobanner.fileReference}" alt="${promobanner.title}" />
+            </div>
+            <div class="promo-item2">
+                <h3 class="title">${promobanner.title}</h3>
+                <p class="description">${promobanner.description @ context='html'}</p>
+                <div >
+                    <sly class="promobanner-button" data-sly-test="${promobanner.showButton}">
+                        <sly data-sly-resource="${'btn' @ resourceType='shell/components/content/shell-button'}"/>
+                    </sly>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=promo.empty}" />

@@ -343,11 +343,10 @@
                 </policy>
             </page>
             <content jcr:primaryType="nt:unstructured">
-
                 <card_v2 jcr:primaryType="nt:unstructured">
                     <policy_1753265351805
                         cq:styleDefaultClasses="card-v2"
-                        jcr:lastModified="{Date}2025-07-24T10:06:55.945+05:30"
+                        jcr:lastModified="{Date}2025-07-24T12:03:18.587+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="card-v2 style policy"
@@ -368,7 +367,6 @@
                         </cq:styleGroups>
                     </policy_1753265351805>
                 </card_v2>
-
                 <shell-herobanner jcr:primaryType="nt:unstructured">
                     <policy_1748338783196
                         jcr:lastModified="{Date}2025-05-27T15:15:59.524+05:30"
@@ -399,7 +397,7 @@
                 </shell-herobanner>
                 <shell-button jcr:primaryType="nt:unstructured">
                     <policy_1753252361854
-                        jcr:lastModified="{Date}2025-07-23T15:20:25.968+05:30"
+                        jcr:lastModified="{Date}2025-07-24T12:04:42.242+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="shell-button"
@@ -455,6 +453,44 @@
                         </cq:styleGroups>
                     </policy_1753252361854>
                 </shell-button>
+                <promobanner jcr:primaryType="nt:unstructured">
+                    <policy_1753339372794
+                        jcr:lastModified="{Date}2025-07-24T12:15:52.045+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="promo banner"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="promo-banner"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="promo-banner--row"
+                                        cq:styleId="1753339377837"
+                                        cq:styleLabel="Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="promo-banner--row-reverse"
+                                        cq:styleId="1753339425051"
+                                        cq:styleLabel="Row-Reverse"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="promo-banner--column"
+                                        cq:styleId="1753339435257"
+                                        cq:styleLabel="Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="promo-banner--column-reverse"
+                                        cq:styleId="1753339446785"
+                                        cq:styleLabel="Column-Reverse"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1753339372794>
+                </promobanner>
             </content>
         </components>
     </shell>
