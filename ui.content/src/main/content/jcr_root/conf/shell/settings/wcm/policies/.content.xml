@@ -343,6 +343,32 @@
                 </policy>
             </page>
             <content jcr:primaryType="nt:unstructured">
+
+                <card_v2 jcr:primaryType="nt:unstructured">
+                    <policy_1753265351805
+                        cq:styleDefaultClasses="card-v2"
+                        jcr:lastModified="{Date}2025-07-24T10:06:55.945+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="card-v2 style policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="card-v2"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="card-v2-content-plain"
+                                        cq:styleId="1753265374859"
+                                        cq:styleLabel="variation-2"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1753265351805>
+                </card_v2>
+
                 <shell-herobanner jcr:primaryType="nt:unstructured">
                     <policy_1748338783196
                         jcr:lastModified="{Date}2025-05-27T15:15:59.524+05:30"
