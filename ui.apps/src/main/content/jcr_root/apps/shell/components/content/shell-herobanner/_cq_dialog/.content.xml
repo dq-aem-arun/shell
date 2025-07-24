@@ -3,7 +3,7 @@
           xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           cq:dialogMode="floating"
           jcr:primaryType="nt:unstructured"
-          jcr:title="Hero section Details"
+          jcr:title="Hero Banner"
           sling:resourceType="cq/gui/components/authoring/dialog">
     <content
             jcr:primaryType="nt:unstructured"
