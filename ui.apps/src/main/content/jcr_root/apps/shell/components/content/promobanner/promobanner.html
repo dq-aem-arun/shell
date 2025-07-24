@@ -10,7 +10,7 @@
                 <p class="description">${promobanner.description @ context='html'}</p>
                 <div >
                     <sly class="promobanner-button" data-sly-test="${promobanner.showButton}">
-                        <sly data-sly-resource="${'btn' @ resourceType='shell/components/content/shell-button'}"/>
+                        <sly data-sly-resource="${'btn' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}"/>
                     </sly>
                 </div>
             </div>

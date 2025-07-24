@@ -397,7 +397,7 @@
                 </shell-herobanner>
                 <shell-button jcr:primaryType="nt:unstructured">
                     <policy_1753252361854
-                        jcr:lastModified="{Date}2025-07-24T12:04:42.242+05:30"
+                        jcr:lastModified="{Date}2025-07-24T16:50:42.203+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="shell-button"
@@ -405,65 +405,113 @@
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                         <cq:styleGroups jcr:primaryType="nt:unstructured">
                             <item0
-                                cq:styleGroupLabel="Alignment"
+                                cq:styleGroupLabel="Icon-Alignment"
                                 jcr:primaryType="nt:unstructured">
                                 <cq:styles jcr:primaryType="nt:unstructured">
                                     <item0
-                                        cq:styleClasses="shell-btn-danger"
-                                        cq:styleId="1753252737902"
-                                        cq:styleLabel="Red"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item1
-                                        cq:styleClasses="button-column"
-                                        cq:styleId="1753261496108"
-                                        cq:styleLabel="Column"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item2
-                                        cq:styleClasses="button-row"
-                                        cq:styleId="1753261510588"
-                                        cq:styleLabel="Row"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item3
-                                        cq:styleClasses="shell-btn-primary-transparent"
-                                        cq:styleId="1753262215370"
-                                        cq:styleLabel="Primary Transparent"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item4
                                         cq:styleClasses="icon-start"
                                         cq:styleId="1753263277288"
                                         cq:styleLabel="Icon at Start"
                                         jcr:primaryType="nt:unstructured"/>
-                                    <item5
+                                    <item1
                                         cq:styleClasses="icon-end"
                                         cq:styleId="1753263319812"
                                         cq:styleLabel="Icon at end"
                                         jcr:primaryType="nt:unstructured"/>
-                                    <item6
-                                        cq:styleClasses="shell-btn-link-1"
-                                        cq:styleId="1753263406186"
-                                        cq:styleLabel="Link Underline"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item7
-                                        cq:styleClasses="shell-btn-link-2"
-                                        cq:styleId="1753263603563"
-                                        cq:styleLabel="Link 2"
-                                        jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
                             </item0>
+                            <item1
+                                cq:styleGroupLabel="Button-Styles"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-btn-danger"
+                                        cq:styleId="1753350818739"
+                                        cq:styleLabel="Red Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="shell-btn-primary-transparent"
+                                        cq:styleId="1753350829511"
+                                        cq:styleLabel="Primary Transparent Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="shell-btn-link-1"
+                                        cq:styleId="1753350875091"
+                                        cq:styleLabel="Link Underline Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="shell-btn-link-2"
+                                        cq:styleId="1753351716051"
+                                        cq:styleLabel="Link-2 Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item4
+                                        cq:styleClasses="shell-btn-primary"
+                                        cq:styleId="1753351776262"
+                                        cq:styleLabel="Button Primary"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Button-Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="button-row"
+                                        cq:styleId="1753350909825"
+                                        cq:styleLabel="Buttons In Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="button-column"
+                                        cq:styleId="1753351621297"
+                                        cq:styleLabel="Button In Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                            <item3
+                                cq:styleGroupLabel="Button-Position"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-btn-align-right-row"
+                                        cq:styleId="1753354747616"
+                                        cq:styleLabel="Right-side Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="shell-btn-align-right-column"
+                                        cq:styleId="1753352900373"
+                                        cq:styleLabel="Right-side Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="shell-btn-align-left-row"
+                                        cq:styleId="1753352917979"
+                                        cq:styleLabel="Left-side Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="shell-btn-align-left-column"
+                                        cq:styleId="1753355405899"
+                                        cq:styleLabel="Left-side Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item4
+                                        cq:styleClasses="shell-btn-align-center-row"
+                                        cq:styleId="1753352932150"
+                                        cq:styleLabel="Center Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item3>
                         </cq:styleGroups>
                     </policy_1753252361854>
                 </shell-button>
                 <promobanner jcr:primaryType="nt:unstructured">
                     <policy_1753339372794
-                        jcr:lastModified="{Date}2025-07-24T12:15:52.045+05:30"
+                        jcr:lastModified="{Date}2025-07-24T15:43:50.093+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="promo banner"
+                        jcr:title="Promo Banner"
                         sling:resourceType="wcm/core/components/policy/policy">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                         <cq:styleGroups jcr:primaryType="nt:unstructured">
                             <item0
-                                cq:styleGroupLabel="promo-banner"
+                                cq:styleGroupLabel="ROW-ALIGNMENT"
                                 jcr:primaryType="nt:unstructured">
                                 <cq:styles jcr:primaryType="nt:unstructured">
                                     <item0
@@ -476,18 +524,24 @@
                                         cq:styleId="1753339425051"
                                         cq:styleLabel="Row-Reverse"
                                         jcr:primaryType="nt:unstructured"/>
-                                    <item2
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="COLUMN-ALIGNMENT"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
                                         cq:styleClasses="promo-banner--column"
-                                        cq:styleId="1753339435257"
+                                        cq:styleId="1753351925441"
                                         cq:styleLabel="Column"
                                         jcr:primaryType="nt:unstructured"/>
-                                    <item3
+                                    <item1
                                         cq:styleClasses="promo-banner--column-reverse"
-                                        cq:styleId="1753339446785"
+                                        cq:styleId="1753351960659"
                                         cq:styleLabel="Column-Reverse"
                                         jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
-                            </item0>
+                            </item1>
                         </cq:styleGroups>
                     </policy_1753339372794>
                 </promobanner>
