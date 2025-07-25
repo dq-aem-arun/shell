@@ -1,0 +1,289 @@
+@media (prefers-color-scheme: dark) {
+  .shell_tab .cmp-tabs__tab {
+    color: #ffffff !important;
+    background-color: transparent !important;
+  }
+
+  .shell_tab .cmp-tabs__tab:hover {
+    background-color: #4e4e4e !important;
+    color: #ffffff !important;
+  }
+
+  .shell_tab .cmp-tabs__tab--active {
+    color: #ffffff !important;
+  }
+
+  .shell_tab .cmp-tabs__tab--active::after {
+    background-color: #ffc800 !important;
+  }
+}
+
+.shell_tab .cmp-tabs__tablist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: transparent;
+  padding: 0 50px;
+  gap: 10px;
+  border-bottom: 2px solid #dfdede;
+}
+
+.shell_tab .cmp-tabs__tab {
+  position: relative;
+  padding: 15px 10px;
+  font: 14px Arial, Roboto, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #4a4a4a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.shell_tab .cmp-tabs__tab::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: transparent;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.shell_tab .cmp-tabs__tab--active {
+  color: #333;
+  font-weight: 500;
+}
+
+.shell_tab .cmp-tabs__tab:hover {
+  padding: 15px 10px;
+  color: #333;
+  background-color: #dfdede;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.shell_tab .cmp-tabs__tab--active::after {
+  width: 100%;
+  background-color: #ffc800;
+}
+
+//Mobile View
+@media screen and (max-width: 320px) {
+  .shell_tab {
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+
+  /* Navigation Arrows */
+  .shell_tab::before,
+  .shell_tab::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #666 !important;
+    transition: background-color 0.3s ease !important;
+  }
+
+  .shell_tab::before {
+    content: "\003C" !important;
+    left: 8px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+  }
+
+  .shell_tab::after {
+    content: "\003E" !important;
+    right: 8px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+  }
+
+  .shell_tab::before:hover,
+  .shell_tab::after:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Tablist Container */
+  .shell_tab .cmp-tabs__tablist {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    background-color: transparent !important;
+    padding: 0 35px !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    border-bottom: 2px solid #dfdede;
+  }
+
+  .shell_tab .cmp-tabs__tablist::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Individual Tabs */
+  .shell_tab .cmp-tabs__tab {
+    position: relative !important;
+    padding: 15px 10px !important;
+    font: 14px Arial, Roboto, Helvetica, sans-serif !important;
+    font-weight: 400 !important;
+    color: #4a4a4a !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: color 0.3s ease !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    min-width: fit-content !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+    float: none !important;
+    clear: none !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Tab Underline */
+  .shell_tab .cmp-tabs__tab::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -10px !important; /* creates space between tab and underline */
+    left: 0 !important;
+    width: 0 !important;
+    height: 4px !important;
+    background-color: transparent !important;
+    transition: width 0.3s ease, background-color 0.3s ease !important;
+  }
+
+  /* Hover Effect */
+  .shell_tab .cmp-tabs__tab:hover {
+    color: #333 !important;
+    background-color: #dfdede !important;
+    border-radius: 5px !important;
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .shell_tab .cmp-tabs__tab:hover::after {
+    width: 100% !important;
+    background-color: #ffc800 !important;
+  }
+
+  /* Active Tab */
+  .shell_tab .cmp-tabs__tab--active {
+    color: #333 !important;
+    font-weight: 500 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .shell_tab .cmp-tabs__tab--active::after {
+    width: 100% !important;
+    background-color: #ffc800 !important;
+    bottom: -10px !important;
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    .shell_tab .cmp-tabs__tab {
+      color: #ffffff !important;
+      background-color: transparent !important;
+    }
+
+    .shell_tab .cmp-tabs__tab:hover {
+      background-color: #4e4e4e !important;
+      color: #ffffff !important;
+    }
+
+    .shell_tab .cmp-tabs__tab--active {
+      color: #ffffff !important;
+    }
+
+    .shell_tab .cmp-tabs__tab--active::after {
+      background-color: #ffc800 !important;
+    }
+  }
+}
+
+//Tablet View
+@media screen and (max-width: 728px) {
+  .shell_tab {
+    position: relative !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .shell_tab .cmp-tabs__tablist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 0 50px;
+    gap: 10px;
+    border-bottom: 2px solid #dfdede;
+  }
+
+  .shell_tab .cmp-tabs__tab {
+    position: relative;
+    padding: 15px 10px;
+    font: 14px Arial, Roboto, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
+  }
+
+  .shell_tab .cmp-tabs__tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
+
+  .shell_tab .cmp-tabs__tab--active {
+    color: #333;
+    font-weight: 500;
+  }
+
+  .shell_tab .cmp-tabs__tab:hover {
+    padding: 15px 10px;
+    color: #333;
+    background-color: #dfdede;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+
+  .shell_tab .cmp-tabs__tab--active::after {
+    width: 100%;
+    background-color: #ffc800;
+  }
+}

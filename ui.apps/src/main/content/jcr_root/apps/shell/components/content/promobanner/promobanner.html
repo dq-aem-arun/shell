@@ -1,3 +1,4 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
 <sly data-sly-use.promo="com.shell.core.models.Promo">
     <div class="promo-banner" data-sly-list.promobanner="${promo.promoBanner}">
         <div class="promo-item1">
@@ -14,3 +15,4 @@
         </div>
     </div>
 </sly>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=promo.empty}" />

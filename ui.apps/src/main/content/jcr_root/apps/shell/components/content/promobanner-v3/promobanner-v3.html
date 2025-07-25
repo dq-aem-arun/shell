@@ -1,0 +1,19 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html" />
+<sly data-sly-use.promobannerv3="com.shell.core.models.PromoBanner_V3"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!promobannerv3.empty}">
+
+    <section class="section-container">
+        <div class="sub1-heading">${promobannerv3.text1}</div>
+        <h1 class="main1-heading">${promobannerv3.text2}</h1>
+        <div class="sub1-text">${promobannerv3.text3}</div>
+
+        <div class="start-button-container">
+            <div class="start-dot"></div>
+            <a href="${promobannerv3.buttonPath}" class="start-label">${promobannerv3.buttonText}</a>
+        </div>
+    </section>
+
+</sly>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}" />
