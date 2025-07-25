@@ -34,9 +34,9 @@
                     jcr:title="Content Image"
                     sling:resourceType="wcm/core/components/policy/policy"
                     allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
-                    disableLazyLoading="false"
                     allowUpload="false"
                     altValueFromDAM="true"
+                    disableLazyLoading="false"
                     displayPopupTitle="true"
                     isDecorative="false"
                     jpegQuality="{Long}85"
@@ -237,10 +237,13 @@
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:lastModified="{Date}2025-06-11T12:37:56.695+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:shell - Content,/apps/shell/components/form/container]">
+                    components="[group:General,/libs/fd/af/components/table,/apps/icici/components/heading-with-content-image,group:Shell,group:shell - Content,/apps/shell/components/form/container,group:shoaib_project - Content,group:Tasks]"
+                    layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -339,6 +342,244 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>
+            <content jcr:primaryType="nt:unstructured">
+                <card_v2 jcr:primaryType="nt:unstructured">
+                    <policy_1753265351805
+                        cq:styleDefaultClasses="card-v2"
+                        jcr:lastModified="{Date}2025-07-25T11:51:27.589+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="card-v2 style policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="card-v2"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="card-v2-content-plain"
+                                        cq:styleId="1753265374859"
+                                        cq:styleLabel="variation-2"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1753265351805>
+                </card_v2>
+                <shell-herobanner jcr:primaryType="nt:unstructured">
+                    <policy_1748338783196
+                        jcr:lastModified="{Date}2025-05-27T15:15:59.524+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="hero policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses=".transparent-card-details"
+                                        cq:styleId="1748338792764"
+                                        cq:styleLabel="transpareent card"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses=".home-herobanner-details"
+                                        cq:styleId="1748339138787"
+                                        cq:styleLabel="home banner"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1748338783196>
+                </shell-herobanner>
+                <shell-button jcr:primaryType="nt:unstructured">
+                    <policy_1753252361854
+                        jcr:lastModified="{Date}2025-07-24T16:50:42.203+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="shell-button"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Icon-Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="icon-start"
+                                        cq:styleId="1753263277288"
+                                        cq:styleLabel="Icon at Start"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="icon-end"
+                                        cq:styleId="1753263319812"
+                                        cq:styleLabel="Icon at end"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Button-Styles"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-btn-danger"
+                                        cq:styleId="1753350818739"
+                                        cq:styleLabel="Red Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="shell-btn-primary-transparent"
+                                        cq:styleId="1753350829511"
+                                        cq:styleLabel="Primary Transparent Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="shell-btn-link-1"
+                                        cq:styleId="1753350875091"
+                                        cq:styleLabel="Link Underline Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="shell-btn-link-2"
+                                        cq:styleId="1753351716051"
+                                        cq:styleLabel="Link-2 Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item4
+                                        cq:styleClasses="shell-btn-primary"
+                                        cq:styleId="1753351776262"
+                                        cq:styleLabel="Button Primary"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="Button-Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="button-row"
+                                        cq:styleId="1753350909825"
+                                        cq:styleLabel="Buttons In Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="button-column"
+                                        cq:styleId="1753351621297"
+                                        cq:styleLabel="Button In Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                            <item3
+                                cq:styleGroupLabel="Button-Position"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-btn-align-right-row"
+                                        cq:styleId="1753354747616"
+                                        cq:styleLabel="Right-side Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="shell-btn-align-right-column"
+                                        cq:styleId="1753352900373"
+                                        cq:styleLabel="Right-side Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="shell-btn-align-left-row"
+                                        cq:styleId="1753352917979"
+                                        cq:styleLabel="Left-side Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="shell-btn-align-left-column"
+                                        cq:styleId="1753355405899"
+                                        cq:styleLabel="Left-side Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item4
+                                        cq:styleClasses="shell-btn-align-center-row"
+                                        cq:styleId="1753352932150"
+                                        cq:styleLabel="Center Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item3>
+                        </cq:styleGroups>
+                    </policy_1753252361854>
+                </shell-button>
+                <promobanner jcr:primaryType="nt:unstructured">
+                    <policy_1753339372794
+                        jcr:lastModified="{Date}2025-07-24T15:43:50.093+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Promo Banner"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="ROW-ALIGNMENT"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="promo-banner--row"
+                                        cq:styleId="1753339377837"
+                                        cq:styleLabel="Row"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="promo-banner--row-reverse"
+                                        cq:styleId="1753339425051"
+                                        cq:styleLabel="Row-Reverse"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="COLUMN-ALIGNMENT"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="promo-banner--column"
+                                        cq:styleId="1753351925441"
+                                        cq:styleLabel="Column"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="promo-banner--column-reverse"
+                                        cq:styleId="1753351960659"
+                                        cq:styleLabel="Column-Reverse"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1753339372794>
+                </promobanner>
+                <playstorecard jcr:primaryType="nt:unstructured">
+                    <policy_1753418982494
+                        jcr:lastModified="{Date}2025-07-25T11:33:47.436+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Play StoreCard"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="left"
+                                        cq:styleId="1753419019964"
+                                        cq:styleLabel="At Left Side"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="right"
+                                        cq:styleId="1753419084510"
+                                        cq:styleLabel="At Right Side"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="center"
+                                        cq:styleId="1753419110899"
+                                        cq:styleLabel="At Center"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1753418982494>
+                </playstorecard>
+            </content>
         </components>
     </shell>
 </jcr:root>
