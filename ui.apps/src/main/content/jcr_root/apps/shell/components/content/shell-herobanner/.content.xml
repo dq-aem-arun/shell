@@ -5,7 +5,6 @@
         xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
         jcr:description="HeroBanner Component"
         jcr:primaryType="cq:Component"
-        jcr:title="HeroBanner"
         jcr:title="Hero Banner"
         componentGroup="Shell"
         sling:resourceType="shell/components/content/shell-herobanner"
