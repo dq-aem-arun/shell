@@ -346,7 +346,7 @@
                 <card_v2 jcr:primaryType="nt:unstructured">
                     <policy_1753265351805
                         cq:styleDefaultClasses="card-v2"
-                        jcr:lastModified="{Date}2025-07-24T12:03:18.587+05:30"
+                        jcr:lastModified="{Date}2025-07-25T11:51:27.589+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="card-v2 style policy"
@@ -545,6 +545,40 @@
                         </cq:styleGroups>
                     </policy_1753339372794>
                 </promobanner>
+                <playstorecard jcr:primaryType="nt:unstructured">
+                    <policy_1753418982494
+                        jcr:lastModified="{Date}2025-07-25T11:33:47.436+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Play StoreCard"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="left"
+                                        cq:styleId="1753419019964"
+                                        cq:styleLabel="At Left Side"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="right"
+                                        cq:styleId="1753419084510"
+                                        cq:styleLabel="At Right Side"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="center"
+                                        cq:styleId="1753419110899"
+                                        cq:styleLabel="At Center"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1753418982494>
+                </playstorecard>
             </content>
         </components>
     </shell>

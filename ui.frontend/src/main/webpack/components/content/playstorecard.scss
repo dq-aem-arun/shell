@@ -1,0 +1,115 @@
+.playstore-card {
+    padding: 20px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.playstore-card__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.playstore-card__description {
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-align: inherit;
+    max-width:600px;
+}
+
+.playstore-card__badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.playstore-card__badge {
+    max-height: 50px;
+    height: auto;
+    width: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #FFFFFF;
+}
+
+/* Style system alignment base */
+.left, .center, .right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Text and item alignment per style */
+.left {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.center {
+    align-items: center;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.right {
+    align-items: flex-end;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Badge alignment per style */
+.left .playstore-card__badges {
+    justify-content: flex-start;
+}
+
+.center .playstore-card__badges {
+    justify-content: flex-start;
+}
+
+.right .playstore-card__badges {
+    justify-content: flex-start;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .playstore-card__title {
+    font-size: 20px;
+  }
+
+  .playstore-card__description {
+    font-size: 13px;
+  }
+
+  .playstore-card__badges {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .playstore-card {
+    display: inline;
+  }
+
+  .playstore-card__title {
+    font-size: 18px;
+  }
+
+  .playstore-card__description {
+    font-size: 12px;
+  }
+
+  .playstore-card__badge {
+    max-height: 40px;
+  }
+  /* --------- Dark Mode Support --------- */
+    @media (prefers-color-scheme: dark) {
+      .shell-card-section-stacked {
+        background-color: #121212;
+        color:#FFFFFF
+      }
+    }
+}
