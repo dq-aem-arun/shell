@@ -11,13 +11,14 @@ import org.slf4j.LoggerFactory;
 /**
  * @author : Bhagyalaxmi
  * @version : v1.0
- * @since : 19-05-2025
- *
+ * @since : 20-05-2025
+ * <p>
  * Sling Model implementation for the PlayStoreCard component.
  * This model is responsible for exposing authored dialog values such as the
  * title, description, app store image references (Google Play and App Store),
  * and a call-to-action URL. These fields are typically used to promote mobile app downloads.
  */
+
 @Model(adaptables = Resource.class, adapters = PlayStroreCard.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class PlayStroreCardImpl implements PlayStroreCard {
@@ -34,10 +35,13 @@ public class PlayStroreCardImpl implements PlayStroreCard {
     private String firstImageReference;
 
     @ValueMapValue
+    private String firstImageLinkURL;
+
+    @ValueMapValue
     private String secondImageReference;
 
     @ValueMapValue
-    private String LinkURL;
+    private String secondImageLinkURL;
 
     /**
      * Returns the title displayed in the PlayStoreCard component.
@@ -75,10 +79,23 @@ public class PlayStroreCardImpl implements PlayStroreCard {
     }
 
     /**
-     * Returns the path to the second app badge image (usually the Apple App Store badge).
-     * This image is also typically stored in the DAM.
+     * Returns the link URL that users are redirected to when clicking on the badges.
+     * Usually this is the app store URL for downloading the mobile application.
      *
-     * @return the image reference path for the App Store badge
+     * @return the external or internal link URL
+     */
+    @Override
+    public String getFirstImageLinkURL() {
+        log.info("getFirstImageLinkURL() called");
+        return firstImageLinkURL;
+    }
+
+    /**
+     * Returns the link URL that users are redirected to when clicking on the Google Play badge.
+     * Typically, this directs to the Shell Asia App page on the Google Play Store,
+     * allowing users to download the app and start collecting rewards.
+     *
+     * @return the URL for the Google Play Store badge
      */
     public String getSecondImageReference() {
         log.info("getSecondImageReference() called");
@@ -86,15 +103,15 @@ public class PlayStroreCardImpl implements PlayStroreCard {
     }
 
     /**
-     * Returns the link URL that users are redirected to when clicking on the badges.
-     * Usually this is the app store URL for downloading the mobile application.
+     * Returns the link URL that users are redirected to when clicking on the App Store badge.
+     * Typically, this directs to the Shell Asia App page on the Apple App Store,
+     * allowing users to download the app and start collecting rewards.
      *
-     * @return the external or internal link URL
+     * @return the URL for the Apple App Store badge
      */
     @Override
-    public String getLinkURL() {
-        log.info("getLinkURL() called");
-        return LinkURL;
+    public String getSecondImageLinkURL() {
+        log.info("getSecondImageLinkURL() called");
+        return secondImageLinkURL;
     }
-
 }

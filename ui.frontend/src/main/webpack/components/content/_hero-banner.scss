@@ -44,10 +44,14 @@
   color: #000;
 }
 
-
 .cmp_hero-banner_para  {
   font-size: 15px;
   color: #fff;
+}
+
+.cmp_hero-banner_para p {
+  font-size: 15px;
+  color: #000;
   margin: 10px 0;
 }
 
@@ -114,6 +118,11 @@
     width: 900px;
     object-fit: cover;
     background-position: center;
+  width: 100%;
+  max-width: 736px;
+  height: 600px;
+  display: block;
+  border-radius: 10px;
 }
 
 .home-herobanner-details .cmp_hero-banner_text {
