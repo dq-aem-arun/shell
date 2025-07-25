@@ -2,11 +2,10 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        cq:lastModified="{Date}2025-05-23T13:02:05.500+05:30"
-        cq:lastModified="{Date}2025-07-24T16:50:42.223+05:30"
+        cq:lastModified="{Date}2025-06-03T21:06:21.234+05:30"
         cq:lastModifiedBy="admin"
         cq:templateType="/conf/shell/settings/wcm/template-types/page"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Shell-ContentPage"
+        jcr:title="Demo1"
         status="enabled"/>
 </jcr:root>

@@ -12,6 +12,12 @@
             <sly data-sly-test="${promobanner.showButton}">
                 <sly data-sly-resource="${'btn' @ resourceType='shell/components/content/shell-button'}"/>
             </sly>
+                <div >
+                    <sly class="promobanner-button" data-sly-test="${promobanner.showButton}">
+                        <sly data-sly-resource="${'btn' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}"/>
+                    </sly>
+                </div>
+            </div>
         </div>
     </div>
 </sly>

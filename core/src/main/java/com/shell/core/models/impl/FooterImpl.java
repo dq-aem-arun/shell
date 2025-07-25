@@ -10,6 +10,13 @@
  * @Version: v1.0.0
  * @since: 19-05-2025   
  * 
+ *
+ * The model is registered for the resource type {@code shell/components/content/footer}.
+ *
+ * @author Jay
+ * @Version: v1.0.0
+ * @since: 19-05-2025
+ *
  */
 package com.shell.core.models.impl;
 

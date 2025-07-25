@@ -1,4 +1,6 @@
 <sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"/>
+<sly data-sly-use.clientlib="${'core/wcm/components/commons/v1/templates/clientlib.html'}"
+     data-sly-call="${clientlib.all @ categories='shell.site'}"/>
 <sly 
   data-sly-use.buttonModel="com.shell.core.models.ShellButton"
   data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
@@ -15,5 +17,18 @@
     </li>
     </div>
   </sly>
+  <div class="button-container ">
+    
+      <sly data-sly-list="${buttonModel.buttons}">
+        <div class="button-item">
+          <a href="${item.buttonLink}.html" class="button-link">
+            <sly data-sly-test="${item.icon}">
+              <img src="${item.icon}" alt="Icon" class="button-icon"/>
+            </sly>
+            <span class="button-text">${item.buttonText}</span>
+          </a>
+        </div>
+      </sly>
+     </div>
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

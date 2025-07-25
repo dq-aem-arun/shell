@@ -16,7 +16,6 @@ public class FooterNavItem {
 
     // The path or URL the navigation item points to
     private final String path;
-    
     // The path to the icon for the navigation item (optional)
     private final String iconPath;
 

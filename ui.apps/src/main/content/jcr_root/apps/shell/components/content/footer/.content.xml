@@ -4,3 +4,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Footer Component"
     componentGroup="Shell"/>
+    componentGroup="Shell"/>

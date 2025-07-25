@@ -71,3 +71,4 @@ public interface Footer {
         List<FooterNavItem> getItems();
     }
 }
+}

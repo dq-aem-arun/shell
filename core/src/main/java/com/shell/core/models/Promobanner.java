@@ -22,4 +22,5 @@ public interface Promobanner {
      * @return the description as a String.
      */
     String getDescription();
+    boolean getShowButton();
 }

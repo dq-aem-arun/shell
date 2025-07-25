@@ -88,6 +88,21 @@
     @media (prefers-color-scheme: dark) {
       color: #ffffff;
     }
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      color: #4a4a4a;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+    }
   }
   .button-icon {
     filter: invert(29%) sepia(1%) saturate(15%) hue-rotate(180deg)
@@ -165,5 +180,74 @@
       border-radius: 5px;
       border: 1px #b82e00;
     }
+  }
+}
+.shell-btn-align-left-row .button-container {
+  flex-direction: row !important;
+  align-items: flex-start; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-left-column .button-container {
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: flex-start; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-center-column .button-container {
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-center-row .button-container {
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-right-column .button-container {
+  flex-direction: column !important;
+  align-items: flex-end; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-right-row .button-container {
+  flex-direction: row !important;
+  justify-content: flex-end;
+  align-items: center;
+   .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
   }
 }

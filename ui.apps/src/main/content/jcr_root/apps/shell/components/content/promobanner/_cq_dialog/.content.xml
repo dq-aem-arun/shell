@@ -158,6 +158,12 @@
                                 </cui>
                             </uiSettings>
                         </description>
+                        <showButton
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                            name="./showButton"
+                            text="Show Button"
+                            value="true"/>
                     </items>
                 </field>
             </promobanner>

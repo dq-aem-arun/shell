@@ -36,6 +36,14 @@ public class PromobannerImpl implements Promobanner {
     private String description;
 
     /**
+     * Enable the button for the banner.
+     *
+     * @return the boolean value as a boolean.
+     */
+    @ValueMapValue
+    private boolean showButton;
+
+    /**
      * Gets the image file reference for the banner.
      *
      * @return the file reference as a String.
@@ -66,5 +74,15 @@ public class PromobannerImpl implements Promobanner {
     public String getDescription() {
         LOG.debug("Getting description: {}", description);
         return description;
+    }
+    /**
+     * Enable the button for the banner.
+     *
+     * @return the boolean value as a boolean.
+     */
+    @Override
+    public boolean getShowButton() {
+        LOG.debug("Getting showButton: {}", showButton);
+        return showButton;
     }
 }
