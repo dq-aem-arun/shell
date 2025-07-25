@@ -179,3 +179,73 @@
     }
   }
 }
+
+.shell-btn-align-left-row .button-container {
+  flex-direction: row !important;
+  align-items: flex-start; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-left-column .button-container {
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: flex-start; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-center-column .button-container {
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-center-row .button-container {
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-right-column .button-container {
+  flex-direction: column !important;
+  align-items: flex-end; /* Or center, if you want horizontal centering */
+  .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
+
+.shell-btn-align-right-row .button-container {
+  flex-direction: row !important;
+  justify-content: flex-end;
+  align-items: center;
+   .button-item {
+    width: auto;
+  }
+  .button-link {
+    width: fit-content; /* Prevents full width buttons in column layout */
+  }
+}
