@@ -1,0 +1,116 @@
+// /* Light mode default */
+// .my-custom-image-container {
+//     background-color: white;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     gap: 1rem;
+//     padding: 2rem;
+// }
+
+// /* Image container positioning override (optional class) */
+// .my-custom-image-container-right .my-custom-image-container {
+//     justify-content: flex-start;
+// }
+
+// /* Image wrapper styles */
+// .my-custom-image {
+//     flex: 0 1 auto;
+//     display: flex;
+//     align-items: center;
+// }
+
+// .my-custom-image img {
+//     max-width: 100%;
+//     height: 350px;
+//     display: block;
+//     border-radius: 20px;
+// }
+
+
+
+// /* Dark mode styles */
+// @media (prefers-color-scheme: dark) {
+//     .my-custom-image-container {
+//         background-color: #1E232A; /* Dark background */
+//     }
+// }
+
+.custom-wrapper {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: white; /* Light mode default */
+}
+
+/* Container holding both left and right */
+.my-custom-image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap; /* Prevent wrapping unless needed */
+    background-color: white; /* Light mode default */
+    padding: 2rem;
+}
+
+/* If right alignment override is needed via class */
+.my-custom-image-container-right .my-custom-image-container {
+    justify-content: flex-start;
+}
+
+/* Left side content container */
+.left-container {
+    flex: 0 0 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Right side image container */
+.right-image {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Optional inner class to help target image styles */
+.my-custom-image {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+}
+
+/* Image styling */
+.right-image img,
+.my-custom-image img {
+    max-width: 100%;
+    height: 350px;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    .custom-wrapper,
+    .my-custom-image-container {
+        background-color: #1E232A; /* Dark background */
+    }
+}
+
+/* Responsive fallback (optional) */
+@media (max-width: 768px) {
+    .my-custom-image-container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-image {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

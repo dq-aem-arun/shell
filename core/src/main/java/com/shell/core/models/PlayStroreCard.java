@@ -48,4 +48,13 @@ public interface PlayStroreCard {
      * @return the App Store badge URL as a {@link String}
      */
     String getSecondImageLinkURL();
+
+        /**
+     * Checks whether all the properties of the PlayStoreCard component are either null or empty.
+     * This method is typically used to determine whether the component should be rendered or hidden,
+     * based on whether any meaningful content has been authored in the dialog.
+     *
+     * @return {@code true} if all fields are null or empty; {@code false} otherwise
+     */
+    boolean isEmpty();
 }
