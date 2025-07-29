@@ -8,7 +8,7 @@
           extraClientlibs="[cq.authoring.dialog.all]">
     <content
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/coral/foundation/form">
+            sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
             <column
                     jcr:primaryType="nt:unstructured"
@@ -106,3 +106,5 @@
         </items>
     </content>
 </jcr:root>
+ 
+ 

@@ -63,15 +63,24 @@
 
 /* Badge alignment per style */
 .left .playstore-card__badges {
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .center .playstore-card__badges {
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .right .playstore-card__badges {
-    justify-content: flex-start;
+    justify-content: center;
+}
+
+.promobanner-v2-variant .playstore-card__badges {
+    display: flex;
+    padding: 50px;
+    margin-left: 80px;;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 /* Responsiveness */
