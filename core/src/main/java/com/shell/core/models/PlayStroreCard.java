@@ -48,4 +48,12 @@ public interface PlayStroreCard {
      * @return the App Store badge URL as a {@link String}
      */
     String getSecondImageLinkURL();
+
+    /**
+     * Checks if the PlayStoreCard component is empty.
+     * Returns true if all key fields (title, description, image references, and link URLs) are null or empty.
+     *
+     * @return true if the component has no content to display
+     */
+    public boolean isEmpty();
 }

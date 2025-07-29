@@ -58,6 +58,58 @@
     line-height: 1.5;
 }
 
+.card-v2-content-3variant {
+    background-color: #F5F5F5;
+    padding: 15px;
+    max-width: 1200px; /* ✅ fixed or percentage */
+    width: 100%;
+    height: auto;
+    margin: 5px auto; /* center it horizontally */
+}
+
+.card-v2-content-3variant .card-v2-content {
+    border-radius: 20px;
+    margin: 0 auto;
+    max-width: 25pc;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    display: contents;
+}
+
+.card-v2-content-3variant .card-v2-container {
+    border-radius: 20px;
+    display: block;
+}
+
+
+
+
+.card-v2-content-3variant .card-v2-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px 10px;  /* Ensures alignment starts from left */
+    margin: 10px 12px;
+    box-sizing: border-box;
+    
+}
+
+.card-v2-content-3variant .card-v2-title {
+    padding: 0;
+    margin: 0 0 10px 5px;
+    text-align: left;
+}
+
+.card-v2-content-3variant .card-v2-button {
+    padding: 5px;
+    margin: 0;
+}
+
+
+
+
 /* Tablet screens (768px and below) */
 @media (max-width: 768px) {
 
@@ -69,25 +121,45 @@
     .cardv2-title {
         font-size: 18px;
     }
+    .card-v2-content-3variant .card-v2-header {
+        padding: 24px 16px;
+    }
 }
 
-/* Mobile screens (480px and below) */
+
+
+
+/* Responsive: Mobile Screens (≤480px) */
 @media (max-width: 480px) {
-    .card-v2-content {
-        max-width: 100%;
-        padding: 20px 12px;
-        border-radius: 12px;
-    }
-    .cardv2-title {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-    .card-v2-title {
-        padding: 16px;
-    }
-    .card-v2-image img {
-        margin-bottom: 1rem;
-    }
+  .card-v2-content {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px 12px;
+    border-radius: 12px;
+  }
+
+  .card-v2-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 12px;
+  }
+
+  .cardv2-title {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .card-v2-title {
+    padding: 16px;
+  }
+
+  .card-v2-image img {
+    margin-bottom: 1rem;
+  }
+
+  .card-v2-content-3variant .card-v2-header {
+    padding: 16px 12px;
+  }
 }
 
 /* Dark Mode Support */
@@ -107,6 +179,8 @@
         background-color:none;
     }
 }
+
+
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: light) {

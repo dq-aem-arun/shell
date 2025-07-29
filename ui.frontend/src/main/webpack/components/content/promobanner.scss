@@ -88,7 +88,8 @@ p {
 
 /* Remove Margin from Last Child */
 .promo-item2>*:not(:last-child) {
-    margin-bottom: 0;
+    margin: 9px 9px 9px 0px;
+    text-align: justify;
 }
 
 /* Responsive Styles for Tablets */
@@ -147,4 +148,33 @@ p {
     .promo-item2 .description {
         font-size: 15px;
     }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    .promo-banner {
+        background-color: #232323;
+    }
+
+    .promo-item1,
+    .promo-item2 {
+        background-color: #121212;
+        color: #f1f1f1;
+    }
+
+    .promo-item2 .title {
+        color: #fafafa;
+    }
+
+    .promo-item2 .description {
+        color: #cccccc;
+    }
+
+    p {
+        color: #e0e0e0;
+    }
+}
+
+.promobanner-button{
+    margin-left: 10px;
 }
