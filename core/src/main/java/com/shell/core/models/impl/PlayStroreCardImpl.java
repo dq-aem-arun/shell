@@ -114,4 +114,20 @@ public class PlayStroreCardImpl implements PlayStroreCard {
         log.info("getSecondImageLinkURL() called");
         return secondImageLinkURL;
     }
+
+    /**
+     * Checks if the PlayStoreCard component is empty.
+     * Returns true if all key fields (title, description, image references, and link URLs) are null or empty.
+     *
+     * @return true if the component has no content to display
+     */
+    @Override
+    public boolean isEmpty() {  
+    return (titlefield == null || titlefield.isEmpty()) &&
+           (description == null || description.isEmpty()) &&
+           (firstImageReference == null || firstImageReference.isEmpty()) &&
+           (firstImageLinkURL == null || firstImageLinkURL.isEmpty()) &&
+           (secondImageReference == null || secondImageReference.isEmpty()) &&
+           (secondImageLinkURL == null || secondImageLinkURL.isEmpty());
+    }
 }
