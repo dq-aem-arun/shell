@@ -75,6 +75,15 @@
     justify-content: center;
 }
 
+.promobanner-v2-variant .playstore-card__badges {
+    display: flex;
+    padding: 50px;
+    margin-left: 80px;;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
   .playstore-card__title {
