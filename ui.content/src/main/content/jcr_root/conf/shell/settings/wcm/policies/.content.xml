@@ -369,7 +369,7 @@
                 </card_v2>
                 <shell-herobanner jcr:primaryType="nt:unstructured">
                     <policy_1748338783196
-                        jcr:lastModified="{Date}2025-05-27T15:15:59.524+05:30"
+                        jcr:lastModified="{Date}2025-07-25T17:46:12.039+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="hero policy"
@@ -381,12 +381,12 @@
                                 jcr:primaryType="nt:unstructured">
                                 <cq:styles jcr:primaryType="nt:unstructured">
                                     <item0
-                                        cq:styleClasses=".transparent-card-details"
+                                        cq:styleClasses="transparent-card-details"
                                         cq:styleId="1748338792764"
                                         cq:styleLabel="transpareent card"
                                         jcr:primaryType="nt:unstructured"/>
                                     <item1
-                                        cq:styleClasses=".home-herobanner-details"
+                                        cq:styleClasses="home-herobanner-details"
                                         cq:styleId="1748339138787"
                                         cq:styleLabel="home banner"
                                         jcr:primaryType="nt:unstructured"/>
@@ -397,7 +397,7 @@
                 </shell-herobanner>
                 <shell-button jcr:primaryType="nt:unstructured">
                     <policy_1753252361854
-                        jcr:lastModified="{Date}2025-07-24T16:50:42.203+05:30"
+                        jcr:lastModified="{Date}2025-07-25T17:47:04.537+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="shell-button"
