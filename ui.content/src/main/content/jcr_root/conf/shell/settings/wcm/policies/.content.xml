@@ -553,61 +553,16 @@
                 </promobanner>
                 <playstorecard jcr:primaryType="nt:unstructured">
                     <policy_1753358791215
-                        cq:styleDefaultClasses="Alignments"
-                        jcr:lastModified="{Date}2025-07-25T10:27:44.586+05:30"
+                        jcr:lastModified="{Date}2025-07-29T10:24:36.697+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="playstoreCard "
                         sling:resourceType="wcm/core/components/policy/policy"
                         layoutDisabled="false">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
-                        <cq:styleGroups jcr:primaryType="nt:unstructured">
-                            <item0
-                                cq:styleGroupLabel="component-alignment"
-                                jcr:primaryType="nt:unstructured">
-                                <cq:styles jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        cq:styleClasses="left"
-                                        cq:styleId="1753358878023"
-                                        cq:styleLabel="Left"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item1
-                                        cq:styleClasses="right"
-                                        cq:styleId="1753358886499"
-                                        cq:styleLabel="Right"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item2
-                                        cq:styleClasses="center"
-                                        cq:styleId="1753358897169"
-                                        cq:styleLabel="Center"
-                                        jcr:primaryType="nt:unstructured"/>
-                                </cq:styles>
-                            </item0>
-                            <item1
-                                cq:styleGroupLabel="badge-alignment"
-                                jcr:primaryType="nt:unstructured">
-                                <cq:styles jcr:primaryType="nt:unstructured">
-                                    <item0
-                                        cq:styleClasses="badges-left"
-                                        cq:styleId="1753359178235"
-                                        cq:styleLabel="left"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item1
-                                        cq:styleClasses="badges-right"
-                                        cq:styleId="1753359189126"
-                                        cq:styleLabel="right"
-                                        jcr:primaryType="nt:unstructured"/>
-                                    <item2
-                                        cq:styleClasses="badges-centre"
-                                        cq:styleId="1753359234848"
-                                        cq:styleLabel="centre"
-                                        jcr:primaryType="nt:unstructured"/>
-                                </cq:styles>
-                            </item1>
-                        </cq:styleGroups>
                     </policy_1753358791215>
                     <policy_1753418982494
-                        jcr:lastModified="{Date}2025-07-25T16:13:51.643+05:30"
+                        jcr:lastModified="{Date}2025-07-29T10:24:50.897+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Play StoreCard"
