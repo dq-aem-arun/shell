@@ -9,7 +9,7 @@
                 <h3 data-sly-test="${card.title}" class="card-title">${card.title @ context='html'}</h3>
                 <p data-sly-test="${card.description}" class="card-description">${card.description @ context='html'}</p>
             </div>
-            <div >
+            <div>
                 <sly class="card-button" data-sly-test="${card.showButton}">
                     <sly data-sly-resource="${'btn' @ resourceType='shell/components/content/shell-button', decorationTagName='div'}"/>
                 </sly>
