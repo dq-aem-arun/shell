@@ -83,4 +83,9 @@ public class HeroBannerImpl implements HeroBanner {
         log.info("Getting Image of HeroBanner component");
         return fileReference;
     }
+
+    public Boolean isEmpty(){
+        return (title == null || title.isEmpty()) && (description == null || description.isEmpty()) &&
+                (fileReference == null || fileReference.isEmpty());
+    }
 }
