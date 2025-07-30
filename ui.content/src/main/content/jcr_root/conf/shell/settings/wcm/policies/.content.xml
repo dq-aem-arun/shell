@@ -702,6 +702,29 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_1753780713462>
             </list>
+            <ctacard jcr:primaryType="nt:unstructured">
+                <policy_1753871483024
+                    jcr:lastModified="{Date}2025-07-30T16:02:27.894+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="CTA Card policy "
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Icon-Alignment"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="horizontal"
+                                    cq:styleId="1753871489845"
+                                    cq:styleLabel="Horizonatl"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
+                </policy_1753871483024>
+            </ctacard>
         </components>
     </shell>
 </jcr:root>
