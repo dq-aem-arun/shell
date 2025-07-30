@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2025-05-23T13:02:05.500+05:30"
+        cq:lastModified="{Date}2025-07-30T14:55:53.138+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/shell/settings/wcm/templates/shell-contentpage"
         jcr:primaryType="cq:PageContent"
@@ -12,23 +12,35 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="shell/components/container"
             layout="responsiveGrid">
-            <experiencefragment-header
+            <container_1444023130
+                jcr:created="{Date}2025-07-30T14:55:33.351+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-07-30T14:55:33.351+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="shell/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/shell/language-masters/en/site/header/master"/>
+                sling:resourceType="shell/components/container">
+                <experiencefragment
+                    jcr:created="{Date}2025-07-30T14:55:40.537+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2025-07-30T14:55:53.135+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="shell/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/shell/us/en/site/shell-header/master"/>
+            </container_1444023130>
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="shell/components/container"
                 editable="{Boolean}true"
                 layout="responsiveGrid"/>
             <experiencefragment
-                jcr:created="{Date}2025-05-23T13:01:39.643+05:30"
+                jcr:created="{Date}2025-07-29T17:31:59.804+05:30"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2025-05-23T13:02:05.495+05:30"
+                jcr:lastModified="{Date}2025-07-29T17:32:12.119+05:30"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="shell/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/shell/us/en/site/footer/master"/>
+                fragmentVariationPath="/content/experience-fragments/shell/us/en/site/shell-footer/master"/>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">

@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2025-07-29T17:32:55.592+05:30"
+        cq:lastModified="{Date}2025-07-30T11:18:54.144+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/shell/settings/wcm/templates/shell-homepage"
         jcr:primaryType="cq:PageContent"
@@ -20,13 +20,13 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="shell/components/container">
                 <experiencefragment
-                    jcr:created="{Date}2025-07-29T16:51:54.331+05:30"
+                    jcr:created="{Date}2025-07-30T11:17:48.854+05:30"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2025-07-29T17:32:55.587+05:30"
+                    jcr:lastModified="{Date}2025-07-30T11:18:54.140+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="shell/components/experiencefragment"
-                    fragmentVariationPath="/content/experience-fragments/shell/us/en/site/header/master"/>
+                    fragmentVariationPath="/content/experience-fragments/shell/us/en/site/shell-header/master"/>
             </container_1465230413>
             <container
                 jcr:primaryType="nt:unstructured"
