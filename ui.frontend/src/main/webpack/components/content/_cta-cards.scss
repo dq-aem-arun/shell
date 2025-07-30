@@ -1,0 +1,222 @@
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-size:cover;
+  font-family: Arial, sans-serif;
+}
+
+.cta-card-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+   margin-left: 80px;
+}
+
+.cta-card-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgb(254, 200, 2);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.ctacard-title {
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+  color: rgb(74, 74, 74);
+  font-size: 1rem;
+  line-height: 1.4;
+  flex: 1;
+  margin-top: 0px;
+  width: 600px;
+margin-left:15px;
+}
+.cta-cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Horizontal variation */
+.horizontal .ctacard-title {
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+  color: rgb(74, 74, 74);
+  font-size: 1rem;
+  line-height: 1.4;
+  flex: 1;
+  overflow: hidden;
+//   text-overflow: ellipsis;
+  margin-top: 0px;
+}
+.horizontal .cta-cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.horizontal .cta-card-list {
+  list-style: none;
+  margin-left: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  flex-direction: row;
+}
+/* Small Mobile */
+@media (max-width: 599px) {
+    .ctacard-title {
+        font-size: 0.95rem;
+        max-width: 213px;
+         margin-top:0px;
+      }
+    .cta-card-list{
+        margin-left:10px;
+        }
+      .circle {
+        height: 50px;
+        width: 50px;
+      }
+
+      .circle img {
+        width: 24px;
+        height: 24px;
+      }
+  .horizontal .ctacard-title {
+    font-size: 0.95rem;
+    max-width: 213px;
+     margin-top:0px;
+  }
+.horizontal .cta-card-list {
+  flex-direction: column;
+ margin-left:10px;
+}
+  .horizontal .circle {
+    height: 50px;
+    width: 50px;
+  }
+.horizontal .circle img {
+    width: 24px;
+    height: 24px;
+  }
+}
+/* Tablet view (600px - 991px) */
+@media (min-width: 600px) and (max-width: 991px) {
+
+    .cta-card-list{
+        margin-left:10px;
+        }
+      .ctacard-title {
+        font-size: 1.1rem;
+      }
+    .circle {
+        height: 70px;
+        width: 70px;
+      }
+    .circle img {
+        width: 32px;
+        height: 32px;
+      }
+
+  .horizontal .ctacard-title {
+    font-size: 1.1rem;
+  }
+.horizontal .circle {
+    height: 70px;
+    width: 70px;
+  }
+.horizontal .circle img {
+    width: 32px;
+    height: 32px;
+  }
+}
+/* Desktop and iPad Pro landscape (992px and up) */
+@media (min-width: 1024px) {
+    .cta-card-items {
+        flex: 1 1 calc(45% - 2rem);
+        max-width: 45%;
+      }
+    .ctacard-title {
+        font-size: 1.2rem;
+      }
+    .circle {
+        height: 80px;
+        width: 80px;
+      }
+    .circle img {
+        width: 36px;
+        height: 36px;
+      }
+  .horizontal .cta-card-items {
+    width: calc(28% - 1.33rem);
+  }
+.horizontal .ctacard-title {
+    font-size: 1.2rem;
+  }
+.horizontal .circle {
+    height: 80px;
+    width: 80px;
+  }
+.horizontal .circle img {
+    width: 36px;
+    height: 36px;
+  }
+}
+/* Ultra-wide Desktop (1200px and up) */
+@media (min-width: 1200px) {
+
+    .cta-card-items {
+        flex: 1 1 calc(30% - 1rem);
+        max-width: 30%;
+      }
+
+  .horizontal .cta-card-items {
+    flex: 1 1 calc(28% - 1rem);
+    max-width: 30%;
+  }
+}
+@media (prefers-color-scheme: dark) {
+     .cta-main{
+          background-color:#141920;
+          }
+      .horizontal .cta-main{
+           background-color:#1D232A;
+          }
+      .ctacard-title {
+          color:white;
+          }
+    .horizontal  .ctacard-title {
+                color:white;
+                }
+      }
+  @media (prefers-color-scheme: light) {
+      .cta-main{
+          background-color:white;
+          }
+        .horizontal .cta-main{
+            background-color:#F5F5F5;
+            }
+        }
