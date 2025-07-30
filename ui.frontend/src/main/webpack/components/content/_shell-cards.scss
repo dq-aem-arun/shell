@@ -1,0 +1,164 @@
+/* === Shell Card Section Wrapper === */
+.shell-card-section-grid .shell-card-section{
+    display:grid;
+    }
+.shell-card-section-bg .shell-card-section{
+    background-color:#1E232A;
+    }
+/*dark background*/
+.shell-card-section-bgd .shell-card-section{
+    background-color:black;
+    }
+.shell-card-section {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+}
+
+/* === Default Card Styling === */
+.shell-card-bg .shell-card{
+    background-color:white;
+    }
+/*dark background*/
+.shell-card-bgd .shell-card{
+    background-color:#1E232A;
+    }
+
+.shell-card {
+  width: 420px;
+  height: auto;
+  background-color: #F5F5F5;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  color: #333;
+}
+
+/* === Card Size Variants for card-3 === */
+.shell-card-width .shell-card{
+    width:600px;
+    }
+/*card-4*/
+.shell-card-max-width .shell-card{
+    width:700px;
+    }
+
+
+
+/* === Card Hover Animation === */
+.shell-card:hover {
+  transform: translateY(-5px);
+}
+
+/* === Card Image Styling === */
+.shell-card img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* === Image Size Variants for card-2 === */
+.shell-card-long img{
+    height:450px;
+    }
+/* === Card Content Styling === */
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  color: inherit;
+  margin-bottom: -23px;
+}
+
+.card-content-small h3 {
+  font-size: 0.5rem;
+}
+.card-content-large h3 {
+  font-size: 2rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: inherit;
+  line-height: .4;
+}
+
+.card-content a {
+  margin-top: auto;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+}
+
+
+/* === Responsive Designs MEDIA QUERIES === */
+@media screen and (max-width: 1023px) {
+  .shell-card:hover {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shell-card {
+    width: 100%;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content p,
+  .card-content a,
+  .read-more {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shell-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===  Dark Mode  === */
+@media (prefers-color-scheme: dark) {
+  .shell-card-section {
+    background-color: #1E232A;
+    color: #f5f5f5;
+  }
+
+  .shell-card {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  }
+
+  .card-content h3,
+  .card-content p,
+  .card-content a,
+  .read-more {
+    color: #f5f5f5;
+  }
+
+  .card-content a:hover,
+  .read-more:hover {
+    color: #ddd;
+  }
+}

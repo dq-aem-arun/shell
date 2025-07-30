@@ -237,12 +237,12 @@
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2025-06-11T12:37:56.695+05:30"
+                    jcr:lastModified="{Date}2025-07-29T13:39:30.088+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:General,/libs/fd/af/components/table,/apps/icici/components/heading-with-content-image,group:Shell,group:shell - Content,/apps/shell/components/form/container,group:shoaib_project - Content,group:Tasks]"
+                    components="[group:Shell,group:shell - Content,/apps/shell/components/form/container]"
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
@@ -306,6 +306,16 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1575040440977>
+                <policy_1753769003560
+                    jcr:lastModified="{Date}2025-07-30T11:03:16.058+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="hero banner "
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:General,group:Shell,group:shell - Content,group:shell - Structure]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1753769003560>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -369,7 +379,7 @@
                 </card_v2>
                 <shell-herobanner jcr:primaryType="nt:unstructured">
                     <policy_1748338783196
-                        jcr:lastModified="{Date}2025-07-25T17:46:12.039+05:30"
+                        jcr:lastModified="{Date}2025-07-29T11:35:52.983+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="hero policy"
@@ -383,12 +393,17 @@
                                     <item0
                                         cq:styleClasses="transparent-card-details"
                                         cq:styleId="1748338792764"
-                                        cq:styleLabel="transpareent card"
+                                        cq:styleLabel="Transparent Card Details  "
                                         jcr:primaryType="nt:unstructured"/>
                                     <item1
                                         cq:styleClasses="home-herobanner-details"
                                         cq:styleId="1748339138787"
-                                        cq:styleLabel="home banner"
+                                        cq:styleLabel="Home Herobanner Details"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="shell-recharge-herobanner"
+                                        cq:styleId="1753769136076"
+                                        cq:styleLabel="shell recharge"
                                         jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
                             </item0>
@@ -579,6 +594,71 @@
                         </cq:styleGroups>
                     </policy_1753418982494>
                 </playstorecard>
+                <shell-cards jcr:primaryType="nt:unstructured">
+                    <policy_1753857795947
+                        jcr:lastModified="{Date}2025-07-30T12:19:55.495+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="test"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Heights"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-card-long ing"
+                                        cq:styleId="1753857862322"
+                                        cq:styleLabel="long-height"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Width"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-card-width"
+                                        cq:styleId="1753858027180"
+                                        cq:styleLabel="card-3"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="shell-card-max-width"
+                                        cq:styleId="1753858050843"
+                                        cq:styleLabel="card-4"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                            <item2
+                                cq:styleGroupLabel="background-colour"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="shell-card-section-bg"
+                                        cq:styleId="1753858106679"
+                                        cq:styleLabel="container-bg"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="shell-card-bg"
+                                        cq:styleId="1753858121661"
+                                        cq:styleLabel="card-bg"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="shell-card-section-bgd"
+                                        cq:styleId="1753858131924"
+                                        cq:styleLabel="container-bg"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="shell-card-bgd"
+                                        cq:styleId="1753858164447"
+                                        cq:styleLabel="card-bg"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
+                        </cq:styleGroups>
+                    </policy_1753857795947>
+                </shell-cards>
             </content>
         </components>
     </shell>
