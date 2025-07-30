@@ -8,4 +8,6 @@ public interface HeroBanner {
     String getDescription();
 
     String getFileReference();
+
+    Boolean isEmpty();
 }

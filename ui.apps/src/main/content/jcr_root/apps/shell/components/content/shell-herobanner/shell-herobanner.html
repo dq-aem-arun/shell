@@ -1,5 +1,6 @@
 <sly data-sly-use.model="com.shell.core.models.HeroBanner">
-    <sly  data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"/>
+    <sly  data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+          data-sly-test.hasContent="${!model.empty}"/>
     <section class="section-main">
         <div class="cmp_hero-banner ${cq.styleClasses}">
             <div> <img src="${model.fileReference}" alt="Upload the Image" class="cmp_hero-banner_img"/></div>
