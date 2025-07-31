@@ -7,7 +7,7 @@
     }
 
     .cmp-accordion__button {
-        font-size: 15px;
+        font-size: 18px;
         color: rgb(63, 63, 63);
         position: relative;
         padding: 12px 32px;
@@ -81,5 +81,16 @@
 @media (prefers-color-scheme: dark) {
     .cmp-text p {
         color: white;
+    }
+    .cmp-accordion__panel{
+        background-color: black !important;
+    }
+    .cmp-accordion__button {
+        background-color: black;
+        color: white;
+
+    }
+    .cmp-accordion__title{
+        color: white !important;
     }
 }
