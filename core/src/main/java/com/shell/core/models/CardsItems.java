@@ -29,5 +29,8 @@ public interface CardsItems {
     /**
      * @return true if description is null or empty, false otherwise.
      */
-    public boolean isDesscriptionEmpty();
+    public boolean isDescriptionEmpty();
+
+    String getCardLink();
+
 }
