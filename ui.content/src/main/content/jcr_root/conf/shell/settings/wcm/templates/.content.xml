@@ -5,7 +5,8 @@
     <page-content/>
     <xf-web-variation/>
     <rep:policy/>
-    <demo1/>
     <shell-contentpage/>
     <shell-homepage/>
+    <product-page-template/>
+    <demo1/>
 </jcr:root>

@@ -16,7 +16,7 @@
 /*second Varation for card*/
 .card-v2-content-plain .card-v2-content{
     height: 420px;
-    background-color: #F5F5F5;
+    background-color: #ececec;
     padding: 24px;
 }
     
@@ -59,7 +59,6 @@
 }
 
 .card-v2-content-3variant {
-    background-color: #F5F5F5;
     padding: 15px;
     max-width: 1200px; /* ✅ fixed or percentage */
     width: 100%;
@@ -80,6 +79,7 @@
 .card-v2-content-3variant .card-v2-container {
     border-radius: 20px;
     display: block;
+    color:#ececec;
 }
 
 
