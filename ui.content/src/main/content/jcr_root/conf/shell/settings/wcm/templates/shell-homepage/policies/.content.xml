@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-06-11T12:37:56.701+05:30"
+        cq:lastModified="{Date}2025-07-31T14:51:57.359+05:30"
         cq:lastModifiedBy="admin"
         cq:policy="shell/components/page/policy"
         jcr:primaryType="nt:unstructured"
@@ -19,10 +19,34 @@
                     <components jcr:primaryType="nt:unstructured">
                         <content jcr:primaryType="nt:unstructured">
                             <shell-button
-                                cq:policy="shell/components/content/shell-button/policy_1747648705393"
+                                cq:policy="shell/components/content/shell-button/policy_1753252361854"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <card_v2
+                                cq:policy="shell/components/content/card_v2/policy_1753265351805"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <playstorecard
+                                cq:policy="shell/components/content/playstorecard/policy_1753418982494"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <shell-herobanner
+                                cq:policy="shell/components/content/shell-herobanner/policy_1748338783196"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <shell-cards
+                                cq:policy="shell/components/content/shell-cards/policy_1753857795947"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <promobanner
+                                cq:policy="shell/components/content/promobanner/policy_1753339372794"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
                         </content>
+                        <ctacard
+                            cq:policy="shell/components/ctacard/policy_1753871483024"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
                     </components>
                 </shell>
             </container>
