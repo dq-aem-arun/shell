@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-07-30T14:38:20.818+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/shell/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Experience Fragment footer"
+        sling:resourceType="shell/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="shell/components/container"
+            layout="responsiveGrid">
+            <footer
+                jcr:created="{Date}2025-07-29T16:50:27.151+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-07-30T14:38:20.807+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="shell/components/content/footer"
+                iconpathRight="/content/dam/shell/icons/copyIcon.png"
+                labelRight="modify cookies preference"
+                pathRight="/content/shell/us"
+                socialNavigationlinksTitle="Connect With Us">
+                <groupNames jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        group="More in Home">
+                        <footerItems jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="Shell Asia"
+                                path="/home"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="Inside Shell Station"
+                                path="/conf"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                label="Shell Recharge"
+                                path="/etc"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                label="Shell Engine Oil and Lubricants"
+                                path="/content"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                label="Sustainability"
+                                path="/content"/>
+                        </footerItems>
+                    </item0>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        group="More about Shell">
+                        <footerItems jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="Business"
+                                path="/home"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="About us"
+                                path="/tmp"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                label="Shell Energy"
+                                path="/libs"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                label="Careers at Shell"
+                                path="/home"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                label="Media"
+                                path="/home"/>
+                        </footerItems>
+                    </item1>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        group="Can we Help?">
+                        <footerItems jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="contact us"
+                                path="/system"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="Station Locator"
+                                path="/system"/>
+                        </footerItems>
+                    </item2>
+                </groupNames>
+                <footerItemsSocial jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        iconpath="/content/dam/shell/icons/instagram 1.png"
+                        label="Instagram"
+                        path="https://www.instagram.com"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        iconpath="/content/dam/shell/icons/facebook 1.png"
+                        label="FaceBook"
+                        path="https://www.facebook.com"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        iconpath="/content/dam/shell/icons/youtube (1) 1.png"
+                        label="Youtube"
+                        path="https://www.youtube.com"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        iconpath="/content/dam/shell/icons/twitter 1.png"
+                        label="X"
+                        path="https://www.youtube.com"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        iconpath="/content/dam/shell/icons/linkedin 1.png"
+                        label="Linkedin"
+                        path="https://www.linkedin.com"/>
+                </footerItemsSocial>
+                <footerItemsLegalLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        label="Accessibility"
+                        path="/etc"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        label="Terms and conditions"
+                        path="/etc"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        label="Privacy notices"
+                        path="/content"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        label="Cookie policy"
+                        path="/home"/>
+                </footerItemsLegalLinks>
+            </footer>
+        </root>
+    </jcr:content>
+</jcr:root>
