@@ -37,6 +37,16 @@ public class CardsItemsImpl implements CardsItems {
     @ValueMapValue
     private boolean showButton;
 
+    @ValueMapValue
+    private String cardLink;
+
+    @Override
+    public String getCardLink() {
+        LOG.info("Getting card link: {}", cardLink);
+        return cardLink;
+    }
+
+
     /**
      * @return true if the button should be shown.
      */
@@ -79,7 +89,7 @@ public class CardsItemsImpl implements CardsItems {
      * @return true if description is empty or null.
      */
     @Override
-    public boolean isDesscriptionEmpty() {
+    public boolean isDescriptionEmpty() {
         boolean isEmpty = description == null || description.isEmpty();
         LOG.info("Checking if description is empty: {}", isEmpty);
         return isEmpty;
