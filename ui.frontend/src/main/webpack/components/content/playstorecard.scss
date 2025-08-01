@@ -1,7 +1,12 @@
 .playstore-card {
-    padding: 20px;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+     display: flex;
+     justify-content: center;
 }
+
+.playstore-card__container{
+    width: 100%;
+     max-width: 1200px;
+    }
 
 .playstore-card__title {
     font-size: 24px;
@@ -49,14 +54,14 @@
 
 .center {
     align-items: center;
-    text-align: left;
+    text-align: center;
     margin-left: 0;
     margin-right: auto;
 }
 
 .right {
     align-items: flex-end;
-    text-align: left;
+    text-align: end;
     margin-left: 0;
     margin-right: auto;
 }
@@ -64,14 +69,20 @@
 /* Badge alignment per style */
 .left .playstore-card__badges {
     justify-content: center;
+    .playstore-card__title{
+      text-align: start;
+    }
 }
 
 .center .playstore-card__badges {
     justify-content: center;
+    .playstore-card__title{
+      text-align: center;
+    }
 }
 
 .right .playstore-card__badges {
-    justify-content: center;
+    justify-content: end;
 }
 
 .promobanner-v2-variant .playstore-card__badges {
@@ -122,3 +133,10 @@
       }
     }
 }
+
+
+
+
+
+
+
