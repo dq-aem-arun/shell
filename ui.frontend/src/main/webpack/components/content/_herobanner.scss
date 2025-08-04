@@ -104,21 +104,23 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
   flex-direction: row;
+  padding: 20px 0px;
 }
 
 .home-herobanner-details .cmp_hero-banner_img {
   width: 100%;
   max-width: 736px;
-  height: 600px;
+  height: 700px;
   display: block;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .home-herobanner-details .cmp_hero-banner_text {
   position: absolute;
   top: 236px;
   left: 69px;
-  width: 25%;
+  width: 40%;
   height: 45%;
   display: flex;
   flex-direction: column;
@@ -126,7 +128,7 @@
   align-items: flex-start;
   padding: 20px;
   box-sizing: border-box;
-  background-color: rgba(2, 4, 3, 0.3);
+  background-color: rgba(2, 4, 3, 0.6);
   border-radius: 16px;
 }
 
@@ -137,6 +139,10 @@
 
 .home-herobanner-details .cmp-herobanner-title {
   font-size: 23px;
+  color: #fff;
+}
+
+ .cmp_hero-banner_button .button-column .button-container .button-link{
   color: #fff;
 }
 
@@ -219,6 +225,7 @@
   /*  Responsive for variant */
   .transparent-card-details .cmp_hero-banner {
     height: 240px;
+    padding: 20px;
   }
 
   .transparent-card-details .cmp_hero-banner_img {
@@ -246,7 +253,6 @@
   .home-herobanner-details .cmp_hero-banner_img {
     border-radius: 10px 10px 0 0;
     display: block;
-    height: 30%;
     max-width: 50pc;
     width: 100%;
   }

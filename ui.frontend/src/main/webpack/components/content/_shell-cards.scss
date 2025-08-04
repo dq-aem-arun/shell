@@ -58,11 +58,15 @@
 /* === Card Size Variants for card-3 === */
 .shell-card-width .shell-card{
     width:600px;
+    height: 340px;
     }
 /*card-4*/
 .shell-card-max-width .shell-card{
     width:700px;
     }
+.shell-card-width .shell-card-section{
+  padding: 20px 20px 0 20px;
+}
 
 
 
