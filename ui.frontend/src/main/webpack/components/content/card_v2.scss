@@ -80,6 +80,7 @@
     border-radius: 20px;
     display: block;
     color:#ececec;
+    background-color: #FFFFFF !important;
 }
 
 
@@ -185,7 +186,7 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: light) {
     .card-v2-container {
-         background-color: #ffffff;
+        background-color: #FFFFFF;
     }
     
 }
