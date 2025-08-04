@@ -384,7 +384,7 @@
                 </card_v2>
                 <shell-herobanner jcr:primaryType="nt:unstructured">
                     <policy_1748338783196
-                        jcr:lastModified="{Date}2025-07-29T11:35:52.983+05:30"
+                        jcr:lastModified="{Date}2025-08-01T11:30:54.751+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="hero policy"
@@ -523,7 +523,7 @@
                 </shell-button>
                 <promobanner jcr:primaryType="nt:unstructured">
                     <policy_1753339372794
-                        jcr:lastModified="{Date}2025-07-24T15:43:50.093+05:30"
+                        jcr:lastModified="{Date}2025-08-01T15:54:52.512+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Promo Banner"
@@ -562,6 +562,17 @@
                                         jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
                             </item1>
+                            <item2
+                                cq:styleGroupLabel="Adjustment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="top-left-content"
+                                        cq:styleId="1754043869265"
+                                        cq:styleLabel="Upper-left Side"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
                         </cq:styleGroups>
                     </policy_1753339372794>
                 </promobanner>
@@ -621,7 +632,7 @@
                 </playstorecard>
                 <shell-cards jcr:primaryType="nt:unstructured">
                     <policy_1753857795947
-                        jcr:lastModified="{Date}2025-07-30T12:19:55.495+05:30"
+                        jcr:lastModified="{Date}2025-08-01T11:37:22.213+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="test"
