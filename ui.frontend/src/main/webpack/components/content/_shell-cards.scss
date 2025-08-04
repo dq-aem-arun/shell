@@ -15,8 +15,10 @@
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
+  padding: 12px;
+  background-color: #fff;
   color: #333;
+  width: auto;
 }
 
 /* === Default Card Styling === */
@@ -28,7 +30,7 @@
 
 .shell-card {
   width: 420px;
-  height: auto;
+  height: 600px;
   background-color: #F5F5F5;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -76,9 +78,9 @@
 /* === Card Image Styling === */
 .shell-card img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   display: block;
-  object-fit: cover;
+  object-fit: fill;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
@@ -98,7 +100,6 @@
 .card-content h3 {
   font-size: 1.1rem;
   color: inherit;
-  margin-bottom: -23px;
   text-decoration: none !important;
 }
 
@@ -131,7 +132,19 @@
   margin-right: 4px;
 }
 
+#outer {
+  background-color: white;
+  padding: 5px 60px;
+}
 
+#recharge-card {
+  background-color: white;
+  padding: 5px 60px;
+}
+
+.card-button{
+  margin-top: 100px;
+}
 /* === Responsive Designs MEDIA QUERIES === */
 @media screen and (max-width: 1023px) {
   .shell-card:hover {
