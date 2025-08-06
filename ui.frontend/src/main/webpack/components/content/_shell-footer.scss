@@ -62,7 +62,15 @@
         color: #fff;
     }
 
-    .image {
-        filter: brightness(0.85);
+   .footer {
+        .left_image {
+            filter: invert(1);
+        }
+    }
+
+    .footer {
+        .right_image {
+            filter: invert(1);
+        }
     }
 }

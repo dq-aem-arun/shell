@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 125px;
-   
+    height: auto;
 }
 
 .footer1,
@@ -24,6 +24,13 @@
 .footer5 {
     flex-basis: 100%; // takes full width, goes to second row
     margin-top: 24px;
+    min-width: 180px;
+}
+
+.footer6 {
+    flex-basis: 100%; 
+    margin-top: 24px;
+    min-width: 180px;
 }
 
 .footer_container{
@@ -36,19 +43,32 @@
     .footer_list{
         display: flex;
         flex-direction: row;
+        gap: 20px;
     }
 }
+
+.fc_footer6 .footer {
+    .footer_list {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.footer4 .footer .footer_list {
+    gap: 20px;
+} 
 
 .bottom_footer{
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        margin-top: 5rem
+        margin-top: 1rem;
 }
 
 .bottom_footer{
     .fc_footer6 .footer6{
-        margin-right: 8rem;
+        margin-right: 120px;
     }
 }
 
@@ -98,6 +118,24 @@
         width: 100%;
         display: inline-block;
     }
+    .fc_footer5 .footer{
+        .footer_list{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
+    .fc_footer6 .footer{
+        .footer_list{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
 }
 
 // Dark mode support
@@ -112,7 +150,7 @@
         color: #fff;
     }
     .bottom_footer {
-        background: #333;
+        background: #222;
         color: #fff;
     }
 }
