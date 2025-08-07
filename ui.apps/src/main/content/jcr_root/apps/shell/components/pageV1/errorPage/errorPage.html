@@ -1,0 +1,20 @@
+<!-- errorPage.html -->
+
+<div class="error-container">
+  <h1>Oops! Page Not Found (404)</h1>
+  <p>The page you’re looking for doesn’t exist. Try searching or go to one of the sections below.</p>
+
+  <!-- Optional search component -->
+  <div data-sly-resource="${'search' @ resourceType='shell/components/content/search'}"></div>
+
+  <!-- Editable container to drop components -->
+  <div data-sly-resource="${'par' @ resourceType='wcm/foundation/components/parsys'}"></div>
+
+  <!-- Helpful links -->
+  <ul>
+    <li><a href="https://www.shell.in/">🏠 Home</a></li>
+    <li><a href="https://www.shell.in/shell-service-station/shell-station-locator.html">⛽ Find a Station</a></li>
+    <li><a href="https://www.shell.in/shell-goplus-india.html">🛢️ Products</a></li>
+    <li><a href="https://www.shell.in/about-us/contact-us.html">📞 Contact Us</a></li>
+  </ul>
+</div>
