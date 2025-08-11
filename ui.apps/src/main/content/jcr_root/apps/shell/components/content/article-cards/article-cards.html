@@ -1,0 +1,24 @@
+<sly data-sly-use.model="com.shell.core.models.Listing" />
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
+
+<section class="custom-card-section" data-sly-test="${!model.empty}">
+    <sly data-sly-list.article="${model.articles}">
+        <div class="custom-card custom-card-hover" data-card-link="${article.path @ extension='html'}">
+
+            <sly data-sly-test="${article.imagePath}">
+                <img src="${article.imagePath @ context='uri'}" alt="${article.title @ context='text'}" class="custom-card-image" />
+            </sly>
+
+            <div class="custom-card-content">
+                <h3 class="custom-card-title" data-sly-test="${article.title}">${article.title}</h3>
+                <p class="custom-card-description" data-sly-test="${article.description}">${article.description}</p>
+
+                <div class="custom-card-button">
+                    <a href="${article.path @ extension='html'}" class="custom-button">Read more</a>
+                </div>
+            </div>
+        </div>
+    </sly>
+</section>
+
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=model.empty}" />
