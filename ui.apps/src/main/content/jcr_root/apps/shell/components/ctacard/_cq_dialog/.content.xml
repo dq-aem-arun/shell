@@ -12,16 +12,6 @@
                 sling:resourceType="granite/ui/components/coral/foundation/container"
                 margin="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <ctaCards
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                        composite="{Boolean}true"
-                        fieldLabel="CTA Cards">
-                        <field
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                            name="./ctaCards">
-                            <items jcr:primaryType="nt:unstructured">
                                 <icon
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
@@ -35,10 +25,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                     fieldLabel="Title"
-                                    name="./title"/>
-                            </items>
-                        </field>
-                    </ctaCards>
+                                    name="./title"/>      
                 </items>
             </columns>
         </items>

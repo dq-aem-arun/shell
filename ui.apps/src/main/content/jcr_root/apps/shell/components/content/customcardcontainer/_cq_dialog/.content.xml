@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Custom Card Container Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    cq:dialogMode="floating"
+    extraClientlibs="[shell.customcardcontainer.dialog]">
+
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        cq:showOnCreate="{Boolean}true">
+
+
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Settings"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+
+                        <items jcr:primaryType="nt:unstructured">
+                            <!-- Heading -->
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Heading"
+                                name="./heading"/>
+
+                            <!-- Image -->
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                allowUpload="{Boolean}true"
+                                autoStart="{Boolean}false"
+                                multiple="{Boolean}false"
+                                uploadUrl="${requestPath}"
+                                name="./image"
+                                fileReferenceParameter="./fileReference"
+                                fieldLabel="Image"/>
+
+                            <!-- Number of Cards -->
+                            <numberOfCards
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Number of Cards"
+                                name="./numberOfCards"
+                                min="2"
+                                max="8"/>
+
+                            <componentPath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                name="./componentPath"
+                                value="${requestPathInfo.suffix}" />
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>
