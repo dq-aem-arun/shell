@@ -585,6 +585,17 @@
                                         jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
                             </item1>
+                            <item2
+                                cq:styleGroupLabel="Adjustment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="top-left-content"
+                                        cq:styleId="1754043869265"
+                                        cq:styleLabel="Upper-left Side"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item2>
                         </cq:styleGroups>
                     </policy_1753339372794>
                 </promobanner>
