@@ -82,7 +82,8 @@
     max-width: 1250px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Prevent vertical stretch */
+    align-items: flex-start;
+    /* Prevent vertical stretch */
 }
 
 .horizontal-alignment .card-container {
@@ -90,21 +91,23 @@
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
-    align-items: flex-start; /* Makes each card row hug content height */
+    align-items: flex-start;
+    /* Makes each card row hug content height */
     background-color: #f5f5f5;
     flex-direction: row;
 }
 
 .horizontal-alignment .card-slot {
-    flex: 0 0 32%; /* ~3 cards per row */
+    flex: 0 0 32%;
+    /* ~3 cards per row */
     box-sizing: border-box;
-    min-height: auto; /* Remove forced extra height */
+    min-height: auto;
+    /* Remove forced extra height */
     display: flex;
     justify-content: left;
     align-items: center;
     background-color: #f5f5f5;
 }
-
 
 .horizontal-alignment .container-heading {
     text-align: left;
@@ -117,12 +120,9 @@
 
 }
 
-.horizontal-alignment .custom-container{
-    background-attachment:#f5f5f5;
+.horizontal-alignment .custom-container {
+    background-attachment: #f5f5f5;
 }
-
-
-
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -148,8 +148,6 @@
         max-height: 300px;
         /* Smaller image height on mobile */
     }
-
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -172,15 +170,17 @@
     .card-slot {
         background-color: #1D232A;
     }
+
     .horizontal-alignment .card-container {
         background-color: #1D232A;
     }
+
     .horizontal-alignment .card-slot {
         background-color: #1D232A;
     }
+
     .horizontal-alignment .container-heading {
         background-color: #1D232A
-};
-
+    };
 
 }

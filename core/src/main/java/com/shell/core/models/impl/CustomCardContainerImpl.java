@@ -80,8 +80,4 @@ public class CustomCardContainerImpl implements CustomCardContainer {
     public boolean isEmpty() {
         return heading == null || heading.isEmpty();
     }
-
-
-    
-
 }
