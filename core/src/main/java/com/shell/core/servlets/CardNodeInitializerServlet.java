@@ -31,19 +31,19 @@ public class CardNodeInitializerServlet extends SlingAllMethodsServlet {
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
             throws ServletException, IOException {
 
-        log.info("🚀 [Servlet] CardNodeInitializerServlet triggered");
+        log.info(" [Servlet] CardNodeInitializerServlet triggered");
 
         Resource resource = request.getResource();
         String resourcePath = resource != null ? resource.getPath() : "null";
 
-        log.info("📍 [Servlet] Resource path from request: {}", resourcePath);
-        log.info("🔎 [Servlet] Resource type: {}", resource.getResourceType());
-        log.info("🧪 [Servlet] Selector: {}", request.getRequestPathInfo().getSelectorString());
-        log.info("🧪 [Servlet] Extension: {}", request.getRequestPathInfo().getExtension());
-        log.info("🧪 [Servlet] Method: {}", request.getMethod());
+        log.info("[Servlet] Resource path from request: {}", resourcePath);
+        log.info("[Servlet] Resource type: {}", resource.getResourceType());
+        log.info("[Servlet] Selector: {}", request.getRequestPathInfo().getSelectorString());
+        log.info("[Servlet] Extension: {}", request.getRequestPathInfo().getExtension());
+        log.info("[Servlet] Method: {}", request.getMethod());
 
         if (!"shell/components/content/customcardcontainer".equals(resource.getResourceType())) {
-            log.warn("❌ [Servlet] Resource type mismatch. Servlet won't proceed.");
+            log.warn(" [Servlet] Resource type mismatch. Servlet won't proceed.");
             response.setStatus(400);
             response.getWriter().write("Invalid resource type: " + resource.getResourceType());
             return;
@@ -51,7 +51,7 @@ public class CardNodeInitializerServlet extends SlingAllMethodsServlet {
 
         Node componentNode = resource.adaptTo(Node.class);
         if (componentNode == null) {
-            log.error("❌ [Servlet] Cannot adapt resource to Node: {}", resourcePath);
+            log.error(" [Servlet] Cannot adapt resource to Node: {}", resourcePath);
             response.setStatus(500);
             response.getWriter().write("Unable to process component node.");
             return;
@@ -64,11 +64,11 @@ public class CardNodeInitializerServlet extends SlingAllMethodsServlet {
         try {
             numberOfCards = Integer.parseInt(numberOfCardsStr);
             if (numberOfCards < 2 || numberOfCards > 8) {
-                log.warn("⚠️ [Servlet] Invalid numberOfCards '{}'. Defaulting to 2", numberOfCardsStr);
+                log.warn(" [Servlet] Invalid numberOfCards '{}'. Defaulting to 2", numberOfCardsStr);
                 numberOfCards = 2;
             }
         } catch (NumberFormatException e) {
-            log.warn("⚠️ [Servlet] numberOfCards format invalid: '{}'. Defaulting to 2", numberOfCardsStr);
+            log.warn(" [Servlet] numberOfCards format invalid: '{}'. Defaulting to 2", numberOfCardsStr);
             numberOfCards = 2;
         }
 
@@ -82,7 +82,7 @@ public class CardNodeInitializerServlet extends SlingAllMethodsServlet {
                 existingCount++;
             }
 
-            log.info("🔍 [Servlet] Existing cards: {}, Requested cards: {}", existingCount, numberOfCards);
+            log.info("[Servlet] Existing cards: {}, Requested cards: {}", existingCount, numberOfCards);
 
             // Add missing cards
             if (numberOfCards > existingCount) {
@@ -91,7 +91,7 @@ public class CardNodeInitializerServlet extends SlingAllMethodsServlet {
                     if (!componentNode.hasNode(nodeName)) {
                         Node newNode = componentNode.addNode(nodeName, "nt:unstructured");
                         newNode.setProperty("sling:resourceType", "shell/components/ctacard");
-                        log.info("➕ [Servlet] Added card node: {}", nodeName);
+                        log.info(" [Servlet] Added card node: {}", nodeName);
                     }
                 }
             }
@@ -102,18 +102,18 @@ public class CardNodeInitializerServlet extends SlingAllMethodsServlet {
                     String nodeName = "card_" + i;
                     if (componentNode.hasNode(nodeName)) {
                         componentNode.getNode(nodeName).remove();
-                        log.info("➖ [Servlet] Removed card node: {}", nodeName);
+                        log.info(" [Servlet] Removed card node: {}", nodeName);
                     }
                 }
             }
 
             componentNode.getSession().save();
-            log.info("🎯 [Servlet] Node update complete. Final card count: {}", numberOfCards);
+            log.info(" [Servlet] Node update complete. Final card count: {}", numberOfCards);
             response.setStatus(200);
             response.getWriter().write("Successfully updated cards to count: " + numberOfCards);
 
         } catch (RepositoryException e) {
-            log.error("❌ [Servlet] Repository exception", e);
+            log.error(" [Servlet] Repository exception", e);
             response.setStatus(500);
             response.getWriter().write("Error updating card nodes: " + e.getMessage());
         }

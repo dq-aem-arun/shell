@@ -66,9 +66,9 @@ public class CustomCardContainerImpl implements CustomCardContainer {
     public List<String> getCardPaths() {
         List<String> paths = new ArrayList<>();
 
-        for (int i = 1; i <= numberOfCards; i++) { // ✅ Start from 1
+        for (int i = 1; i <= numberOfCards; i++) {
             Resource card = resource.getChild("card_" + i);
-            if (card != null && !card.getPath().equals(resource.getPath())) { // ✅ safety
+            if (card != null && !card.getPath().equals(resource.getPath())) { 
                 paths.add(card.getPath());
             }
         }
