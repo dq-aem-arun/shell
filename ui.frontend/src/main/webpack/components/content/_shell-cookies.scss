@@ -1,0 +1,116 @@
+.cookie-consent {
+  padding: 6px 24px;
+  background: #ffe4b6;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  display: block;
+}
+
+.cookie-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.cookie-description p {
+  margin: 10px 0px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.cookie-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  
+}
+
+.cookie-actions .btn {
+  min-width: 100px;
+  padding: 8px 0;
+  margin: 0 0 0 0;
+  border: 2px solid brown;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.cookie-actions .accept {
+  background: linear-gradient(45deg, #d9670e, #9d7e42, crimson);
+  color: #fff;
+}
+
+.cookie-actions .accept:hover {
+  background: linear-gradient(45deg, #b3540b, #7a6132, #a8002f);
+  box-shadow: 0 2px 8px rgba(217,103,14,0.15);
+}
+
+.cookie-actions .reject {
+  background: #eee;
+  color: #333;
+}
+
+.cookie-actions .reject:hover {
+  background: #ccc;
+  color: #111;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cookie-policy-link {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  color: #007b5f;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .cookie-consent {
+    background: #23272f;
+    color: #f1f1f1;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.32);
+  }
+  .cookie-header h2,
+  .cookie-description p {
+    color: #f1f1f1;
+  }
+  .cookie-actions .accept {
+    background: linear-gradient(45deg, #ff9800, #b388ff, #e57373);
+    color: #fff;
+  }
+  .cookie-actions .reject {
+    background: #444;
+    color: #eee;
+  }
+  .cookie-policy-link {
+    color: #90caf9;
+    border-top: 1px solid #444;
+  }
+  .cookie-actions .btn {
+    border: 2px solid white;
+  }
+
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .cookie-consent {
+    padding: 16px 8px;
+    gap: 16px;
+  }
+  .cookie-header h2 {
+    font-size: 1.1rem;
+  }
+  .cookie-actions .btn {
+    min-width: 90px;
+    font-size: 0.95rem;
+    padding: 8px 0;
+  }
+  .cookie-policy-link {
+    font-size: 0.9rem;
+    padding: 6px 0;
+  }
+}
