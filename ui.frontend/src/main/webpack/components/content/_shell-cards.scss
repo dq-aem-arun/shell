@@ -41,15 +41,14 @@
   text-decoration:none;
 }
 
-/* Make entire card clickable if it has a link */
-.shell-card[data-card-link]:hover {
+/* Enable hover only when hoverEnabled = true */
+.card-hover-enabled:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
-/* Disable hover effect if there's no link */
-.shell-card:not([data-card-link]):hover {
+.card-hover-disabled:hover {
   transform: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: default;
@@ -68,12 +67,6 @@
   padding: 20px 20px 0 20px;
 }
 
-
-
-/* === Card Hover Animation === */
-.shell-card:hover {
-  transform: translateY(-5px);
-}
 
 /* === Card Image Styling === */
 .shell-card img {
@@ -145,12 +138,7 @@
 .card-button{
   margin-top: 100px;
 }
-/* === Responsive Designs MEDIA QUERIES === */
-@media screen and (max-width: 1023px) {
-  .shell-card:hover {
-    transform: none;
-  }
-}
+
 
 @media screen and (max-width: 768px) {
   .shell-card {
@@ -169,8 +157,16 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .shell-card:hover {
-    transform: translateY(-5px);
+  .card-hover-enabled:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+
+  .card-hover-disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: default;
   }
 }
 

@@ -33,4 +33,5 @@ public interface CardsItems {
 
     String getCardLink();
 
+    boolean getHoverEnabled();
 }
