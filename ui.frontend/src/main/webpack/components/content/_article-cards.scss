@@ -1,0 +1,124 @@
+/* === Section Layout: Responsive Grid with Reduced Gap === */
+.custom-card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 0.75rem; /* Reduced gap between cards */
+    padding: 20px 40px; /* Increased padding on left and right */
+    background-color: #fff;
+    justify-items: center;
+}
+
+/* === Card Styling === */
+.custom-card {
+    width: 100%;
+    max-width: 270px; /* Set max width for each card */
+    height: 420px;    /* Fixed height for uniformity */
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    color: #333;
+}
+
+/* Hover effect */
+.custom-card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+/* === Card Image Styling === */
+.custom-card-image {
+    width: 100%;
+    height: 180px; /* Adjust height for smaller cards */
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* === Card Content Styling === */
+.custom-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    background: white;
+}
+
+.custom-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: #1e232a;
+}
+
+.custom-card-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #555;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* === Read More Button Styling === */
+.custom-card-button {
+    margin-top: auto;  /* Ensures the button stays at the bottom of the card */
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    padding-right: 10px; /* Adds some spacing from the right edge */
+}
+
+.custom-button {
+    font-weight: 600;  /* Slightly bolder text */
+    font-size: 0.85rem; /* Slightly smaller text */
+    color: #333; /* Darker color for the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem; /* Space between text and arrow */
+}
+
+
+.custom-button::after {
+    content: '→'; /* Arrow after the "Read more" text */
+    font-size: 1.2rem; /* Slightly larger arrow */
+    color: inherit;  /* Makes sure the arrow color matches the text */
+}
+
+.custom-button {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #000000; /* Shell red */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* === Responsive Adjustments for Mobile === */
+@media screen and (max-width: 1024px) {
+    .custom-card-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .custom-card-section {
+        grid-template-columns: 1fr; /* 1 card per row on smaller screens */
+    }
+
+    .custom-card-image {
+        height: 150px;
+    }
+
+    .custom-card-title {
+        font-size: 0.95rem;
+    }
+
+    .custom-card-description {
+        font-size: 0.85rem;
+    }
+}
