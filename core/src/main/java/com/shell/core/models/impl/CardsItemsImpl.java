@@ -40,6 +40,9 @@ public class CardsItemsImpl implements CardsItems {
     @ValueMapValue
     private String cardLink;
 
+    @ValueMapValue
+    private boolean hoverEnabled;
+
     @Override
     public String getCardLink() {
         LOG.info("Getting card link: {}", cardLink);
@@ -93,5 +96,10 @@ public class CardsItemsImpl implements CardsItems {
         boolean isEmpty = description == null || description.isEmpty();
         LOG.info("Checking if description is empty: {}", isEmpty);
         return isEmpty;
+    }
+
+    @Override
+    public boolean getHoverEnabled() {
+        return hoverEnabled;
     }
 }
