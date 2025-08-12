@@ -1,64 +1,69 @@
 
 /* === Shell Card Section Wrapper === */
 .shell-card-section-grid .shell-card-section{
-    display:grid;
-    }
+  display:grid;
+  }
 .shell-card-section-bg .shell-card-section{
-    background-color:#1E232A;
-    }
+  background-color:#1E232A;
+  }
 /*dark background*/
 .shell-card-section-bgd .shell-card-section{
-    background-color:black;
-    }
+  background-color:black;
+  }
 .shell-card-section {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 12px;
-  background-color: #fff;
-  color: #333;
-  width: auto;
+display: flex;
+gap: 1.5rem;
+flex-wrap: wrap;
+justify-content: center;
+padding: 12px;
+background-color: #fff;
+color: #333;
+// width: auto;
 }
 
 /* === Default Card Styling === */
 
 /*dark background*/
 .shell-card-bgd .shell-card{
-    background-color:#1E232A;
-    }
+  background-color:#1E232A;
+  }
 
 .shell-card {
-  width: 420px;
-  height: 600px;
-  background-color: #F5F5F5;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s, background-color 0.3s, color 0.3s;
-  color: #333;
-  text-decoration:none;
+width: 350px;
+height: 600px;
+background-color: #F5F5F5;
+border-radius: 15px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+display: flex;
+flex-direction: column;
+transition: transform 0.3s, background-color 0.3s, color 0.3s;
+color: #333;
+text-decoration:none;
 }
 
 /* Enable hover only when hoverEnabled = true */
 .card-hover-enabled:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+transform: translateY(-6px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+cursor: pointer;
 }
 
 .card-hover-disabled:hover {
-  transform: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  cursor: default;
+transform: none;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+cursor: default;
 }
 
 /* === Card Size Variants for card-3 === */
 .shell-card-width .shell-card{
-    width:600px;
-    height: 340px;
-    }
+  width:600px;
+  height: 340px;
+  }
+
+  .shell-card-width .shell-card-section{
+  padding: 20px 20px 0 20px;
+  }
+
 /*card-4*/
 .shell-card-max-width .shell-card{
     width:700px;
@@ -70,127 +75,127 @@
 
 /* === Card Image Styling === */
 .shell-card img {
-  width: 100%;
-  height: 250px;
-  display: block;
-  object-fit: fill;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+width: 100%;
+height: 250px;
+display: block;
+object-fit: fill;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
 }
 
 /* === Image Size Variants for card-2 === */
 .shell-card-long img{
-    height:450px;
-    }
+  height:450px;
+  }
 /* === Card Content Styling === */
 .card-content {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+gap: 0.75rem;
 }
 
 .card-content h3 {
-  font-size: 1.1rem;
-  color: inherit;
-  text-decoration: none !important;
+font-size: 1.1rem;
+color: inherit;
+text-decoration: none !important;
 }
 
 .card-content-small h3 {
-  font-size: 0.5rem;
+font-size: 0.5rem;
 }
 .card-content-large h3 {
-  font-size: 2rem;
+font-size: 2rem;
 }
 
 .card-content p {
-      color: inherit;
-      font-size: .95rem;
-      line-height: 1.4;
-      text-decoration: none !important;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      white-space: normal;
-      max-width: 100%;
-  }
+    color: inherit;
+    font-size: .95rem;
+    line-height: 1.4;
+    text-decoration: none !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
 
 .card-content a {
-  margin-top: auto;
-  font-weight: bold;
-  color: inherit;
-  text-decoration: none;
-  font-size: 0.95rem;
-  display: inline-flex;
-  align-items: center;
-  margin-right: 4px;
+margin-top: auto;
+font-weight: bold;
+color: inherit;
+text-decoration: none;
+font-size: 0.95rem;
+display: inline-flex;
+align-items: center;
+margin-right: 4px;
 }
 
 #outer {
-  background-color: white;
-  padding: 5px 60px;
+background-color: white;
+padding: 5px 60px;
 }
 
 #recharge-card {
-  background-color: white;
-  padding: 5px 60px;
+background-color: white;
+padding: 5px 60px;
 }
 
-.card-button{
-  margin-top: 100px;
-}
+// .card-button{
+// margin-top: 100px;
+// }
 
 
 @media screen and (max-width: 768px) {
-  .shell-card {
-    width: 100%;
-  }
+.shell-card {
+  width: 100%;
+}
 
-  .card-content h3 {
-    font-size: 1rem;
-  }
+.card-content h3 {
+  font-size: 1rem;
+}
 
-  .card-content p,
-  .card-content a,
-  .read-more {
-    font-size: 0.9rem;
-  }
+.card-content p,
+.card-content a,
+.read-more {
+  font-size: 0.9rem;
+}
 }
 
 @media screen and (min-width: 1024px) {
-  .card-hover-enabled:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-  }
+.card-hover-enabled:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
 
-  .card-hover-disabled:hover {
-    transform: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    cursor: default;
-  }
+.card-hover-disabled:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
 }
 
 /* ===  Dark Mode  === */
 @media (prefers-color-scheme: dark) {
-  .shell-card-section {
-    color: #f5f5f5;
-  }
+.shell-card-section {
+  color: #f5f5f5;
+}
 
-  .shell-card {
-    background-color: #1a1a1a;
-    color: #f5f5f5;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
-  }
+.shell-card {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
 
-  .card-content h3,
-  .card-content p,
-  .card-content a,
-  .read-more {
-    color: #f5f5f5;
-  }
+.card-content h3,
+.card-content p,
+.card-content a,
+.read-more {
+  color: #f5f5f5;
+}
 
-  .card-content a:hover,
-  .read-more:hover {
-    color: #ddd;
-  }
+.card-content a:hover,
+.read-more:hover {
+  color: #ddd;
+}
 }
