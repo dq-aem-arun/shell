@@ -3,22 +3,83 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2025-08-12T16:14:21.288+05:30"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/shell/settings/wcm/templates/error-template"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="shell/components/page">
         <root
+            jcr:lastModified="{Date}2025-08-12T13:00:46.743+05:30"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="shell/components/container"
             layout="responsiveGrid">
-            <experiencefragment-header
+            <experiencefragment_940815469
+                jcr:created="{Date}2025-08-12T12:49:57.989+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-08-12T12:50:51.511+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="shell/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/shell/language-masters/en/site/header/master"/>
+                fragmentVariationPath="/content/experience-fragments/shell/us/en/site/shell-header/master"/>
             <container
+                jcr:lastModified="{Date}2025-08-12T13:11:48.714+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="shell/components/container">
+                <title
+                    jcr:lastModified="{Date}2025-08-12T14:35:37.371+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Oops! Page Not Found (404)"
+                    sling:resourceType="shell/components/title"
+                    linkTarget="_self"
+                    type="h1"/>
+                <text
+                    jcr:lastModified="{Date}2025-08-12T14:35:53.596+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="shell/components/text"
+                    text="&lt;p>The page you're looking for doesn't exist. Try searching or go to one of the sections below.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <shell_button
+                    jcr:lastModified="{Date}2025-08-12T14:34:42.332+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="shell/components/content/shell-button">
+                    <buttons jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            buttonLink="https://www.shell.in/"
+                            buttonText="Home"
+                            icon="/content/dam/shell/home .png"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            buttonLink="https://www.shell.in/shell-service-station.html"
+                            buttonText="Shell Station "
+                            icon="/content/dam/shell/gas.png"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            buttonLink="https://www.shell.in/about-us/contact-us.html"
+                            buttonText="Contact Us"
+                            icon="/content/dam/shell/call.png"/>
+                    </buttons>
+                </shell_button>
+            </container>
+            <container_copy
+                jcr:lastModified="{Date}2025-08-12T13:09:35.852+05:30"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="shell/components/container"
-                editable="{Boolean}true"
-                layout="responsiveGrid"/>
+                editable="{Boolean}true"/>
+            <experiencefragment
+                jcr:created="{Date}2025-08-12T12:50:01.988+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-08-12T16:14:21.280+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="shell/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/shell/us/en/site/shell-footer/master"/>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
