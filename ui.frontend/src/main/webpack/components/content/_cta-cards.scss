@@ -9,21 +9,15 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.cta-card-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-   margin-left: 80px;
-}
-
-.cta-card-items {
+.cta-cards {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
   border-radius: 12px;
+  justify-content: flex-start;
+  min-width: 0; // <-- Add this line
+  align-items: flex-start;
 }
 
 .circle {
@@ -47,16 +41,11 @@ body {
   color: rgb(74, 74, 74);
   font-size: 1rem;
   line-height: 1.4;
+  margin-left: 15px;
+  margin-top: 0;
   flex: 1;
-  margin-top: 0px;
-  width: 600px;
-margin-left:15px;
-}
-.cta-cards {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
+  width: auto;
+  white-space: pre;
 }
 
 /* Horizontal variation */
@@ -70,6 +59,7 @@ margin-left:15px;
   overflow: hidden;
 //   text-overflow: ellipsis;
   margin-top: 0px;
+  min-width: 0;
 }
 .horizontal .cta-cards {
   display: flex;
@@ -93,8 +83,9 @@ margin-left:15px;
         max-width: 213px;
          margin-top:0px;
       }
-    .cta-card-list{
-        margin-left:10px;
+    .cta-cards {
+        padding: 0.5rem;
+        gap: 0.75rem;
         }
       .circle {
         height: 50px;
@@ -126,10 +117,7 @@ margin-left:15px;
 /* Tablet view (600px - 991px) */
 @media (min-width: 600px) and (max-width: 991px) {
 
-    .cta-card-list{
-        margin-left:10px;
-        }
-      .ctacard-title {
+    .ctacard-title {
         font-size: 1.1rem;
       }
     .circle {
@@ -155,20 +143,16 @@ margin-left:15px;
 }
 /* Desktop and iPad Pro landscape (992px and up) */
 @media (min-width: 1024px) {
-    .cta-card-items {
-        flex: 1 1 calc(45% - 2rem);
-        max-width: 45%;
-      }
     .ctacard-title {
         font-size: 1.2rem;
       }
     .circle {
-        height: 80px;
-        width: 80px;
+        height: 65px;
+        width: 65px;
       }
     .circle img {
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
       }
   .horizontal .cta-card-items {
     width: calc(28% - 1.33rem);
@@ -188,10 +172,9 @@ margin-left:15px;
 /* Ultra-wide Desktop (1200px and up) */
 @media (min-width: 1200px) {
 
-    .cta-card-items {
-        flex: 1 1 calc(30% - 1rem);
-        max-width: 30%;
-      }
+    .cta-cards {
+    max-width: 30%;
+  }
 
   .horizontal .cta-card-items {
     flex: 1 1 calc(28% - 1rem);
@@ -200,7 +183,7 @@ margin-left:15px;
 }
 @media (prefers-color-scheme: dark) {
      .cta-main{
-          background-color:#141920;
+          background-color:#1D232A;
           }
       .horizontal .cta-main{
            background-color:#1D232A;
@@ -214,9 +197,9 @@ margin-left:15px;
       }
   @media (prefers-color-scheme: light) {
       .cta-main{
-          background-color:white;
+          background-color:#FFFFFF;
           }
-        .horizontal .cta-main{
-            background-color:#F5F5F5;
+        .horizontal-alignment  .cta-main{
+            background-color:#F5f5f5;
             }
         }

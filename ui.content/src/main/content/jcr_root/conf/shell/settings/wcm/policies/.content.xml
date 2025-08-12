@@ -237,7 +237,7 @@
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2025-07-29T13:39:30.088+05:30"
+                    jcr:lastModified="{Date}2025-08-04T10:26:18.676+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
@@ -316,6 +316,29 @@
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy_1753769003560>
+                <policy_25299023373000
+                    jcr:lastModified="{Date}2025-08-01T17:33:00.271+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="container-policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured"/>
+                    </cq:styleGroups>
+                </policy_25299023373000>
+                <policy_5318099369208
+                    jcr:lastModified="{Date}2025-08-11T15:41:48.672+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="container-color"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_5318099369208>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -384,7 +407,7 @@
                 </card_v2>
                 <shell-herobanner jcr:primaryType="nt:unstructured">
                     <policy_1748338783196
-                        jcr:lastModified="{Date}2025-08-01T11:30:54.751+05:30"
+                        jcr:lastModified="{Date}2025-07-29T11:35:52.983+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="hero policy"
@@ -523,7 +546,7 @@
                 </shell-button>
                 <promobanner jcr:primaryType="nt:unstructured">
                     <policy_1753339372794
-                        jcr:lastModified="{Date}2025-08-01T15:54:52.512+05:30"
+                        jcr:lastModified="{Date}2025-08-04T10:58:01.958+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Promo Banner"
@@ -578,7 +601,7 @@
                 </promobanner>
                 <playstorecard jcr:primaryType="nt:unstructured">
                     <policy_1753418982494
-                        jcr:lastModified="{Date}2025-07-25T11:33:47.436+05:30"
+                        jcr:lastModified="{Date}2025-08-01T16:23:57.276+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Play StoreCard"
@@ -632,7 +655,7 @@
                 </playstorecard>
                 <shell-cards jcr:primaryType="nt:unstructured">
                     <policy_1753857795947
-                        jcr:lastModified="{Date}2025-08-01T11:37:22.213+05:30"
+                        jcr:lastModified="{Date}2025-07-31T11:49:58.742+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="test"
@@ -695,6 +718,29 @@
                         </cq:styleGroups>
                     </policy_1753857795947>
                 </shell-cards>
+                <customcardcontainer jcr:primaryType="nt:unstructured">
+                    <policy_1754643431739
+                        jcr:lastModified="{Date}2025-08-11T15:40:37.298+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="custom-card-container-policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="horizontal-alignment"
+                                        cq:styleId="1754655698547"
+                                        cq:styleLabel="Horizonatl"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1754643431739>
+                </customcardcontainer>
             </content>
             <list jcr:primaryType="nt:unstructured">
                 <policy_1753780713462
@@ -715,7 +761,7 @@
             </list>
             <ctacard jcr:primaryType="nt:unstructured">
                 <policy_1753871483024
-                    jcr:lastModified="{Date}2025-07-30T16:02:27.894+05:30"
+                    jcr:lastModified="{Date}2025-07-31T10:49:20.406+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="CTA Card policy "

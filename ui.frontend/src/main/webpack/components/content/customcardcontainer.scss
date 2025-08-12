@@ -1,0 +1,186 @@
+.custom-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    // background-color: #FFFFFF;
+
+}
+
+.container-heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #4A4A4A;
+    padding: 30px;
+}
+
+.content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 100px;
+    align-items: stretch;
+    /* Ensures image and cards section align heights */
+}
+
+.image-section,
+.cards-section {
+    min-width: 0;
+    /* Prevents overflow */
+}
+
+/* Fewer than 4 cards: image-section larger (60%), cards-section smaller (40%) */
+.image-section {
+    flex: 1 1 60%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.cards-section {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: baseline;
+    background-color: #FFFFFF;
+}
+
+.card-slot {
+    padding: 15px;
+    flex: 1;
+    /* Ensures cards stretch to fill available space */
+    min-height: 100px;
+    /* Minimum height for consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-image {
+    width: 85%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+    /* Scales image without distortion */
+    border-radius: 20px;
+    ;
+}
+
+/* Variant: horizontal-alignment */
+.horizontal-alignment .cards-section {
+    max-width: 1250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Prevent vertical stretch */
+}
+
+.horizontal-alignment .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-start;
+    /* Makes each card row hug content height */
+    background-color: #f5f5f5;
+    flex-direction: row;
+}
+
+.horizontal-alignment .card-slot {
+    flex: 0 0 32%;
+    /* ~3 cards per row */
+    box-sizing: border-box;
+    min-height: auto;
+    /* Remove forced extra height */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.horizontal-alignment .container-heading {
+    text-align: left;
+    background-color: #f5f5f5;
+
+}
+
+.horizontal-alignment .content-wrapper {
+    background-color: #f5f5f5;
+
+}
+
+.horizontal-alignment .custom-container {
+    background-attachment: #f5f5f5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .image-section,
+    .cards-section {
+        flex: 1 1 100%;
+    }
+
+    .card-container {
+        gap: 10px;
+    }
+
+    .card-slot {
+        min-height: 80px;
+        /* Slightly smaller on mobile */
+    }
+
+    .container-image {
+        max-height: 300px;
+        /* Smaller image height on mobile */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .custom-container {
+        background-color: #1D232A;
+    }
+
+    .container-heading {
+        color: #e0e0e0;
+    }
+
+    .image-section {
+        background-color: #1D232A;
+    }
+
+    .cards-section {
+        background-color: #1D232A;
+    }
+
+    .card-slot {
+        background-color: #1D232A;
+    }
+
+    .horizontal-alignment .card-container {
+        background-color: #1D232A;
+    }
+
+    .horizontal-alignment .card-slot {
+        background-color: #1D232A;
+    }
+
+    .horizontal-alignment .container-heading {
+        background-color: #1D232A
+    };
+
+}

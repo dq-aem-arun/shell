@@ -1,0 +1,33 @@
+<sly 
+    data-sly-use.model="com.shell.core.models.CustomCardContainer"
+    data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${model.isEmpty}"/> <!-- fix 'model.empty' -->
+
+<div class="custom-container" data-sly-test="${!hasContent}">
+    <!-- Heading -->
+    <h2 class="container-heading" data-sly-test="${model.heading}">
+        ${model.heading}
+    </h2>
+
+    <!-- Flex container for cards (left) and image (right) -->
+    <div class="content-wrapper">
+        <!-- Cards section (left) -->
+        <div class="cards-section" data-sly-test="${model.cardPaths}">
+            <div class="card-container">
+                <sly data-sly-list.path="${model.cardPaths}">
+                    <div class="card-slot">
+                        <sly data-sly-resource="${path @ addSelectors='editable'}"/>
+                    </div>
+                </sly>
+            </div>
+        </div>
+
+        <!-- Image section (right) -->
+        <div class="image-section" data-sly-test="${model.image}">
+            <img src="${model.image}" alt="Container Image" class="container-image"/>
+        </div>
+    </div>
+</div>
+
+<!-- Placeholder fallback when no cards -->
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=hasContent}"/>
