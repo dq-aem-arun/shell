@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Shell Footer"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+        
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                
+                <items jcr:primaryType="nt:unstructured">
+                    
+                    <!-- Multifield -->
+                    <footerItems
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldLabel="Footer Items"
+                        composite="{Boolean}true"
+                        name="./footerItems">
+
+                        <!-- Each field group (Title, Path, Image) -->
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            name="./footerItem">
+                            
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+
+                            <items jcr:primaryType="nt:unstructured">
+
+                                <!-- Title -->
+                                <title
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Title"
+                                    name="./title"/>
+
+                                <!-- Path -->
+                                <path
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Select Path"
+                                    name="./path"
+                                    rootPath="/content"/>
+
+                                <!-- Image Upload -->
+                                <leftImageUploader
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                    fieldLabel="Left Image"
+                                    class="cq-droptarget"
+                                    name="./leftImage"
+                                    allowUpload="{Boolean}true"
+                                    fileNameParameter="./leftFileName"
+                                    fileReferenceParameter="./leftFileReference"
+                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                    multiple="{Boolean}false"
+                                    uploadUrl="${request.contextPath}/content/dam"/>
+                                 <rightImageUploader
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                    fieldLabel="Right Image"
+                                    class="cq-droptarget"
+                                    name="./rightImage"
+                                    allowUpload="{Boolean}true"
+                                    fileNameParameter="./rightFileName"
+                                    fileReferenceParameter="./rightFileReference"
+                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                    multiple="{Boolean}false"
+                                    uploadUrl="${request.contextPath}/content/dam"/>
+                            </items>
+                        </field>
+                    </footerItems>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

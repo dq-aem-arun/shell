@@ -1,0 +1,23 @@
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
+<sly data-sly-use.footerModel="com.shell.core.models.ShellFooter" />
+<sly data-sly-test.hasContent="${!footerModel.empty}" />
+
+<!-- Rendered only if component has content -->
+<div data-sly-test="${hasContent}" class="footer">
+        <div class="footer_list" data-sly-list.item="${footerModel.footerItem}">
+
+                <div class="f_item">                        
+                       
+                        <a class="link" href="${item.path}">
+                                <img data-sly-test="${item.leftImage}" class="left_image" src="${item.leftImage}" />
+                                        ${item.title}
+                                <img data-sly-test="${item.rightImage}" class="right_image" src="${item.rightImage}" />
+                        </a>                        
+               </div>
+        </div>
+</div>
+
+<!-- Placeholder for empty component in author mode -->
+<sly data-sly-test="${!hasContent}">
+    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}" />
+</sly>

@@ -3,7 +3,9 @@
 
 <section class="shell-card-section" data-sly-test="${!model.empty}">
     <sly data-sly-list.card="${model.cards}">
-        <div class="shell-card ${style.cssClass}" data-card-link="${card.cardLink}">
+        <div class="shell-card ${card.hoverEnabled ? 'card-hover-enabled' : 'card-hover-disabled'} ${style.cssClass}"
+             data-card-link="${card.cardLink @ context='uri'}">
+
             <img src="${card.fileReference}" alt="${card.title}" class="card-image" />
 
             <div class="card-content">
