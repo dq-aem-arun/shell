@@ -1,0 +1,21 @@
+<sly data-sly-use.model="com.shell.core.models.CookieConsent" />
+<sly data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html" />
+
+<div class="cookie-consent" data-sly-test="${!model.empty}">
+    <div class="cookie-header">
+        <h2>${model.title}</h2>
+    </div>
+    <div class="cookie-description" data-sly-test="${model.description}">
+        <p>${model.description @ context='html'}</p>
+    </div>
+    <div class="cookie-actions">
+        <button class="btn accept" data-sly-test="${model.acceptText}">${model.acceptText}</button>
+        <button class="btn reject" data-sly-test="${model.rejectText}">${model.rejectText}</button>
+        <sly data-sly-test="${model.policyLink}">
+            <a href="${model.policyLink}" class="cookie-policy-link" target="_blank">View Cookie Policy</a>
+        </sly>
+    </div>
+</div>
+
+<!-- Placeholder support -->
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=model.empty}" />

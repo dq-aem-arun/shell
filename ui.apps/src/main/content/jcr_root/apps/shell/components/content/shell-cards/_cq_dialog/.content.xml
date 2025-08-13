@@ -181,6 +181,14 @@
                                 required="false"
                                 allowBlank="true"
                         />
+                        <enableHover
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                name="./hoverEnabled"
+                                text="Enable Hover"
+                                value="true"
+                                uncheckedValue="false"
+                        />
                     </items>
                 </field>
             </cards>

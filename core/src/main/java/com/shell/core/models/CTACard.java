@@ -21,6 +21,7 @@ public interface CTACard {
      *
      * @return List of CTACardItems representing individual cards
      */
-    List<CTACardItems> getCtaCards();
+    public String getIconReference();
+    public String getTitle();
     public boolean isEmpty();
 }
