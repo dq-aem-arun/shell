@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-07-30T12:48:41.946+05:30"
+        cq:lastModified="{Date}2025-08-11T14:30:51.231+05:30"
         cq:lastModifiedBy="admin"
         cq:tags="[experience-fragments:variation/web]"
         cq:template="/conf/shell/settings/wcm/templates/xf-web-variation"
@@ -25,7 +25,7 @@
                 <navigationv2_copy
                     jcr:created="{Date}2025-07-30T11:21:31.292+05:30"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2025-07-30T12:44:52.643+05:30"
+                    jcr:lastModified="{Date}2025-08-11T12:22:57.288+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="shell/components/content/navigationv2"
@@ -33,30 +33,47 @@
                     disableShadowing="false"
                     navigationRoot="/content/shell/us/en"
                     structureStart="0"/>
-                <navigation_v3_copy
-                    jcr:created="{Date}2025-07-30T12:42:16.024+05:30"
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="12"/>
+                </cq:responsive>
+                <navigation_v3
+                    jcr:created="{Date}2025-08-11T12:28:12.507+05:30"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2025-07-30T12:43:15.433+05:30"
+                    jcr:lastModified="{Date}2025-08-11T14:30:51.224+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="shell/components/content/navigation-v3"
                     collectAllPages="true"
                     disableShadowing="false"
-                    navigationRoot="/content/shell/us"
+                    logo="/content/dam/shell/icons/shell logo.jpg"
+                    logoAlt="shell logo "
+                    logoPath="/content/shell/us/en/Customer/home"
+                    navigationRoot="/content/shell/us/en/Customer"
                     structureStart="1">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
+                    <navIcons jcr:primaryType="nt:unstructured">
+                        <item0
                             jcr:primaryType="nt:unstructured"
-                            offset="1"
-                            width="10"/>
-                    </cq:responsive>
-                </navigation_v3_copy>
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        offset="1"
-                        width="10"/>
-                </cq:responsive>
+                            altText="Station Locator"
+                            iconPath="/content/dam/shell/icons/icons8-fuel-gas-32.png"
+                            link="/content/shell/us/en/Customer/inside-shell-station/station-locator"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            altText="shell recharge station"
+                            iconPath="/content/dam/shell/icons/icons8-fuel-gas-50.png"
+                            link="/content/shell/us/en/Customer/shell-recharge"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            altText="Help and Support"
+                            iconPath="/content/dam/shell/icons/icons8-circle-64.png"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            altText="search icon"
+                            iconPath="/content/dam/shell/icons/icons8-search.svg"/>
+                    </navIcons>
+                </navigation_v3>
             </container>
         </root>
     </jcr:content>
