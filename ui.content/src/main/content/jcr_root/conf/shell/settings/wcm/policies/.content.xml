@@ -367,10 +367,13 @@
             <page jcr:primaryType="nt:unstructured">
                 <policy
                     jcr:description="Includes the required client libraries."
+                    jcr:lastModified="{Date}2025-08-11T16:41:04.556+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
                     clientlibs="[shell.dependencies,shell.site]"
+                    clientlibsAsync="false"
                     clientlibsJsHead="shell.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
@@ -546,7 +549,7 @@
                 </shell-button>
                 <promobanner jcr:primaryType="nt:unstructured">
                     <policy_1753339372794
-                        jcr:lastModified="{Date}2025-08-04T10:58:01.958+05:30"
+                        jcr:lastModified="{Date}2025-08-18T15:47:33.859+05:30"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Promo Banner"
@@ -582,6 +585,11 @@
                                         cq:styleClasses="promo-banner--column-reverse"
                                         cq:styleId="1753351960659"
                                         cq:styleLabel="Column-Reverse"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="zero-border-radius"
+                                        cq:styleId="1755512242114"
+                                        cq:styleLabel="background-change"
                                         jcr:primaryType="nt:unstructured"/>
                                 </cq:styles>
                             </item1>
