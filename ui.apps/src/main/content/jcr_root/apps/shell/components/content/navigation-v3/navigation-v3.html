@@ -1,23 +1,32 @@
+<sly
+  data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation"
+/>
+<sly data-sly-use.model="com.shell.core.models.NavigationV3LogoModel" />
+
 <nav class="cmp-bottom-navbar">
   <div class="cmp-nav-container">
+    <!-- Logo -->
     <div class="cmp-logo">
-      <a href="#">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/e/e8/Shell_logo.svg"
-          alt="Shell Logo"
-        />
+      <a href="${model.logoPath}">
+        <img src="${model.logo}" alt="${model.logoAlt}" />
       </a>
     </div>
-    <ul class="cmp-nav-links">
-      <li>
-        <a href="#" class="cmp-active"><span>Home</span></a>
+    <!-- Navigation -->
+    <ul class="cmp-nav-links" data-sly-list.rootItem="${navigation.items}">
+      <!-- No children -->
+      <li data-sly-test="${rootItem.children.empty}">
+        <a
+          href="${rootItem.URL}"
+          class="${rootItem.active ? 'cmp-active' : ''}"
+        >
+          <span>${rootItem.title}</span>
+        </a>
       </li>
-      <li>
-        <a href="#"><span>Shell Asia</span></a>
-      </li>
-      <li class="cmp-dropdown">
-        <a href="#" class="cmp-dropdown-toggle">
-          <span>Inside Shell station</span>
+
+      <!-- Dropdown -->
+      <li class="cmp-dropdown" data-sly-test="${!rootItem.children.empty}">
+        <a href="${rootItem.URL}" class="cmp-dropdown-toggle">
+          <span>${rootItem.title}</span>
           <img
             class="cmp-chevron"
             src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
@@ -26,355 +35,134 @@
             height="12"
           />
         </a>
+
+        <!-- Dropdown Menu -->
         <div class="cmp-dropdown-content">
-          <ul class="cmp-dropdown-menu">
-            <li class="cmp-dropdown-item cmp-bol">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Go to: Inside Shell station</span
-                >
+          <ul
+            class="cmp-dropdown-menu"
+            data-sly-list.child="${rootItem.children}"
+          >
+            <!-- Child with no grandchildren -->
+            <li
+              class="cmp-dropdown-item ${childList.index == 0 ? 'cmp-bol' : ''}"
+              data-sly-test="${child.children.empty}"
+            >
+              <a href="${child.URL}">
+                <span class="cmp-dropdown-item-text">${child.title}</span>
               </a>
             </li>
-            <li class="cmp-dropdown-item cmp-submenu-toggle">
-              <a href="#">
-                <span class="cmp-dropdown-item-text">Inside Shell station</span>
+
+            <!-- Child with grandchildren (2nd level submenu) -->
+            <li
+              class="cmp-dropdown-item ${childList.index == 0 ? 'cmp-bol' : ''}"
+              data-sly-test="${!child.children.empty}"
+            >
+              <div class="cmp-submenu-toggle">
+                <span class="cmp-dropdown-item-text">${child.title}</span>
                 <img
                   class="cmp-dropdown-icon"
                   src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                  alt="Dropdown Icon"
+                  alt="Submenu Icon"
                   width="12"
                   height="12"
                 />
-              </a>
-            </li>
-            <ul class="cmp-submenu">
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >Go to: Inside Shell station</span
-                  >
-                </a>
-              </li>
-            </ul>
-            <li class="cmp-dropdown-item cmp-submenu-toggle">
-              <a href="#">
-                <span class="cmp-dropdown-item-text">Shell Fuels</span>
-                <img
-                  class="cmp-dropdown-icon"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                  alt="Dropdown Icon"
-                  width="12"
-                  height="12"
-                />
-              </a>
-            </li>
-            <ul class="cmp-submenu">
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text">Go to: Shell Fuels</span>
-                </a>
-              </li>
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >New & Improved Shell Fuels</span
-                  >
-                </a>
-              </li>
-            </ul>
-            <li class="cmp-dropdown-item cmp-submenu-toggle">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Shell V-Power Rewards</span
+              </div>
+
+              <!-- Grandchildren -->
+              <ul
+                class="cmp-submenu"
+                data-sly-list.grandchild="${child.children}"
+              >
+                <!-- Grandchild with no great-grandchildren -->
+                <li
+                  class="cmp-dropdown-item ${grandchildList.index == 0 ? 'cmp-bol' : ''}"
+                  data-sly-test="${grandchild.children.empty}"
                 >
-                <img
-                  class="cmp-dropdown-icon"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                  alt="Dropdown Icon"
-                  width="12"
-                  height="12"
-                />
-              </a>
-            </li>
-            <ul class="cmp-submenu">
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >Go to: Shell V-Power Rewards</span
-                  >
-                </a>
-              </li>
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >Shell V-Power Rewards Terms and Conditions India</span
-                  >
-                </a>
-              </li>
-            </ul>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Fuel Pricing in India</span
-                >
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <a href="#"><span>Shell Recharge</span></a>
-      </li>
-      <li class="cmp-dropdown">
-        <a href="#" class="cmp-dropdown-toggle">
-          <span>Shell Engine oils and lubricants</span>
-          <img
-            class="cmp-chevron"
-            src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-            alt="Dropdown Icon"
-            width="12"
-            height="12"
-          />
-        </a>
-        <div class="cmp-dropdown-content">
-          <ul class="cmp-dropdown-menu">
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text cmp-bol"
-                  >Go to: Shell Engine oils and lubricants</span
-                >
-              </a>
-            </li>
-            <li class="cmp-dropdown-item cmp-submenu-toggle">
-              <a href="#">
-                <span class="cmp-dropdown-item-text">Shell Fuels</span>
-                <img
-                  class="cmp-dropdown-icon"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                  alt="Dropdown Icon"
-                  width="12"
-                  height="12"
-                />
-              </a>
-            </li>
-            <ul class="cmp-submenu">
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text">Go to: Shell Fuels</span>
-                </a>
-              </li>
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >New & Improved Shell Fuels</span
-                  >
-                </a>
-              </li>
-              <li class="cmp-dropdown-item cmp-submenu-toggle">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >Shell V-Power Rewards</span
-                  >
-                  <img
-                    class="cmp-dropdown-icon"
-                    src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                    alt="Dropdown Icon"
-                    width="12"
-                    height="12"
-                  />
-                </a>
-              </li>
-              <ul class="cmp-submenu">
-                <li class="cmp-dropdown-item">
-                  <a href="#">
+                  <a href="${grandchild.URL}">
                     <span class="cmp-dropdown-item-text"
-                      >Go to: Shell V-Power Rewards</span
+                      >${grandchild.title}</span
                     >
                   </a>
                 </li>
-                <li class="cmp-dropdown-item">
-                  <a href="#">
+
+                <!-- Grandchild with great-grandchildren (3rd level submenu) -->
+                <li
+                  class="cmp-dropdown-item ${grandchildList.index == 0 ? 'cmp-bol' : ''}"
+                  data-sly-test="${!grandchild.children.empty}"
+                >
+                  <div class="cmp-submenu-toggle">
                     <span class="cmp-dropdown-item-text"
-                      >Shell V-Power Rewards Terms and Conditions</span
+                      >${grandchild.title}</span
                     >
-                  </a>
-                </li>
-                <li class="cmp-dropdown-item">
-                  <a href="#">
-                    <span class="cmp-dropdown-item-text"
-                      >Fuel Pricing in India</span
+                    <img
+                      class="cmp-dropdown-icon"
+                      src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
+                      alt="Nested Submenu Icon"
+                      width="12"
+                      height="12"
+                    />
+                  </div>
+
+                  <!-- Great-grandchildren -->
+                  <ul
+                    class="cmp-submenu"
+                    data-sly-list.greatgrandchild="${grandchild.children}"
+                  >
+                    <li
+                      class="cmp-dropdown-item ${greatgrandchildList.index == 0 ? 'cmp-bol' : ''}"
                     >
-                  </a>
+                      <a href="${greatgrandchild.URL}">
+                        <span class="cmp-dropdown-item-text"
+                          >${greatgrandchild.title}</span
+                        >
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
-            </ul>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Shell Lubricants MemberPlus+ Program</span
-                >
-              </a>
             </li>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Lubricants frequently asked questions</span
-                >
-              </a>
-            </li>
-            <li class="cmp-dropdown-item cmp-submenu-toggle">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Car Engine Oils & Motor Oils - Helix</span
-                >
-                <img
-                  class="cmp-dropdown-icon"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                  alt="Dropdown Icon"
-                  width="12"
-                  height="12"
-                />
-              </a>
-            </li>
-            <ul class="cmp-submenu">
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >Go to: Car Engine Oils & Motor Oils - Helix</span
-                  >
-                </a>
-              </li>
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >How car motor oil works</span
-                  >
-                </a>
-              </li>
-              <li class="cmp-dropdown-item">
-                <a href="#">
-                  <span class="cmp-dropdown-item-text"
-                    >Shell Helix Ultra with PurePlus Technology</span
-                  >
-                </a>
-              </li>
-            </ul>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Engine Oils for Bikes - Advance</span
-                >
-              </a>
-            </li>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Truck Oils & Heavy Duty Engine Oils - Rimula</span
-                >
-              </a>
-            </li>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Outride Anything With Shell Advance</span
-                >
-              </a>
-            </li>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text">Shell Coolant Range</span>
-              </a>
-            </li>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >What makes Shell leaders in oil?</span
-                >
-              </a>
-            </li>
-            <li class="cmp-dropdown-item">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Sustainable Lubricants</span
-                >
-              </a>
-            </li>
-            <li class="cmp-dropdown-item cmp-submenu-toggle">
-              <a href="#">
-                <span class="cmp-dropdown-item-text"
-                  >Unleash the power within</span
-                >
-                <img
-                  class="cmp-dropdown-icon"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                  alt="Dropdown Icon"
-                  width="12"
-                  height="12"
-                />
-              </a>
-            </li>
-            <ul class="cmp-submenu"></ul>
           </ul>
         </div>
       </li>
     </ul>
   </div>
+
   <div class="cmp-icons">
-    <a href="#">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-        alt="User Icon"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/263/263142.png"
-        alt="Cart Icon"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/482/482631.png"
-        alt="Search Icon"
-      />
-    </a>
-    <a href="#">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/3917/3917032.png"
-        alt="Settings Icon"
-      />
-    </a>
+    <sly data-sly-list.icon="${model.icons}">
+      <a href="${icon.link}.html" >
+        <img src="${icon.iconPath}" alt="${icon.altText}" />
+      </a>
+    </sly>
   </div>
+
+  <!-- Hamburger -->
   <div class="cmp-hamburger" id="hamburger">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
     >
       <line x1="3" y1="8" x2="21" y2="8"></line>
       <line x1="3" y1="16" x2="21" y2="16"></line>
     </svg>
   </div>
+
+  <!-- Close Button -->
   <div class="cmp-close-menu" id="close-menu">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
     >
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
     </svg>
   </div>
 </nav>
+ 

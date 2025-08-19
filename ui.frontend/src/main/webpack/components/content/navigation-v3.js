@@ -1,3 +1,4 @@
+
 // Wait for the DOM to fully load before executing the script
 document.addEventListener("DOMContentLoaded", function () {
   // Select DOM elements for the hamburger menu, close button, navbar, and top-level nav links
@@ -51,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
         navLinks.forEach((l) => l.classList.remove("cmp-active"));
         // Set the clicked link as active
         link.classList.add("cmp-active");
-        // Close the mobile menu if the screen width is 960px or less
-        if (window.innerWidth <= 960) {
+        // Close the mobile menu if the screen width is 1000px or less
+        if (window.innerWidth <= 1000) {
           closeMobileMenu();
         }
       });
@@ -60,7 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Add click event listeners to dropdown toggle links
-  const dropdownToggles = document.querySelectorAll(".cmp-dropdown-toggle");
+  const dropdownToggles = document.querySelectorAll(
+    ".cmp-dropdown-toggle"
+  );
   dropdownToggles.forEach((toggle) => {
     toggle.addEventListener("click", (e) => {
       e.preventDefault(); // Prevent default link behavior
@@ -99,7 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
         toggle.classList.add("cmp-active");
         submenu.classList.add("cmp-show");
         // Find all dropdown items in the submenu
-        const submenuItems = submenu.querySelectorAll(".cmp-dropdown-item");
+        const submenuItems =
+          submenu.querySelectorAll(".cmp-dropdown-item");
         let goToItem = null;
         // Identify the first item starting with "Go to:"
         submenuItems.forEach((item) => {
@@ -109,9 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         // If a "Go to:" item is found, mark it as selected
         if (goToItem) {
-          submenu.querySelectorAll(".cmp-dropdown-item").forEach((item) => {
-            item.classList.remove("cmp-selected");
-          });
+          submenu
+            .querySelectorAll(".cmp-dropdown-item")
+            .forEach((item) => {
+              item.classList.remove("cmp-selected");
+            });
           goToItem.classList.add("cmp-selected");
         }
       }
@@ -127,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.stopPropagation(); // Prevent the click from bubbling up
       closeAllDropdowns(); // Close all dropdowns
       // Close the mobile menu if the screen width is 960px or less
-      if (window.innerWidth <= 960) {
+      if (window.innerWidth <= 1000) {
         closeMobileMenu();
       }
     });
