@@ -46,16 +46,16 @@ public class NavigationV3LogoModel {
         }
 
         return icons.stream()
-            .filter(Objects::nonNull)
-            .map(resource -> {
-                ValueMap props = resource.getValueMap();
-                return new Icon(
-                    props.get("iconPath", String.class),
-                    props.get("altText", String.class),
-                    props.get("link", String.class)
-                );
-            })
-            .collect(Collectors.toList());
+                .filter(Objects::nonNull)
+                .map(resource -> {
+                    ValueMap props = resource.getValueMap();
+                    return new Icon(
+                            props.get("iconPath", String.class),
+                            props.get("altText", String.class),
+                            props.get("link", String.class)
+                    );
+                })
+                .collect(Collectors.toList());
     }
 
 
@@ -83,4 +83,3 @@ public class NavigationV3LogoModel {
         }
     }
 }
- 

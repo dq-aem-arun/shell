@@ -1,41 +1,41 @@
 <jcr:root
-    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-    xmlns:cq="http://www.day.com/jcr/cq/1.0"
-    xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="nt:unstructured"
-    jcr:title="Navigation v3 Logo and Icons"
-    sling:resourceType="cq/gui/components/authoring/dialog">
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Navigation v3 Logo and Icons"
+        sling:resourceType="cq/gui/components/authoring/dialog">
 
     <content
-        jcr:primaryType="nt:unstructured"
-        sling:resourceType="granite/ui/components/coral/foundation/container">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
 
         <items jcr:primaryType="nt:unstructured">
             <tabs
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs">
 
                 <items jcr:primaryType="nt:unstructured">
 
                     <!-- Logo Tab -->
                     <logoTab
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Logo"
-                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Logo"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
 
                         <items jcr:primaryType="nt:unstructured">
                             <logo
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                name="./logo"
-                                fieldLabel="Logo Path"
-                                rootPath="/content/dam"
-                                allowUpload="true" />
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    name="./logo"
+                                    fieldLabel="Logo Path"
+                                    rootPath="/content/dam"
+                                    allowUpload="true" />
                             <logoAlt
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                name="./logoAlt"
-                                fieldLabel="Logo Alt Text" />
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    name="./logoAlt"
+                                    fieldLabel="Logo Alt Text" />
                             <logoPath
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
@@ -43,63 +43,63 @@
                                     name="./logoPath"
                                     rootPath="/content"
                                     required="true"
-                                    />
+                            />
                         </items>
                     </logoTab>
 
                     <!--  Icons Tab -->
                     <logoIconsTab
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Navigation Icons"
-                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Navigation Icons"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
 
                         <items jcr:primaryType="nt:unstructured">
 
                             <navIcons
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                composite="true"
-                                fieldLabel="Navigation Icons">
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                    composite="true"
+                                    fieldLabel="Navigation Icons">
 
                                 <field
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                                    name="./navIcons">
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                                        name="./navIcons">
 
                                     <layout
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"
-                                        margin="true" />
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"
+                                            margin="true" />
 
                                     <items jcr:primaryType="nt:unstructured">
 
                                         <iconPath
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                            fieldLabel="Icon Path"
-                                            name="iconPath"
-                                            rootPath="/content/dam/shell"
-                                            filter="hierarchyNotFile"
-                                            forceSelection="true"
-                                            required="true"
-                                            showTitles="true" />
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Icon Path"
+                                                name="iconPath"
+                                                rootPath="/content/dam/shell"
+                                                filter="hierarchyNotFile"
+                                                forceSelection="true"
+                                                required="true"
+                                                showTitles="true" />
 
                                         <altText
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                            fieldLabel="Alt Text"
-                                            name="altText"
-                                            required="true" />
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Alt Text"
+                                                name="altText"
+                                                required="false" />
 
                                         <link
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                            fieldLabel="Link (optional)"
-                                            name="link"
-                                            rootPath="/content/shell"
-                                            filter="hierarchyNotFile"
-                                            forceSelection="false"
-                                            showTitles="true" />
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Link (optional)"
+                                                name="link"
+                                                rootPath="/content/shell"
+                                                filter="hierarchyNotFile"
+                                                forceSelection="false"
+                                                showTitles="true" />
 
                                     </items>
                                 </field>

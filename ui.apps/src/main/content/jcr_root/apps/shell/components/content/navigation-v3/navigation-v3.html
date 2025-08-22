@@ -1,6 +1,4 @@
-<sly
-  data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation"
-/>
+<sly data-sly-use.navigation="com.adobe.cq.wcm.core.components.models.Navigation" />
 <sly data-sly-use.model="com.shell.core.models.NavigationV3LogoModel" />
 
 <nav class="cmp-bottom-navbar">
@@ -15,106 +13,78 @@
     <ul class="cmp-nav-links" data-sly-list.rootItem="${navigation.items}">
       <!-- No children -->
       <li data-sly-test="${rootItem.children.empty}">
-        <a
-          href="${rootItem.URL}"
-          class="${rootItem.active ? 'cmp-active' : ''}"
-        >
-          <span>${rootItem.title}</span>
+        <a href="${rootItem.URL}" class="${rootItem.active ? 'cmp-active' : ''}">
+                    <span>
+                        ${rootItem.title == 'Home' && rootItemList.index == 1 ? 'Shell Asia' : rootItem.title}
+                    </span>
         </a>
       </li>
 
       <!-- Dropdown -->
       <li class="cmp-dropdown" data-sly-test="${!rootItem.children.empty}">
         <a href="${rootItem.URL}" class="cmp-dropdown-toggle">
-          <span>${rootItem.title}</span>
+                    <span>
+                        ${rootItem.title == 'Home' && rootItemList.index == 1 ? 'Shell Asia' : rootItem.title}
+                    </span>
           <img
-            class="cmp-chevron"
-            src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-            alt="Dropdown Icon"
-            width="12"
-            height="12"
+                  class="cmp-chevron"
+                  src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
+                  alt="Dropdown Icon"
+                  width="12"
+                  height="12"
           />
         </a>
 
         <!-- Dropdown Menu -->
         <div class="cmp-dropdown-content">
-          <ul
-            class="cmp-dropdown-menu"
-            data-sly-list.child="${rootItem.children}"
-          >
+          <ul class="cmp-dropdown-menu" data-sly-list.child="${rootItem.children}">
             <!-- Child with no grandchildren -->
-            <li
-              class="cmp-dropdown-item ${childList.index == 0 ? 'cmp-bol' : ''}"
-              data-sly-test="${child.children.empty}"
-            >
+            <li class="cmp-dropdown-item ${childList.index == 0 ? 'cmp-bol' : ''}" data-sly-test="${child.children.empty}">
               <a href="${child.URL}">
                 <span class="cmp-dropdown-item-text">${child.title}</span>
               </a>
             </li>
 
             <!-- Child with grandchildren (2nd level submenu) -->
-            <li
-              class="cmp-dropdown-item ${childList.index == 0 ? 'cmp-bol' : ''}"
-              data-sly-test="${!child.children.empty}"
-            >
+            <li class="cmp-dropdown-item ${childList.index == 0 ? 'cmp-bol' : ''}" data-sly-test="${!child.children.empty}">
               <div class="cmp-submenu-toggle">
                 <span class="cmp-dropdown-item-text">${child.title}</span>
                 <img
-                  class="cmp-dropdown-icon"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                  alt="Submenu Icon"
-                  width="12"
-                  height="12"
+                        class="cmp-dropdown-icon"
+                        src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
+                        alt="Submenu Icon"
+                        width="12"
+                        height="12"
                 />
               </div>
 
               <!-- Grandchildren -->
-              <ul
-                class="cmp-submenu"
-                data-sly-list.grandchild="${child.children}"
-              >
+              <ul class="cmp-submenu" data-sly-list.grandchild="${child.children}">
                 <!-- Grandchild with no great-grandchildren -->
-                <li
-                  class="cmp-dropdown-item ${grandchildList.index == 0 ? 'cmp-bol' : ''}"
-                  data-sly-test="${grandchild.children.empty}"
-                >
+                <li class="cmp-dropdown-item ${grandchildList.index == 0 ? 'cmp-bol' : ''}" data-sly-test="${grandchild.children.empty}">
                   <a href="${grandchild.URL}">
-                    <span class="cmp-dropdown-item-text"
-                      >${grandchild.title}</span
-                    >
+                    <span class="cmp-dropdown-item-text">${grandchild.title}</span>
                   </a>
                 </li>
 
                 <!-- Grandchild with great-grandchildren (3rd level submenu) -->
-                <li
-                  class="cmp-dropdown-item ${grandchildList.index == 0 ? 'cmp-bol' : ''}"
-                  data-sly-test="${!grandchild.children.empty}"
-                >
+                <li class="cmp-dropdown-item ${grandchildList.index == 0 ? 'cmp-bol' : ''}" data-sly-test="${!grandchild.children.empty}">
                   <div class="cmp-submenu-toggle">
-                    <span class="cmp-dropdown-item-text"
-                      >${grandchild.title}</span
-                    >
+                    <span class="cmp-dropdown-item-text">${grandchild.title}</span>
                     <img
-                      class="cmp-dropdown-icon"
-                      src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
-                      alt="Nested Submenu Icon"
-                      width="12"
-                      height="12"
+                            class="cmp-dropdown-icon"
+                            src="https://cdn-icons-png.flaticon.com/512/25/25623.png"
+                            alt="Nested Submenu Icon"
+                            width="12"
+                            height="12"
                     />
                   </div>
 
                   <!-- Great-grandchildren -->
-                  <ul
-                    class="cmp-submenu"
-                    data-sly-list.greatgrandchild="${grandchild.children}"
-                  >
-                    <li
-                      class="cmp-dropdown-item ${greatgrandchildList.index == 0 ? 'cmp-bol' : ''}"
-                    >
+                  <ul class="cmp-submenu" data-sly-list.greatgrandchild="${grandchild.children}">
+                    <li class="cmp-dropdown-item ${greatgrandchildList.index == 0 ? 'cmp-bol' : ''}">
                       <a href="${greatgrandchild.URL}">
-                        <span class="cmp-dropdown-item-text"
-                          >${greatgrandchild.title}</span
-                        >
+                        <span class="cmp-dropdown-item-text">${greatgrandchild.title}</span>
                       </a>
                     </li>
                   </ul>
@@ -129,7 +99,7 @@
 
   <div class="cmp-icons">
     <sly data-sly-list.icon="${model.icons}">
-      <a href="${icon.link}.html" >
+      <a href="${icon.link}.html">
         <img src="${icon.iconPath}" alt="${icon.altText}" />
       </a>
     </sly>
@@ -137,14 +107,7 @@
 
   <!-- Hamburger -->
   <div class="cmp-hamburger" id="hamburger">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
       <line x1="3" y1="8" x2="21" y2="8"></line>
       <line x1="3" y1="16" x2="21" y2="16"></line>
     </svg>
@@ -152,17 +115,9 @@
 
   <!-- Close Button -->
   <div class="cmp-close-menu" id="close-menu">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
     </svg>
   </div>
 </nav>
- 

@@ -1,4 +1,3 @@
-
 // Wait for the DOM to fully load before executing the script
 document.addEventListener("DOMContentLoaded", function () {
   // Select DOM elements for the hamburger menu, close button, navbar, and top-level nav links
@@ -43,18 +42,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Add click event listeners to top-level nav links (excluding dropdown toggles)
+
   navLinks.forEach((link) => {
     if (!link.classList.contains("cmp-dropdown-toggle")) {
       link.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent default link behavior
-        closeAllDropdowns(); // Close all dropdowns
-        // Remove 'active' class from all nav links
-        navLinks.forEach((l) => l.classList.remove("cmp-active"));
-        // Set the clicked link as active
-        link.classList.add("cmp-active");
-        // Close the mobile menu if the screen width is 1000px or less
-        if (window.innerWidth <= 1000) {
-          closeMobileMenu();
+        const url = link.getAttribute("href");
+
+        // Special case: "Customer" always goes to /content/home.html
+        if (link.textContent.trim() === "Customer") {
+          e.preventDefault();
+          window.location.href = "/content/home.html";
+          return;
+        }
+
+        // If link has a real URL, let browser navigate normally
+        if (url && url !== "#") {
+          closeAllDropdowns();
+          navLinks.forEach((l) => l.classList.remove("cmp-active"));
+          link.classList.add("cmp-active");
+          if (window.innerWidth <= 1000) {
+            closeMobileMenu();
+          }
+          //  No preventDefault here, so navigation works
+        } else {
+          // Handle empty links (just toggle dropdown if needed)
+          e.preventDefault();
         }
       });
     }
