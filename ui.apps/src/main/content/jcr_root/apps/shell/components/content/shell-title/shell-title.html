@@ -1,0 +1,33 @@
+<sly data-sly-use.shellTitle="com.shell.core.models.ShellTitle"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
+
+    <sly data-sly-test.hasContent="${!shellTitle.empty}">
+        <div class="shell-title__container"
+             style="margin: ${shellTitle.margin @ context='unsafe'}; padding: ${shellTitle.padding @ context='unsafe'};">
+             
+            <sly data-sly-test="${shellTitle.title}">
+                <h1 class="shell-title__title"
+                    style="font-size: ${shellTitle.titleFontSize @ context='styleToken'}; 
+                           font-weight: ${shellTitle.titleFontWeight @ context='styleToken'}; 
+                          color: ${shellTitle.titleColor @ context='styleToken'}; margin: 0px; padding:0px;">
+                    ${shellTitle.title}
+                </h1>
+            </sly>
+
+            <sly data-sly-test="${shellTitle.description}">
+                <p class="shell-title__description"
+                   style="font-size: ${shellTitle.descriptionFontSize @ context='styleToken'}; 
+                          font-weight: ${shellTitle.descriptionFontWeight @ context='styleToken'}; 
+                          color: ${shellTitle.descriptionColor @ context='styleToken'}; 
+                          width:${shellTitle.descriptionWidth @ context='styleToken'}">
+                    ${shellTitle.description}
+                </p>
+            </sly>
+        </div>
+    </sly>
+
+    <!-- Placeholder logic -->
+    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+</sly>
+
+
