@@ -1,0 +1,25 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"/>
+<sly data-sly-use.model="com.shell.core.models.Search"/>
+
+<div class="search-container">
+  <div class="search-header">
+    <form method="get" action="/bin/search" class="search-form">
+      <div class="search-input-wrapper">
+        <input type="text" name="searchTerm" placeholder="${model.placeholder}" class="search-input" />
+        <button type="button" class="clear-input" style="display:none;" aria-label="Clear search">&times;</button>
+      </div>
+
+      <!-- Hidden field for componentPath -->
+      <input type="hidden" name="componentPath" value="/content/shell/us/en/test/jcr:content/root/container/search" />
+
+      <button type="submit" class="search-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="block h-full w-full"><path fill="#FFFFFF" d="M10.5,2 C15.1944204,2 19,5.80557963 19,10.5 C19,12.4865245 18.3185332,14.3138839 17.1766205,15.7610573 L21.7071068,20.2928932 L20.2928932,21.7071068 L15.7610573,17.1766205 C14.3138839,18.3185332 12.4865245,19 10.5,19 C5.80557963,19 2,15.1944204 2,10.5 C2,5.80557963 5.80557963,2 10.5,2 Z M10.5,4 C6.91014913,4 4,6.91014913 4,10.5 C4,14.0898509 6.91014913,17 10.5,17 C14.0898509,17 17,14.0898509 17,10.5 C17,6.91014913 14.0898509,4 10.5,4 Z"></path></svg></button>
+    </form>
+
+    <!-- Result count -->
+    <p id="result-count" class="result-count" style="display:none;"></p>
+  </div>
+
+  <!-- ✅ Only ONE results container -->
+  <div class="search-result" id="results" style="display:none;"></div>
+  <div class= "pagination-div" id="pagination" style="display:none;"></div>
+</div>
