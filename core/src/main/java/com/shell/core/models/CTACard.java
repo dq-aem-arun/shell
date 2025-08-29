@@ -1,6 +1,5 @@
 package com.shell.core.models;
 
-import java.util.List;
 
 /**
  * Interface representing the contract for a CTA (Call-To-Action) Cards component.
